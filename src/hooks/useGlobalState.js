@@ -1,4 +1,6 @@
-import { useReducer, createContext } from 'react';
+import {
+  useReducer, createContext, useEffect, useCallback,
+} from 'react';
 
 export const context = createContext(null);
 const init = () => ({
@@ -16,14 +18,30 @@ const reducer = (state, { type, payload }) => {
       return state;
   }
 };
+const LOCAL_STORAGE_KEY = 'alphaVantageAPIKey';
 const useGlobalState = () => {
   const [state, dispatch] = useReducer(reducer, undefined, init);
+  const setAlphaVantageAPIKey = useCallback(
+    (key) => dispatch({ type: SET_ALPHA_VANTAGE_API_KEY, payload: key }),
+    [dispatch],
+  );
+  useEffect(() => {
+    const alphaVantageAPIKey = localStorage?.getItem(LOCAL_STORAGE_KEY);
+    if (alphaVantageAPIKey) {
+      setAlphaVantageAPIKey(alphaVantageAPIKey);
+    }
+  }, []);
+  useEffect(() => {
+    if (state.alphaVantageAPIKey) {
+      localStorage?.setItem(LOCAL_STORAGE_KEY, state.alphaVantageAPIKey);
+    }
+  }, [state.alphaVantageAPIKey]);
   return {
     // Value
     alphaVantageAPIKey: state.alphaVantageAPIKey,
 
     // Actions
-    setAlphaVantageAPIKey: (key) => dispatch({ type: SET_ALPHA_VANTAGE_API_KEY, payload: key }),
+    setAlphaVantageAPIKey,
   };
 };
 export default useGlobalState;
