@@ -12,7 +12,8 @@ const reducer = (state, { type, payload }) => {
     case SET_ALPHA_VANTAGE_API_KEY:
       return {
         ...state,
-        alphaVantageAPIKey: payload,
+        alphaVantageAPIKey: payload.key,
+        isFromStorage: payload.isFromStorage,
       };
     default:
       return state;
@@ -22,17 +23,20 @@ const LOCAL_STORAGE_KEY = 'alphaVantageAPIKey';
 const useGlobalState = () => {
   const [state, dispatch] = useReducer(reducer, undefined, init);
   const setAlphaVantageAPIKey = useCallback(
-    (key) => dispatch({ type: SET_ALPHA_VANTAGE_API_KEY, payload: key }),
+    (key, isFromStorage = false) => dispatch({
+      type: SET_ALPHA_VANTAGE_API_KEY,
+      payload: { key, isFromStorage },
+    }),
     [dispatch],
   );
   useEffect(() => {
     const alphaVantageAPIKey = localStorage?.getItem(LOCAL_STORAGE_KEY);
     if (alphaVantageAPIKey) {
-      setAlphaVantageAPIKey(alphaVantageAPIKey);
+      setAlphaVantageAPIKey(alphaVantageAPIKey, true);
     }
   }, []);
   useEffect(() => {
-    if (state.alphaVantageAPIKey) {
+    if (!state.isFromStorage) {
       localStorage?.setItem(LOCAL_STORAGE_KEY, state.alphaVantageAPIKey);
     }
   }, [state.alphaVantageAPIKey]);

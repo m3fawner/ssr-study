@@ -21,7 +21,7 @@ export default function Home() {
           <FormLabel>Ticker symbol</FormLabel>
           <Flex>
             <Input onChange={({ target: { value } }) => setSymbol(value)} value={symbol} />
-            <Button onClick={() => getData(symbol)}>Get data</Button>
+            <Button ml="2" onClick={() => getData(symbol)}>Get data</Button>
           </Flex>
         </FormControl>
       </VStack>
