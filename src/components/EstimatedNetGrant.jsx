@@ -1,4 +1,6 @@
 import {
+  SimpleGrid,
+  Box,
   Input,
   FormControl,
   FormLabel,
@@ -9,6 +11,7 @@ import {
   InputRightAddon,
   InputLeftAddon,
   Divider,
+  Container,
 } from '@chakra-ui/react';
 import {
   useCallback, useState, useMemo,
@@ -52,7 +55,28 @@ LineItem.propTypes = {
   label: PropTypes.string.isRequired,
   amount: PropTypes.number.isRequired,
 };
-
+const HelpItem = ({ label, body }) => (
+  <Container py="4" borderWidth="1px" borderColor="gray.400" borderStyled="solid" bg="white" borderRadius="md">
+    <Text fontSize="lg" as="strong">{label}</Text>
+    <Text>
+      {body}
+    </Text>
+  </Container>
+);
+HelpItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+};
+const HelpItems = () => (
+  <SimpleGrid columns="3" bg="gray.100" spacing="6" p="6" ml="-4" mr="-4" mt="4">
+    <HelpItem label="Gross proceeds" body="Gross proceeds is the total sum of the sale, and amounts to the share price times the number of shares" />
+    <HelpItem label="Federal income taxes" body="Federal income taxes are withheld at supplemental income rates, or 22%. You will need to appropriately account for the difference in supplemental & marginal rates!" />
+    <HelpItem label="State taxes" body="State taxes are income taxes applied to earnings. This will be dependent upon the appropriate state's tax regulation." />
+    <HelpItem label="Medicare taxes" body="Medicare taxes are withheld at 1.45% for the employee, and another 1.45% paid by the employer." />
+    <HelpItem label="Social Security taxes" body="Social Security taxes, like medicare, are an employee/employer tax. The employee pays 6.2%, on up to $142,800 of earnings. After that, social security does not apply." />
+    <HelpItem label="Net proceeds" body="The amount of proceeds that will be credited to your account after all sales & and taxes are withheld." />
+  </SimpleGrid>
+);
 const EstimatedNetGrant = () => {
   const {
     register, watch, getValues,
@@ -77,6 +101,7 @@ const EstimatedNetGrant = () => {
     medicareTaxes,
     ssTaxes,
     netProceeds,
+    sharesToCover,
   } = useMemo(() => {
     const casted = schema.cast(watched);
     const proceeds = (casted.sharesGranted * currentPrice) || 0;
@@ -85,6 +110,7 @@ const EstimatedNetGrant = () => {
     const federal = SUPPLEMENTAL_INCOME_RATE * proceeds || 0;
     const medicare = MEDICARE_RATE * proceeds || 0;
     const ss = ssTaxableProceeds * SS_TAX || 0;
+    const totalTaxes = state + federal + medicare + ss;
     return {
       ...casted,
       grantProceeds: proceeds,
@@ -92,7 +118,8 @@ const EstimatedNetGrant = () => {
       federalTaxes: federal,
       medicareTaxes: medicare,
       ssTaxes: ss,
-      netProceeds: proceeds - state - federal - medicare - ss,
+      netProceeds: proceeds - totalTaxes,
+      sharesToCover: Math.ceil(totalTaxes / currentPrice),
     };
   }, [watched, currentPrice]);
   const updatePrice = useCallback(async () => {
@@ -100,7 +127,7 @@ const EstimatedNetGrant = () => {
   }, [getValues]);
   const stateTaxesApplicable = stateTaxes !== 0 && stateTaxes;
   return (
-    <form>
+    <Box as="form" w="100%">
       <FormControl>
         <FormLabel htmlFor="symbol">Ticker symbol</FormLabel>
         <Flex>
@@ -207,11 +234,21 @@ const EstimatedNetGrant = () => {
               <Divider mt="2" size="4" />
               <LineItem label="Net proceeds" amount={netProceeds} />
             </Flex>
+            <Flex mt="4">
+              <Text>
+                Your brokerage will sell
+                {' '}
+                {sharesToCover}
+                {' '}
+                shares to cover the taxes, if you have automatic withholding selected.
+              </Text>
+            </Flex>
           </>
         )}
+        <HelpItems />
       </>
       )}
-    </form>
+    </Box>
   );
 };
 

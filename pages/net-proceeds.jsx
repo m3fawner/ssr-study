@@ -1,6 +1,3 @@
-import {
-  VStack,
-} from '@chakra-ui/react';
 import Head from 'next/head';
 import AlphaVantageAPIKeyEntry from '../src/components/AlphaVantageAPIKeyEntry';
 import EstimatedNetGrant from '../src/components/EstimatedNetGrant';
@@ -11,10 +8,8 @@ const NetProceeds = () => (
       <title>Net RSU grant proceeds</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <VStack spacing="4">
-      <AlphaVantageAPIKeyEntry />
-      <EstimatedNetGrant />
-    </VStack>
+    <AlphaVantageAPIKeyEntry />
+    <EstimatedNetGrant />
   </>
 );
 export default NetProceeds;
