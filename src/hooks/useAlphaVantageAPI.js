@@ -4,8 +4,10 @@ import { context } from './useGlobalState';
 const useAlphaVantageAPI = () => {
   const { alphaVantageAPIKey } = useContext(context) ?? {};
   return useMemo(() => ({
-    getData: async (symbol) => {
-      await fetch(`api/alphaVantage/${symbol}?apiKey=${alphaVantageAPIKey}`);
+    getPrice: async (symbol) => {
+      const response = await fetch(`api/alphaVantage/${symbol}?apiKey=${alphaVantageAPIKey}`);
+      const { data: { price } } = await response.json();
+      return parseFloat(price);
     },
   }), [alphaVantageAPIKey]);
 };
