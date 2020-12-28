@@ -68,7 +68,7 @@ HelpItem.propTypes = {
   body: PropTypes.string.isRequired,
 };
 const HelpItems = () => (
-  <SimpleGrid columns="3" bg="gray.100" spacing="6" p="6" ml="-4" mr="-4" mt="4">
+  <SimpleGrid columns={[1, null, 2, 3]} bg="gray.100" spacing="6" p="6" ml="-4" mr="-4" mt="4">
     <HelpItem label="Gross proceeds" body="Gross proceeds is the total sum of the sale, and amounts to the share price times the number of shares" />
     <HelpItem label="Federal income taxes" body="Federal income taxes are withheld at supplemental income rates, or 22%. You will need to appropriately account for the difference in supplemental & marginal rates!" />
     <HelpItem label="State taxes" body="State taxes are income taxes applied to earnings. This will be dependent upon the appropriate state's tax regulation." />

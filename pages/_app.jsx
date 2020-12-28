@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import GlobalStateManager from '../src/components/GlobalStateManager';
 import Header from '../src/components/Header';
@@ -8,16 +8,13 @@ const App = ({ Component, pageProps }) => (
   <GlobalStateManager>
     <ThemeProvider>
       <Header />
-      <Grid
-        templateRows="repeat(1, 100vh)"
-        templateColumns={['repeat(4, 1fr)', null, null, 'repeat(6, 1fr)']}
-      >
-        <GridItem colSpan={1} bg="gray.100" />
-        <GridItem colSpan={4} m="4">
-          <Component {...pageProps} />
-        </GridItem>
-        <GridItem colSpan={1} bg="gray.100" />
-      </Grid>
+      <Flex bg="gray.100" justify="center">
+        <Box flexBasis={['100%', null, null, '80em']} minH="100vh">
+          <Box bg="white" px="4">
+            <Component {...pageProps} />
+          </Box>
+        </Box>
+      </Flex>
     </ThemeProvider>
   </GlobalStateManager>
 );
