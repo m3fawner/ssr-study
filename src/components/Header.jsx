@@ -1,5 +1,5 @@
-import { useContext } from 'react';
 import PropTypes from 'prop-types';
+import NextLink from 'next/link';
 import {
   Drawer,
   DrawerOverlay,
@@ -10,31 +10,39 @@ import {
   useDisclosure,
   Box,
   Icon,
-  Button,
+  Link,
 } from '@chakra-ui/react';
-import { context } from '../hooks/useGlobalState';
 import MenuIcon from '../svgs/menu.svg';
 
-const PageMenu = ({ isOpen, onClose }) => {
-  const { setAlphaVantageAPIKey } = useContext(context);
-  return (
-    <Drawer
-      isOpen={isOpen}
-      onClose={onClose}
-      placement="left"
-    >
-      <DrawerOverlay>
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
-          <DrawerBody>
-            <Button onClick={() => setAlphaVantageAPIKey('')}>Clear API key</Button>
-          </DrawerBody>
-        </DrawerContent>
-      </DrawerOverlay>
-    </Drawer>
-  );
+const ROUTES = {
+  '/': 'Home',
+  '/net-proceeds': 'Net Proceeds',
+  '/alpha-vantage-info': 'Alpha Vantage Info',
 };
+const PageMenu = ({ isOpen, onClose }) => (
+  <Drawer
+    isOpen={isOpen}
+    onClose={onClose}
+    placement="left"
+  >
+    <DrawerOverlay>
+      <DrawerContent>
+        <DrawerCloseButton />
+        <DrawerHeader>Menu</DrawerHeader>
+        <DrawerBody>
+          {Object.entries(ROUTES).map(([href, label]) => (
+            <Box key={href}>
+              <NextLink href={href} passHref>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <Link>{label}</Link>
+              </NextLink>
+            </Box>
+          ))}
+        </DrawerBody>
+      </DrawerContent>
+    </DrawerOverlay>
+  </Drawer>
+);
 PageMenu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,

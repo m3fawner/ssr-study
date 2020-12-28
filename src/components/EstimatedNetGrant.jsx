@@ -56,7 +56,7 @@ LineItem.propTypes = {
   amount: PropTypes.number.isRequired,
 };
 const HelpItem = ({ label, body }) => (
-  <Container py="4" borderWidth="1px" borderColor="gray.400" borderStyled="solid" bg="white" borderRadius="md">
+  <Container py="4" borderWidth="1px" borderColor="gray.400" borderStyle="solid" bg="white" borderRadius="md">
     <Text fontSize="lg" as="strong">{label}</Text>
     <Text>
       {body}
