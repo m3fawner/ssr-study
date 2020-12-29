@@ -17,6 +17,7 @@ import {
 import PropTypes from 'prop-types';
 import useForm from '../hooks/useForm';
 import yup from '../util/yup';
+import { getDollar, getPercentString } from '../util/formatters';
 import useAlphaVantageAPI from '../hooks/useAlphaVantageAPI';
 import RHFInput from './RHFInput';
 
@@ -31,8 +32,6 @@ const SS_LIMIT = 142800;
 const SS_TAX = 0.062;
 const SUPPLEMENTAL_INCOME_RATE = 0.22;
 const MEDICARE_RATE = 0.0145;
-const getDollar = (amount) => amount.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-const getPercent = (amount) => (amount * 100).toLocaleString('en-US');
 const getSSTaxableProceeds = (ssEarnings, proceeds) => {
   if (ssEarnings > SS_LIMIT) {
     return 0;
@@ -185,8 +184,8 @@ const EstimatedNetGrant = () => {
               <Text>
                 Your federal withholdings are at supplemental rate of
                 {' '}
-                {getPercent(SUPPLEMENTAL_INCOME_RATE)}
-                %, or
+                {getPercentString(SUPPLEMENTAL_INCOME_RATE)}
+                or
                 {' '}
               </Text>
               <Text as="strong" ml="1">{getDollar(federalTaxes)}</Text>
@@ -195,8 +194,7 @@ const EstimatedNetGrant = () => {
               <Text>
                 Additionally, you will owe medicare taxes, at
                 {' '}
-                {getPercent(MEDICARE_RATE)}
-                % or,
+                {getPercentString(MEDICARE_RATE)}
                 {' '}
               </Text>
               <Text as="strong" ml="1">{getDollar(medicareTaxes)}</Text>

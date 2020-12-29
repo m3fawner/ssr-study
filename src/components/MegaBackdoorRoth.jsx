@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { useCallback, useState, useMemo } from 'react';
 import useForm from '../hooks/useForm';
 import yup from '../util/yup';
+import { getDollar } from '../util/formatters';
 import RHFInput from './RHFInput';
 import RHFCheckbox from './RHFCheckbox';
 
@@ -13,10 +14,10 @@ const TOTAL_401K_LIMIT_OVER_55 = 64500;
 const TOTAL_401K_LIMIT = 58000;
 const BASE_401K_LIMIT_OVER_55 = 26000;
 const BASE_401K_LIMIT = 19500;
-const TOTAL_401K_LIMIT_IN_DOLLARS = TOTAL_401K_LIMIT.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-const TOTAL_401K_LIMIT_OVER_55_IN_DOLLARS = TOTAL_401K_LIMIT_OVER_55.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-const BASE_401K_LIMIT_IN_DOLLARS = BASE_401K_LIMIT.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-const BASE_401K_LIMIT_OVER_55_IN_DOLLARS = BASE_401K_LIMIT_OVER_55.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+const TOTAL_401K_LIMIT_IN_DOLLARS = getDollar(TOTAL_401K_LIMIT, true);
+const TOTAL_401K_LIMIT_OVER_55_IN_DOLLARS = getDollar(TOTAL_401K_LIMIT_OVER_55, true);
+const BASE_401K_LIMIT_IN_DOLLARS = getDollar(BASE_401K_LIMIT, true);
+const BASE_401K_LIMIT_OVER_55_IN_DOLLARS = getDollar(BASE_401K_LIMIT_OVER_55, true);
 const Intro = (
   <>
     <Heading size="sm">Motivation</Heading>
@@ -141,7 +142,7 @@ const AfterTaxSpaceCalculator = ({ onSubmit }) => {
         {/* Add a future value calculator */}
         Your after tax limit is
         <Text as="strong" mx="1">
-          {afterTaxLimit.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+          {getDollar(afterTaxLimit)}
           .
         </Text>
       </Text>
@@ -157,7 +158,10 @@ const PerPaycheck = ({ limit, employeeContributions }) => {
     defaultValues: { noOfPaychecks: 26, traditional: true },
   });
   const { noOfPaychecks, traditional } = watch();
-  const getPaycheckForAmount = useCallback((amount) => (amount / noOfPaychecks).toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }), [noOfPaychecks]);
+  const getPaycheckForAmount = useCallback(
+    (amount) => getDollar(amount / noOfPaychecks),
+    [noOfPaychecks],
+  );
   return (
     <>
       <Box>
