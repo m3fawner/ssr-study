@@ -1,7 +1,8 @@
 import {
   Heading, Text, Box, Button, Flex,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { useCallback, useState } from 'react';
 import useForm from '../hooks/useForm';
 import yup from '../util/yup';
 import RHFInput from './RHFInput';
@@ -59,16 +60,23 @@ const Intro = (
       again!*
     </Text>
     <Text as="em" fontSize="sm">* under current tax law.</Text>
+    <Text mt="4">
+      <Text as="strong">Note:</Text>
+      {' '}
+      Some employers artificially limit after
+      tax maximums. For instance, my employer limits it to the match times the IRS 401k compensation
+      limit ($290,000).
+    </Text>
   </>
 );
-const schema = yup.object({
+const afterTaxSpaceSchema = yup.object({
   flatMatch: yup.bool(),
   flatMatchAmount: yup.number().min(0).label('Flat match amount'),
   salary: yup.number().min(0).label('Salary'),
   matchPercent: yup.number().min(0).label('Match percent'),
   employeeContributions: yup.number().min(0).max(BASE_401K_LIMIT).label('Employee contributions'),
 });
-const AfterTaxSpaceCalculator = () => {
+const AfterTaxSpaceCalculator = ({ onSubmit }) => {
   const [afterTaxLimit, setAfterTaxLimit] = useState(null);
   const { getInputProps, watch, handleSubmit } = useForm({
     defaultValues: {
@@ -77,23 +85,28 @@ const AfterTaxSpaceCalculator = () => {
       salary: 100000,
       employeeContributions: BASE_401K_LIMIT,
     },
-  }, schema);
+  }, afterTaxSpaceSchema);
   const {
     flatMatch, employeeContributions, matchPercent, salary, flatMatchAmount,
   } = watch();
-  const onSubmit = handleSubmit(() => {
+  const calculatedAfterTaxMax = handleSubmit(() => {
     const match = flatMatch ? flatMatchAmount : (salary * (matchPercent / 100));
-    setAfterTaxLimit(TOTAL_401K_LIMIT - match - employeeContributions);
+    const limit = TOTAL_401K_LIMIT - match - employeeContributions;
+    setAfterTaxLimit(limit);
+    onSubmit({
+      limit,
+      employeeContributions,
+    });
   });
   return (
     <>
-      <Box as="form" pb="4" onSubmit={onSubmit}>
+      <Box as="form" pb="4" onSubmit={calculatedAfterTaxMax}>
         <RHFCheckbox {...getInputProps('flatMatch')} label="Flat match (not percentage based)?" />
         {flatMatch
-          ? <RHFInput {...getInputProps('flatMatchAmount')} label="Flat match amount" />
+          ? <RHFInput {...getInputProps('flatMatchAmount')} label="Flat match amount" left="$" right="/yr" />
           : (
             <Flex>
-              <RHFInput {...getInputProps('salary')} label="Salary" left="$" />
+              <RHFInput {...getInputProps('salary')} label="Salary" left="$" mr="4" />
               <RHFInput {...getInputProps('matchPercent')} label="Match percent" right="%" />
             </Flex>
           )}
@@ -102,21 +115,64 @@ const AfterTaxSpaceCalculator = () => {
       </Box>
       {afterTaxLimit && (
       <Text>
-        {/* With after tax limit, do a "per paycheck" calculator & a future value calculator */}
+        {/* Add a future value calculator */}
         Your after tax limit is
-        {' '}
-        {afterTaxLimit.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+        <Text as="strong" mx="1">
+          {afterTaxLimit.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+          .
+        </Text>
       </Text>
       )}
     </>
   );
 };
-const MegaBackdoorRoth = () => (
-  <>
-    <Heading size="lg" mb="4">Megabackdoor Roth</Heading>
-    {Intro}
-    <AfterTaxSpaceCalculator />
-  </>
-);
-
+AfterTaxSpaceCalculator.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+const PerPaycheck = ({ limit, employeeContributions }) => {
+  const { getInputProps, watch } = useForm({
+    defaultValues: { noOfPaychecks: 26, traditional: true },
+  });
+  const { noOfPaychecks, traditional } = watch();
+  const getPaycheckForAmount = useCallback((amount) => (amount / noOfPaychecks).toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }), [noOfPaychecks]);
+  return (
+    <>
+      <Box>
+        <RHFInput {...getInputProps('noOfPaychecks')} label="Number of paychecks" right="/yr" />
+        <RHFCheckbox {...getInputProps('traditional')} label="Traditional employee contributions" />
+      </Box>
+      <Box mt="4">
+        <Text>
+          You should have
+          <Text as="strong" mx="1">{getPaycheckForAmount(limit)}</Text>
+          for your after tax contribution amount to maximize your after tax space.
+        </Text>
+        <Text>
+          In addition, you should have
+          <Text as="strong" mx="1">{getPaycheckForAmount(employeeContributions)}</Text>
+          in employee contributions directly to
+          {' '}
+          {traditional ? 'traditional' : 'Roth'}
+          {' '}
+          401k.
+        </Text>
+      </Box>
+    </>
+  );
+};
+PerPaycheck.propTypes = {
+  limit: PropTypes.number.isRequired,
+  employeeContributions: PropTypes.number.isRequired,
+};
+const MegaBackdoorRoth = () => {
+  const [{ limit, employeeContributions } = {}, setCalculatedAfterTaxMax] = useState(undefined);
+  return (
+    <>
+      <Heading size="lg" mb="4">Megabackdoor Roth</Heading>
+      {Intro}
+      <AfterTaxSpaceCalculator onSubmit={setCalculatedAfterTaxMax} />
+      {limit && <PerPaycheck limit={limit} employeeContributions={employeeContributions} />}
+    </>
+  );
+};
 export default MegaBackdoorRoth;

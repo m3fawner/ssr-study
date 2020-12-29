@@ -32,7 +32,7 @@ const PageMenu = ({ isOpen, onClose }) => (
         <DrawerHeader>Menu</DrawerHeader>
         <DrawerBody>
           {Object.entries(ROUTES).map(([href, label]) => (
-            <Box key={href}>
+            <Box key={href} onClick={onClose}>
               <NextLink href={href} passHref>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <Link>{label}</Link>
