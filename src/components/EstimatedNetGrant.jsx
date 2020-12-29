@@ -7,26 +7,23 @@ import {
   Flex,
   Button,
   Text,
-  InputGroup,
-  InputRightAddon,
-  InputLeftAddon,
   Divider,
   Container,
 } from '@chakra-ui/react';
 import {
   useCallback, useState, useMemo,
 } from 'react';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 import PropTypes from 'prop-types';
+import useForm from '../hooks/useForm';
+import yup from '../util/yup';
 import useAlphaVantageAPI from '../hooks/useAlphaVantageAPI';
+import RHFInput from './RHFInput';
 
 const schema = yup.object({
-  symbol: yup.string().required(),
-  stateTax: yup.number().min(0).max(100),
-  ssEarnings: yup.number().min(0),
-  sharesGranted: yup.number().min(0),
+  symbol: yup.string().required().label('Symbol'),
+  stateTax: yup.number().min(0).max(100).label('State tax rate'),
+  ssEarnings: yup.number().min(0).label('Social Security earnings'),
+  sharesGranted: yup.number().min(0).label('Shares granted'),
 });
 
 const SS_LIMIT = 142800;
@@ -79,59 +76,61 @@ const HelpItems = () => (
 );
 const EstimatedNetGrant = () => {
   const {
-    register, watch, getValues,
+    watch, getInputProps, register,
   } = useForm({
-    mode: 'onBlur',
     defaultValues: {
       stateTax: 0,
       sharesGranted: 0,
       ssEarnings: 0,
     },
-    resolver: yupResolver(schema),
-  });
+  }, schema);
   const { getPrice } = useAlphaVantageAPI();
   const [currentPrice, setCurrentPrice] = useState(null);
   const watched = watch();
   const {
-    sharesGranted,
-    grantProceeds,
-    ssEarnings,
-    stateTaxes,
-    federalTaxes,
-    medicareTaxes,
-    ssTaxes,
-    netProceeds,
-    sharesToCover,
+    sharesGranted = 0,
+    grantProceeds = 0,
+    ssEarnings = 0,
+    stateTaxes = 0,
+    federalTaxes = 0,
+    medicareTaxes = 0,
+    ssTaxes = 0,
+    netProceeds = 0,
+    sharesToCover = 0,
   } = useMemo(() => {
-    const casted = schema.cast(watched);
-    const proceeds = (casted.sharesGranted * currentPrice) || 0;
-    const ssTaxableProceeds = getSSTaxableProceeds(casted.ssEarnings, proceeds);
-    const state = (casted.stateTax / 100) * proceeds || 0;
-    const federal = SUPPLEMENTAL_INCOME_RATE * proceeds || 0;
-    const medicare = MEDICARE_RATE * proceeds || 0;
-    const ss = ssTaxableProceeds * SS_TAX || 0;
-    const totalTaxes = state + federal + medicare + ss;
-    return {
-      ...casted,
-      grantProceeds: proceeds,
-      stateTaxes: state,
-      federalTaxes: federal,
-      medicareTaxes: medicare,
-      ssTaxes: ss,
-      netProceeds: proceeds - totalTaxes,
-      sharesToCover: Math.ceil(totalTaxes / currentPrice),
-    };
+    try {
+      const casted = schema.cast(watched);
+      const proceeds = (casted.sharesGranted * currentPrice) || 0;
+      const ssTaxableProceeds = getSSTaxableProceeds(casted.ssEarnings, proceeds);
+      const state = (casted.stateTax / 100) * proceeds || 0;
+      const federal = SUPPLEMENTAL_INCOME_RATE * proceeds || 0;
+      const medicare = MEDICARE_RATE * proceeds || 0;
+      const ss = ssTaxableProceeds * SS_TAX || 0;
+      const totalTaxes = state + federal + medicare + ss;
+      return {
+        ...casted,
+        grantProceeds: proceeds,
+        stateTaxes: state,
+        federalTaxes: federal,
+        medicareTaxes: medicare,
+        ssTaxes: ss,
+        netProceeds: proceeds - totalTaxes,
+        sharesToCover: Math.ceil(totalTaxes / currentPrice),
+      };
+    } catch (e) {
+      return {};
+    }
   }, [watched, currentPrice]);
   const updatePrice = useCallback(async () => {
-    setCurrentPrice(await getPrice(getValues('symbol')));
-  }, [getValues]);
+    setCurrentPrice(await getPrice(watched.symbol));
+  }, [watched]);
   const stateTaxesApplicable = stateTaxes !== 0 && stateTaxes;
   return (
     <Box as="form" w="100%">
       <FormControl>
         <FormLabel htmlFor="symbol">Ticker symbol</FormLabel>
         <Flex>
-          <Input ref={register} name="symbol" />
+          <Input name="symbol" ref={register} />
           <Button ml="2" onClick={updatePrice}>Get data</Button>
         </Flex>
       </FormControl>
@@ -141,7 +140,7 @@ const EstimatedNetGrant = () => {
           <Text>
             Current price of
             {' '}
-            {getValues('symbol')}
+            {watched.symbol}
             :
             {' '}
           </Text>
@@ -149,30 +148,14 @@ const EstimatedNetGrant = () => {
             {getDollar(currentPrice)}
           </Text>
         </Flex>
-        <FormControl mt="4">
-          <FormLabel htmlFor="sharesGranted">
-            Shares granted
-          </FormLabel>
-          <InputGroup>
-            <Input ref={register} name="sharesGranted" />
-            <InputRightAddon>shares</InputRightAddon>
-          </InputGroup>
-        </FormControl>
+        <RHFInput {...getInputProps('sharesGranted')} label="Shares granted" right="shares" />
         {sharesGranted !== 0 && sharesGranted && (
         <Flex>
           <Text>Gross proceeds: </Text>
           <Text as="strong" ml="2">{getDollar(grantProceeds)}</Text>
         </Flex>
         )}
-        <FormControl mt="4">
-          <FormLabel htmlFor="ssEarnings">
-            YTD earnings subject to Social Security
-          </FormLabel>
-          <InputGroup>
-            <InputLeftAddon>$</InputLeftAddon>
-            <Input ref={register} name="ssEarnings" />
-          </InputGroup>
-        </FormControl>
+        <RHFInput {...getInputProps('ssEarnings')} label="YTD earnings subject to Social Security" left="$" />
         {grantProceeds && ssTaxes === 0
           ? (
             <Text>
@@ -187,15 +170,7 @@ const EstimatedNetGrant = () => {
               <Text as="strong">{getDollar(ssTaxes)}</Text>
             </Text>
           )}
-        <FormControl mt="4">
-          <FormLabel htmlFor="stateTax">
-            Top marginal state tax rate
-          </FormLabel>
-          <InputGroup>
-            <Input ref={register} name="stateTax" />
-            <InputRightAddon>%</InputRightAddon>
-          </InputGroup>
-        </FormControl>
+        <RHFInput {...getInputProps('stateTax')} label="Top marginal state tax rate" right="%" />
         {stateTaxesApplicable && (
         <Flex>
           <Text>Your state tax liability is</Text>
