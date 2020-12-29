@@ -2,17 +2,21 @@ import {
   Heading, Text, Box, Button, Flex,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import useForm from '../hooks/useForm';
 import yup from '../util/yup';
 import RHFInput from './RHFInput';
 import RHFCheckbox from './RHFCheckbox';
 
 // TODO: Adjust for over 55 (add input for swapping)
+const TOTAL_401K_LIMIT_OVER_55 = 64500;
 const TOTAL_401K_LIMIT = 58000;
+const BASE_401K_LIMIT_OVER_55 = 26000;
 const BASE_401K_LIMIT = 19500;
 const TOTAL_401K_LIMIT_IN_DOLLARS = TOTAL_401K_LIMIT.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+const TOTAL_401K_LIMIT_OVER_55_IN_DOLLARS = TOTAL_401K_LIMIT_OVER_55.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 const BASE_401K_LIMIT_IN_DOLLARS = BASE_401K_LIMIT.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+const BASE_401K_LIMIT_OVER_55_IN_DOLLARS = BASE_401K_LIMIT_OVER_55.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 const Intro = (
   <>
     <Heading size="sm">Motivation</Heading>
@@ -24,13 +28,20 @@ const Intro = (
       {BASE_401K_LIMIT_IN_DOLLARS}
       {' '}
       limit, which can be Traditional (Pre-tax) or Roth. This is the limit most people are
-      familiar with.
+      familiar with. If you are over the age of 55, this limit is
+      {' '}
+      {BASE_401K_LIMIT_OVER_55_IN_DOLLARS}
+      .
     </Text>
     <Text>
       &nbsp;&nbsp;However, the total 401k limit is actually
       {' '}
       {TOTAL_401K_LIMIT_IN_DOLLARS}
-      !
+      , or
+      {' '}
+      {TOTAL_401K_LIMIT_OVER_55_IN_DOLLARS}
+      {' '}
+      if over 55!
       The additional difference is made up by your employer match (if you have one!)
       and &quot;after-tax&quot; 401k contributions. After-tax is what we will be
       leveraging to perform megabackdoor Roth conversions. It is a way of unlocking the full limit.
@@ -70,11 +81,16 @@ const Intro = (
   </>
 );
 const afterTaxSpaceSchema = yup.object({
+  over55: yup.bool(),
   flatMatch: yup.bool(),
   flatMatchAmount: yup.number().min(0).label('Flat match amount'),
   salary: yup.number().min(0).label('Salary'),
   matchPercent: yup.number().min(0).label('Match percent'),
-  employeeContributions: yup.number().min(0).max(BASE_401K_LIMIT).label('Employee contributions'),
+  employeeContributions: yup.number().min(0).label('Employee contributions').when('over55', {
+    is: true,
+    then: (schema) => schema.max(BASE_401K_LIMIT_OVER_55),
+    otherwise: (schema) => schema.max(BASE_401K_LIMIT),
+  }),
 });
 const AfterTaxSpaceCalculator = ({ onSubmit }) => {
   const [afterTaxLimit, setAfterTaxLimit] = useState(null);
@@ -84,14 +100,20 @@ const AfterTaxSpaceCalculator = ({ onSubmit }) => {
       matchPercent: 4,
       salary: 100000,
       employeeContributions: BASE_401K_LIMIT,
+      over55: false,
     },
   }, afterTaxSpaceSchema);
   const {
-    flatMatch, employeeContributions, matchPercent, salary, flatMatchAmount,
+    flatMatch, employeeContributions, matchPercent, salary, flatMatchAmount, over55,
   } = watch();
+  const max401k = useMemo(() => (over55 ? TOTAL_401K_LIMIT_OVER_55 : TOTAL_401K_LIMIT), [over55]);
+  const maxEmployee401k = useMemo(
+    () => (over55 ? BASE_401K_LIMIT_OVER_55 : BASE_401K_LIMIT),
+    [over55],
+  );
   const calculatedAfterTaxMax = handleSubmit(() => {
     const match = flatMatch ? flatMatchAmount : (salary * (matchPercent / 100));
-    const limit = TOTAL_401K_LIMIT - match - employeeContributions;
+    const limit = max401k - match - employeeContributions;
     setAfterTaxLimit(limit);
     onSubmit({
       limit,
@@ -101,7 +123,8 @@ const AfterTaxSpaceCalculator = ({ onSubmit }) => {
   return (
     <>
       <Box as="form" pb="4" onSubmit={calculatedAfterTaxMax}>
-        <RHFCheckbox {...getInputProps('flatMatch')} label="Flat match (not percentage based)?" />
+        <RHFCheckbox {...getInputProps('flatMatch')} label="Flat match (not percentage based)" />
+        <RHFCheckbox {...getInputProps('over55')} label="55 or older" />
         {flatMatch
           ? <RHFInput {...getInputProps('flatMatchAmount')} label="Flat match amount" left="$" right="/yr" />
           : (
@@ -110,7 +133,7 @@ const AfterTaxSpaceCalculator = ({ onSubmit }) => {
               <RHFInput {...getInputProps('matchPercent')} label="Match percent" right="%" />
             </Flex>
           )}
-        <RHFInput {...getInputProps('employeeContributions')} label="Employee contributions" left="$" help={employeeContributions < BASE_401K_LIMIT ? 'You should consider maximizing your employee contributions before megabackdoor Roth' : null} />
+        <RHFInput {...getInputProps('employeeContributions')} label="Employee contributions" left="$" help={employeeContributions < maxEmployee401k ? 'You should consider maximizing your employee contributions before megabackdoor Roth' : null} />
         <Button type="submit" mt="4">Submit</Button>
       </Box>
       {afterTaxLimit && (
