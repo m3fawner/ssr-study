@@ -1,15 +1,12 @@
-import Head from 'next/head';
 import PropTypes from 'prop-types';
 import getMarkdown from '../markdown/getMarkdown';
+import Head from '../src/components/Head';
 import MarkdownConverter from '../src/components/MarkdownConverter';
 import MegaBackdoorRoth from '../src/components/MegaBackdoorRoth';
 
 const MegaBackdoorRothPage = ({ intro }) => (
   <>
-    <Head>
-      <title>FIcarious | Megabackdoor Roth</title>
-      <link rel="icon" href="/favicon-32x32.png" />
-    </Head>
+    <Head title="Megabackdoor Roth" description="Learn about the advantages of a megabackdoor Roth, calculate how much more Roth you can get out of your 401k per year, and calculate what your paycheck withholdings should look like to maximize it." url="mega-backdoor-roth" />
     <MarkdownConverter markdown={intro} />
     <MegaBackdoorRoth />
   </>

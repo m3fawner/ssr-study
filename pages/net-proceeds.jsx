@@ -1,13 +1,10 @@
-import Head from 'next/head';
 import AlphaVantageAPIKeyEntry from '../src/components/AlphaVantageAPIKeyEntry';
 import EstimatedNetGrant from '../src/components/EstimatedNetGrant';
+import Head from '../src/components/Head';
 
 const NetProceeds = () => (
   <>
-    <Head>
-      <title>FIcarious | Net RSU grant proceeds</title>
-      <link rel="icon" href="/favicon-32x32.png" />
-    </Head>
+    <Head title="Net RSU grant proceeds" description="A calculator for determining how much your net proceeds should be for an RSU grant. Simply enter your company stock ticker, fill out the subsequent share form, and find out how much to expect after taxes are paid!" url="net-proceeds" />
     <AlphaVantageAPIKeyEntry />
     <EstimatedNetGrant />
   </>

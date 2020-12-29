@@ -1,12 +1,9 @@
-import Head from 'next/head';
 import { Text, Heading } from '@chakra-ui/react';
+import Head from '../src/components/Head';
 
 const Home = () => (
   <>
-    <Head>
-      <title>FIcarious Home</title>
-      <link rel="icon" href="/favicon-32x32.png" />
-    </Head>
+    <Head title="Home" description="Welcome to FIcarious! This is a site dedicated to teaching about financial independence with helpful tools and articles about the subject." url="" />
     <Heading>Welcome to FIcarious!</Heading>
     <Heading as="h4" size="md" mt="4">What is this site?</Heading>
     <Text mt="2">

@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import { Text, Button } from '@chakra-ui/react';
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { context } from '../src/hooks/useGlobalState';
 import AlphaVantageAPIKeyEntry from '../src/components/AlphaVantageAPIKeyEntry';
+import Head from '../src/components/Head';
 import MarkdownConverter from '../src/components/MarkdownConverter';
 import getMarkdown from '../markdown/getMarkdown';
 
@@ -11,10 +11,7 @@ const AlphaVantageInfo = ({ intro }) => {
   const { setAlphaVantageAPIKey } = useContext(context);
   return (
     <>
-      <Head>
-        <title>FICarious | Alpha vantage info</title>
-        <link rel="icon" href="/favicon-32x32.png" />
-      </Head>
+      <Head title="Alpha Vantage info" description="Learn about how FIcarious leverages Alpha Vantage's API and how to access the site's data." url="alpha-vantage-info" />
       <MarkdownConverter markdown={intro} />
       <AlphaVantageAPIKeyEntry />
       <Text my="2">
