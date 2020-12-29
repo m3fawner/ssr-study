@@ -9,6 +9,7 @@ import {
   Text,
   Divider,
   Container,
+  Heading,
 } from '@chakra-ui/react';
 import {
   useCallback, useState, useMemo,
@@ -126,7 +127,8 @@ const EstimatedNetGrant = () => {
   }, [watched]);
   const stateTaxesApplicable = stateTaxes !== 0 && stateTaxes;
   return (
-    <Box as="form" w="100%">
+    <Box as="form" w="100%" pb="4">
+      <Heading size="lg" pt="2">Net RSU grant proceeds calculator</Heading>
       <FormControl>
         <FormLabel htmlFor="symbol">Ticker symbol</FormLabel>
         <Flex>

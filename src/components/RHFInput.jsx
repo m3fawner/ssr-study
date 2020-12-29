@@ -1,15 +1,22 @@
 import {
-  FormControl, FormLabel, FormErrorMessage, InputGroup, InputRightAddon, InputLeftAddon, Input,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+  FormErrorMessage,
+  InputGroup,
+  InputRightAddon,
+  InputLeftAddon,
+  Input,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 
 const RHFInput = ({
-  register, name, left, right, label, errors,
+  register, name, left, right, label, errors, help, ...props
 }) => {
   const error = get(errors, name);
   return (
-    <FormControl mt="4" isInvalid={!!error}>
+    <FormControl mt="4" isInvalid={!!error} {...props}>
       <FormLabel htmlFor={name}>
         {label}
       </FormLabel>
@@ -18,6 +25,7 @@ const RHFInput = ({
         <Input ref={register} name={name} />
         {right && <InputRightAddon>{right}</InputRightAddon>}
       </InputGroup>
+      {help && <FormHelperText>{help}</FormHelperText>}
       <FormErrorMessage>{error?.message}</FormErrorMessage>
     </FormControl>
   );
@@ -29,10 +37,12 @@ RHFInput.propTypes = {
   right: PropTypes.node,
   label: PropTypes.node.isRequired,
   errors: PropTypes.shape().isRequired,
+  help: PropTypes.string,
 };
 RHFInput.defaultProps = {
   left: null,
   right: null,
+  help: null,
 };
 
 export default RHFInput;
