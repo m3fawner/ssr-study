@@ -1,13 +1,12 @@
 import {
-  Text, Box, Button, Flex, Table, Thead, Tbody, Tr, Th, Td,
+  Text, Flex, Table, Thead, Tbody, Tr, Th, Td,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import { useCallback, useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import useForm from '../hooks/useForm';
 import yup from '../util/yup';
 import { getDollar } from '../util/formatters';
 import RHFInput from './RHFInput';
-import RHFCheckbox from './RHFCheckbox';
 
 const PERCENTAGE_INTERVAL = 5;
 const RANGE = 50;
@@ -59,8 +58,8 @@ const RSUvOptions = ({ initialSharePrice }) => {
     }),
   [sharePrice, optionRatio, grantPrice, grantAmount]);
   const breakEvenPrice = useMemo(
-    () => rows.find(({ rsuValue, optionValue }) => optionValue > rsuValue)?.rowPrice,
-    [rows],
+    () => (1 + (1 / (optionRatio - 1))) * grantPrice,
+    [grantPrice, optionRatio],
   );
   return (
     <form onSubmit={handleSubmit(() => {})}>
@@ -121,6 +120,6 @@ RSUvOptions.propTypes = {
   initialSharePrice: PropTypes.number,
 };
 RSUvOptions.defaultProps = {
-  initialSharePrice: 0,
+  initialSharePrice: 135,
 };
 export default RSUvOptions;
