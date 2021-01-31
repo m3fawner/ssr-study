@@ -11,8 +11,8 @@ const useForm = (formArgs, schema) => {
     ...rest,
     register,
     errors,
-    getInputProps: (name) => ({
-      register,
+    getInputProps: (name, registerArgs) => ({
+      register: registerArgs ? register(registerArgs) : register,
       name,
       id: name,
       errors,

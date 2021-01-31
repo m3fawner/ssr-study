@@ -23,3 +23,9 @@
 <br/>
 
 &nbsp;&nbsp;Additionally, options can expire, and options must be exercised within trading windows. This means converting an option into a share is only available during the available trading windows, and if you leave the company you are forced to either not execute the options or execute them in the quarter following your departure if you want to convert them to a share and realize any value. On the other hand, if there is an incentive to take options and the intent is to stay a long time at the company, those options have a very high likelihood of being worth more than RSUs if the company has even average returns.
+
+<br/>
+
+#### Tax considerations
+
+&nbsp;&nbsp;Another important consideration is taxation. RSUs are taxed immediately upon vesting, regardless of whether you choose to sell or not, whereas options allow for taxes to be deferred until they are exercised. Options are taxed as income for the difference between the **exercise price** and the **strike price**. At the time of exercise, the cost basis will be set to the exercise price. From there, capital gains taxes are applied (i.e. short & long term considerations).
