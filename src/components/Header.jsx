@@ -17,6 +17,7 @@ import MenuIcon from '../svgs/menu.svg';
 const ROUTES = {
   '/': 'Home',
   '/net-proceeds': 'Net Proceeds',
+  '/rsu-vs-options': 'RSU vs Options',
   '/mega-backdoor-roth': 'Megabackdoor Roth',
   '/alpha-vantage-info': 'Alpha Vantage Info',
 };
