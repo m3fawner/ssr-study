@@ -19,7 +19,6 @@ const ROUTES = {
   '/net-proceeds': 'Net Proceeds',
   '/rsu-vs-options': 'RSU vs Options',
   '/mega-backdoor-roth': 'Megabackdoor Roth',
-  '/alpha-vantage-info': 'Alpha Vantage Info',
 };
 const PageMenu = ({ isOpen, onClose }) => (
   <Drawer

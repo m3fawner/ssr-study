@@ -1,14 +1,10 @@
-import { useContext, useMemo } from 'react';
-import { context } from './useGlobalState';
+import { useMemo } from 'react';
 
-const useAlphaVantageAPI = () => {
-  const { alphaVantageAPIKey } = useContext(context) ?? {};
-  return useMemo(() => ({
-    getPrice: async (symbol) => {
-      const response = await fetch(`api/alphaVantage/${symbol}?apiKey=${alphaVantageAPIKey}`);
-      const { data: { price } } = await response.json();
-      return parseFloat(price);
-    },
-  }), [alphaVantageAPIKey]);
-};
+const useAlphaVantageAPI = () => useMemo(() => ({
+  getPrice: async (symbol) => {
+    const response = await fetch(`api/alphaVantage/${symbol}`);
+    const { data: { price } } = await response.json();
+    return parseFloat(price);
+  },
+}), []);
 export default useAlphaVantageAPI;
