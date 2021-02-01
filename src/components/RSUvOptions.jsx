@@ -24,6 +24,7 @@ const getColorForValue = (value, compareTo) => {
   return 'red.400';
 };
 const hiddenOnMobileCell = ['none',,, 'table-cell'];
+const fullOnMobile = ['100%',, '50%'];
 const RSUvOptions = ({ initialSharePrice }) => {
   const { getInputProps, watch, handleSubmit } = useForm({
     defaultValues: {
@@ -66,12 +67,12 @@ const RSUvOptions = ({ initialSharePrice }) => {
   return (
     <form onSubmit={handleSubmit(() => {})}>
       <Flex flexWrap="wrap">
-        <RHFInput mr="2" left="$" {...getInputProps('sharePrice', { valueAsNumber: true })} label="Share price" />
-        <RHFInput left="$" {...getInputProps('grantPrice', { valueAsNumber: true })} label="Grant (strike) price" />
+        <RHFInput flexBasis={fullOnMobile} pr="2" left="$" {...getInputProps('sharePrice', { valueAsNumber: true })} label="Share price" />
+        <RHFInput flexBasis={fullOnMobile} left="$" {...getInputProps('grantPrice', { valueAsNumber: true })} label="Grant (strike) price" />
       </Flex>
       <Flex flexWrap="wrap">
-        <RHFInput mr="2" right="per RSU" {...getInputProps('optionRatio', { valueAsNumber: true })} label="Options per RSU" />
-        <RHFInput right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
+        <RHFInput flexBasis={fullOnMobile} pr="2" right="per RSU" {...getInputProps('optionRatio', { valueAsNumber: true })} label="Options per RSU" />
+        <RHFInput flexBasis={fullOnMobile} right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
       </Flex>
       {breakEvenPrice && (
         <>
