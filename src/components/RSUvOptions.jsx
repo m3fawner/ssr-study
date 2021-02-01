@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import { useMemo } from 'react';
 import useForm from '../hooks/useForm';
 import yup from '../util/yup';
-import { getDollar } from '../util/formatters';
+import { timeToFutureValue } from '../util/futureValue';
+import { getDollar, getFloatToPrecision } from '../util/formatters';
 import RHFInput from './RHFInput';
 
 const PERCENTAGE_INTERVAL = 5;
@@ -72,12 +73,21 @@ const RSUvOptions = ({ initialSharePrice }) => {
         <RHFInput right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
       </Flex>
       {breakEvenPrice && (
-      <Text as="span">
-        The current breakeven price is
-        {' '}
-        <Text as="strong">{getDollar(breakEvenPrice)}</Text>
-        , meaning the share price must exceed that amount for options to be worth more than RSUs.
-      </Text>
+        <>
+          <Text as="span">
+            The current breakeven price is
+            {' '}
+            <Text as="strong">{getDollar(breakEvenPrice)}</Text>
+            , meaning the share price must exceed that amount for options to be worth more than RSUs.
+          </Text>
+          <Text>
+            Using a standard 10% rate of return, it would take
+            {' '}
+            <Text as="strong">{getFloatToPrecision(timeToFutureValue(breakEvenPrice, sharePrice, 0.1), 2)}</Text>
+            {' '}
+            years to reach that point.
+          </Text>
+        </>
       )}
       {!!grantPrice && !!sharePrice && !!optionRatio && (
         <Table mt="5">
