@@ -1,5 +1,5 @@
 import {
-  Text, Flex, Table, Thead, Tbody, Tr, Th, Td, useToken, useBreakpointValue,
+  Text, Flex, Table, Thead, Tbody, Tr, Th, Td, useToken, useBreakpointValue, Box,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useMemo, useState } from 'react';
@@ -63,8 +63,10 @@ const getColorForValue = (value, compareTo) => {
   }
   return 'red.400';
 };
-const ComparisonTableView = ({ dataRows, sharePrice, grantAmount }) => (
-  <Table mt="5">
+const ComparisonTableView = ({
+  dataRows, sharePrice, grantAmount, ...props
+}) => (
+  <Table {...props}>
     <Thead>
       <Tr>
         <Th>Share price</Th>
@@ -111,7 +113,8 @@ const rsuVOptionsSchema = yup.object({
   optionRatio: yup.number().min(1).required().label('Option ratio'),
   grantAmount: yup.number().min(1).required().label('Grant amount'),
 });
-const fullOnMobile = ['100%',, '50%'];
+const chartFlex = ['column',,, 'row'];
+const fullOnMobile = ['100%', , '50%', '100%'];
 const toTwoDecimalFloat = (value) => parseFloat(getFloatToPrecision(value, 2));
 const RSUvOptions = ({ initialSharePrice }) => {
   const { getInputProps, watch } = useForm({
@@ -155,13 +158,14 @@ const RSUvOptions = ({ initialSharePrice }) => {
   );
   return (
     <>
-      <Flex flexWrap="wrap">
-        <RHFInput flexBasis={fullOnMobile} pr="2" left="$" {...getInputProps('sharePrice', { valueAsNumber: true })} label="Share price" />
-        <RHFInput flexBasis={fullOnMobile} left="$" {...getInputProps('grantPrice', { valueAsNumber: true })} label="Grant (strike) price" />
-      </Flex>
-      <Flex flexWrap="wrap">
-        <RHFInput flexBasis={fullOnMobile} pr="2" right="per RSU" {...getInputProps('optionRatio', { valueAsNumber: true })} label="Options per RSU" />
-        <RHFInput flexBasis={fullOnMobile} right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
+      <Flex flexDir={chartFlex}>
+        <Flex flexWrap="wrap" pr="5">
+          <RHFInput flexBasis={fullOnMobile} pr="2" left="$" {...getInputProps('sharePrice', { valueAsNumber: true })} label="Share price" />
+          <RHFInput flexBasis={fullOnMobile} left="$" {...getInputProps('grantPrice', { valueAsNumber: true })} label="Grant (strike) price" />
+          <RHFInput flexBasis={fullOnMobile} pr="2" right="per RSU" {...getInputProps('optionRatio', { valueAsNumber: true })} label="Options per RSU" />
+          <RHFInput flexBasis={fullOnMobile} right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
+        </Flex>
+        <ComparisonChart dataRows={dataRows} />
       </Flex>
       {breakEvenPrice && (
         <>
@@ -180,12 +184,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
           </Text>
         </>
       )}
-      {!!grantPrice && !!sharePrice && !!optionRatio && (
-        <>
-          <ComparisonChart dataRows={dataRows} />
-          <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} grantAmount={grantAmount} />
-        </>
-      )}
+      <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} grantAmount={grantAmount} />
     </>
   );
 };

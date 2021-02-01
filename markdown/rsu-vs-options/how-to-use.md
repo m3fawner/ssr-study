@@ -1,6 +1,6 @@
 #### How to use this tool
 
-&nbsp;&nbsp;This is a rather over-simplified comparison of RSUs vs options in the event of an employer having an exchange of RSUs for options. In the default, it is set to 5 options per RSU, for instance. This has an impact on when the "breakeven" point is, in which the share price going over that point makes options a more lucrative option than RSUs.
+This is a rather over-simplified comparison of RSUs vs options in the event of an employer having an exchange of RSUs for options. In the default, it is set to 5 options per RSU, for instance. This has an impact on when the "breakeven" point is, in which the share price going over that point makes options a more lucrative option than RSUs.
 
 <br/>
 
