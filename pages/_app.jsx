@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box, Flex } from '@chakra-ui/react';
+import 'react-vis/dist/style.css';
 import ThemeProvider from '../src/components/ThemeProvider';
 import Header from '../src/components/Header';
 
