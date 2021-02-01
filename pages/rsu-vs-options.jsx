@@ -5,22 +5,25 @@ import MarkdownConverter from '../src/components/MarkdownConverter';
 import Head from '../src/components/Head';
 import { getDataFromSymbol } from './api/alphaVantage/[symbol]';
 
-const RSUvsOptionsPage = ({ intro, initialSharePrice }) => (
+const RSUvsOptionsPage = ({ intro, extraInfo, initialSharePrice }) => (
   <>
     <Head title="RSUs vs Options" description="A calculator to help determine if you should take options, RSUs, or both" url="rsu-vs-options" />
-    <MarkdownConverter markdown={intro} />
+    <MarkdownConverter pt="5" markdown={intro} />
     <RSUvOptions initialSharePrice={initialSharePrice} />
+    <MarkdownConverter pt="5" markdown={extraInfo} />
   </>
 );
 RSUvsOptionsPage.propTypes = {
   intro: PropTypes.string.isRequired,
   initialSharePrice: PropTypes.number.isRequired,
+  extraInfo: PropTypes.string.isRequired,
 };
 
 export const getStaticProps = async () => ({
   props: {
     initialSharePrice: parseFloat((await getDataFromSymbol('Z')).data.price),
-    intro: await getMarkdown('rsu-vs-options'),
+    intro: await getMarkdown('rsu-vs-options/how-to-use'),
+    extraInfo: await getMarkdown('rsu-vs-options/extra-info'),
   },
 });
 export default RSUvsOptionsPage;

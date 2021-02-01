@@ -113,7 +113,7 @@ const rsuVOptionsSchema = yup.object({
 const fullOnMobile = ['100%',, '50%'];
 const toTwoDecimalFloat = (value) => parseFloat(getFloatToPrecision(value, 2));
 const RSUvOptions = ({ initialSharePrice }) => {
-  const { getInputProps, watch, handleSubmit } = useForm({
+  const { getInputProps, watch } = useForm({
     defaultValues: {
       sharePrice: initialSharePrice,
       grantPrice: initialSharePrice,
@@ -154,7 +154,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
     [grantPrice, optionRatio],
   );
   return (
-    <form onSubmit={handleSubmit(() => {})}>
+    <>
       <Flex flexWrap="wrap">
         <RHFInput flexBasis={fullOnMobile} pr="2" left="$" {...getInputProps('sharePrice', { valueAsNumber: true })} label="Share price" />
         <RHFInput flexBasis={fullOnMobile} left="$" {...getInputProps('grantPrice', { valueAsNumber: true })} label="Grant (strike) price" />
@@ -186,7 +186,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
           <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} />
         </>
       )}
-    </form>
+    </>
   );
 };
 RSUvOptions.propTypes = {

@@ -1,5 +1,5 @@
 import {
-  Heading, Link, OrderedList, UnorderedList, ListItem, Text, Table, Tbody, Tr, Th, Td, Thead, Code,
+  Heading, Link, OrderedList, UnorderedList, ListItem, Text, Table, Tbody, Tr, Th, Td, Thead, Code, Box,
 } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
@@ -41,11 +41,13 @@ const renderers = {
   text: ({ value }) => <Text as="span">{value}</Text>,
 };
 /* eslint-enable react/prop-types */
-const MarkdownConverter = ({ markdown }) => (markdown
+const MarkdownConverter = ({ markdown, ...props }) => (markdown
   ? (
-    <ReactMarkdown renderers={renderers} plugins={[gfm]} allowDangerousHtml>
-      {markdown}
-    </ReactMarkdown>
+    <Box {...props}>
+      <ReactMarkdown renderers={renderers} plugins={[gfm]} allowDangerousHtml>
+        {markdown}
+      </ReactMarkdown>
+    </Box>
   ) : null);
 MarkdownConverter.propTypes = {
   markdown: PropTypes.string.isRequired,

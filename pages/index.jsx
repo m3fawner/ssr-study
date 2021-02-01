@@ -6,7 +6,7 @@ import MarkdownConverter from '../src/components/MarkdownConverter';
 const Home = ({ content }) => (
   <>
     <Head title="Home" description="Welcome to FIcarious! This is a site dedicated to teaching about financial independence with helpful tools and articles about the subject." url="" />
-    <MarkdownConverter markdown={content} />
+    <MarkdownConverter py="5" markdown={content} />
   </>
 );
 Home.propTypes = {
