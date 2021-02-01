@@ -105,8 +105,10 @@ ComparisonTableView.propTypes = {
 const PERCENTAGE_INTERVAL = 5;
 const RANGE = 50;
 const rsuVOptionsSchema = yup.object({
-  sharePrice: yup.number().min(0).required(),
-  optionsPerRSU: yup.number().min(1).required(),
+  sharePrice: yup.number().min(0).required().label('Share price'),
+  grantPrice: yup.number().min(0).required().label('Grant price'),
+  optionRatio: yup.number().min(1).required().label('Option ratio'),
+  grantAmount: yup.number().min(1).required().label('Grant amount'),
 });
 const fullOnMobile = ['100%',, '50%'];
 const toTwoDecimalFloat = (value) => parseFloat(getFloatToPrecision(value, 2));
