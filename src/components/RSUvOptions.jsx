@@ -1,5 +1,5 @@
 import {
-  Text, Flex, Table, Thead, Tbody, Tr, Th, Td, useToken, useBreakpointValue, Box,
+  Text, Flex, Table, Thead, Tbody, Tr, Th, Td, useToken, useBreakpointValue,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useMemo, useState } from 'react';
@@ -79,7 +79,7 @@ const ComparisonTableView = ({
       {dataRows.map(({
         rowPrice, optionValue, rsuValue, difference,
       }) => (
-        <Tr key={`${rowPrice} - ${optionValue}`}>
+        <Tr key={rowPrice}>
           <Td><Text as={rowPrice === sharePrice ? 'strong' : 'span'}>{getDollar(rowPrice)}</Text></Td>
           <Td color={getColorForValue(rsuValue, optionValue)}>{getDollar(rsuValue * grantAmount)}</Td>
           <Td color={getColorForValue(optionValue, rsuValue)}>{getDollar(optionValue * grantAmount)}</Td>
@@ -184,7 +184,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
           </Text>
         </>
       )}
-      <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} grantAmount={grantAmount} />
+      <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} grantAmount={grantAmount} key={[sharePrice, optionRatio, grantPrice, grantAmount].join('')} />
     </>
   );
 };
