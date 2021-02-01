@@ -30,7 +30,7 @@ const PageMenu = ({ isOpen, onClose }) => (
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>Menu</DrawerHeader>
-        <DrawerBody>
+        <DrawerBody as="nav">
           {Object.entries(ROUTES).map(([href, label]) => (
             <Box key={href} onClick={onClose}>
               <NextLink href={href} passHref>
@@ -51,7 +51,7 @@ PageMenu.propTypes = {
 const Header = () => {
   const { onOpen, isOpen, onClose } = useDisclosure();
   return (
-    <Box p="4" bg="brand.200">
+    <Box p="4" bg="brand.200" as="header">
       <Icon as={MenuIcon} onClick={onOpen} fill="brand.900" _hover={{ cursor: 'pointer' }} />
       <PageMenu isOpen={isOpen} onClose={onClose} />
     </Box>
