@@ -63,7 +63,7 @@ const getColorForValue = (value, compareTo) => {
   }
   return 'red.400';
 };
-const ComparisonTableView = ({ dataRows, sharePrice }) => (
+const ComparisonTableView = ({ dataRows, sharePrice, grantAmount }) => (
   <Table mt="5">
     <Thead>
       <Tr>
@@ -79,8 +79,8 @@ const ComparisonTableView = ({ dataRows, sharePrice }) => (
       }) => (
         <Tr key={`${rowPrice} - ${optionValue}`}>
           <Td><Text as={rowPrice === sharePrice ? 'strong' : 'span'}>{getDollar(rowPrice)}</Text></Td>
-          <Td color={getColorForValue(rsuValue, optionValue)}>{getDollar(rsuValue)}</Td>
-          <Td color={getColorForValue(optionValue, rsuValue)}>{getDollar(optionValue)}</Td>
+          <Td color={getColorForValue(rsuValue, optionValue)}>{getDollar(rsuValue * grantAmount)}</Td>
+          <Td color={getColorForValue(optionValue, rsuValue)}>{getDollar(optionValue * grantAmount)}</Td>
           <Td d={hiddenOnMobileCell}>
             {getDollar(difference)}
             {difference !== 0 && (
@@ -100,6 +100,7 @@ const ComparisonTableView = ({ dataRows, sharePrice }) => (
 ComparisonTableView.propTypes = {
   dataRows: dataRowsPropTypes.isRequired,
   sharePrice: PropTypes.number.isRequired,
+  grantAmount: PropTypes.number.isRequired,
 };
 
 const PERCENTAGE_INTERVAL = 5;
@@ -134,11 +135,10 @@ const RSUvOptions = ({ initialSharePrice }) => {
     ], [])
     .filter(Boolean)
     .map((rowPrice) => {
-      const rsuValue = toTwoDecimalFloat(rowPrice * grantAmount);
+      const rsuValue = toTwoDecimalFloat(rowPrice);
       const optionValue = toTwoDecimalFloat(
         optionRatio
-        * (Math.max(grantPrice, rowPrice) - grantPrice)
-        * grantAmount,
+        * (Math.max(grantPrice, rowPrice) - grantPrice),
       );
       const difference = Math.max(rsuValue, optionValue) - Math.min(rsuValue, optionValue);
       return ({
@@ -183,7 +183,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
       {!!grantPrice && !!sharePrice && !!optionRatio && (
         <>
           <ComparisonChart dataRows={dataRows} />
-          <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} />
+          <ComparisonTableView dataRows={dataRows} sharePrice={sharePrice} grantAmount={grantAmount} />
         </>
       )}
     </>
