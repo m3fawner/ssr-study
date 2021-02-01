@@ -7,7 +7,7 @@ const App = ({ Component, pageProps }) => (
   <ThemeProvider>
     <Header />
     <Flex bg="gray.100" justify="center">
-      <Box flexBasis={['100%', null, null, '80em']} minH="100vh">
+      <Box flexBasis={['100%', null, null, '80em']} minH="100vh" maxW="100%">
         <Box bg="white" px="4">
           <Component {...pageProps} />
         </Box>

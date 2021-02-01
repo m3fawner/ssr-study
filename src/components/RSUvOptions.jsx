@@ -23,6 +23,7 @@ const getColorForValue = (value, compareTo) => {
   }
   return 'red.400';
 };
+const hiddenOnMobileCell = ['none',,, 'table-cell'];
 const RSUvOptions = ({ initialSharePrice }) => {
   const { getInputProps, watch, handleSubmit } = useForm({
     defaultValues: {
@@ -64,17 +65,17 @@ const RSUvOptions = ({ initialSharePrice }) => {
   );
   return (
     <form onSubmit={handleSubmit(() => {})}>
-      <Flex>
+      <Flex flexWrap="wrap">
         <RHFInput mr="2" left="$" {...getInputProps('sharePrice', { valueAsNumber: true })} label="Share price" />
         <RHFInput left="$" {...getInputProps('grantPrice', { valueAsNumber: true })} label="Grant (strike) price" />
       </Flex>
-      <Flex>
+      <Flex flexWrap="wrap">
         <RHFInput mr="2" right="per RSU" {...getInputProps('optionRatio', { valueAsNumber: true })} label="Options per RSU" />
         <RHFInput right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
       </Flex>
       {breakEvenPrice && (
         <>
-          <Text as="span">
+          <Text d="inline-block" mt="2">
             The current breakeven price is
             {' '}
             <Text as="strong">{getDollar(breakEvenPrice)}</Text>
@@ -96,7 +97,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
               <Th>Share price</Th>
               <Th>RSU value</Th>
               <Th>Options value</Th>
-              <Th>Difference</Th>
+              <Th d={hiddenOnMobileCell}>Difference</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -107,7 +108,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
                 <Td><Text as={rowPrice === sharePrice ? 'strong' : 'span'}>{getDollar(rowPrice)}</Text></Td>
                 <Td color={getColorForValue(rsuValue, optionValue)}>{getDollar(rsuValue)}</Td>
                 <Td color={getColorForValue(optionValue, rsuValue)}>{getDollar(optionValue)}</Td>
-                <Td>
+                <Td d={hiddenOnMobileCell}>
                   {getDollar(difference)}
                   {difference !== 0 && (
                     <Text as="span">

@@ -7,7 +7,7 @@ import { getDataFromSymbol } from './api/alphaVantage/[symbol]';
 
 const RSUvsOptionsPage = ({ intro, initialSharePrice }) => (
   <>
-    <Head title="RSUvOptions" description="A calculator to help determine if you should take options, RSUs, or both" url="rsu-vs-options" />
+    <Head title="RSUs vs Options" description="A calculator to help determine if you should take options, RSUs, or both" url="rsu-vs-options" />
     <MarkdownConverter markdown={intro} />
     <RSUvOptions initialSharePrice={initialSharePrice} />
   </>
