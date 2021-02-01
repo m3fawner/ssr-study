@@ -29,3 +29,17 @@
 #### Tax considerations
 
 &nbsp;&nbsp;Another important consideration is taxation. RSUs are taxed immediately upon vesting, regardless of whether you choose to sell or not, whereas options allow for taxes to be deferred until they are exercised. Options are taxed as income for the difference between the **exercise price** and the **strike price**. At the time of exercise, the cost basis will be set to the exercise price. From there, capital gains taxes are applied (i.e. short & long term considerations).
+
+<br/>
+
+#### How to use this tool
+
+&nbsp;&nbsp;This is a rather over-simplified comparison of RSUs vs options in the event of an employer having an exchange of RSUs for options. In the default, it is set to 5 options per RSU, for instance. This has an impact on when the "breakeven" point is, in which the share price going over that point makes options a more lucrative option than RSUs.
+
+<br/>
+
+What it does not account for is the difference in tax treatment between RSUs and options. It is meant purely to visualize the potential value of an RSU or options at a particular price point relative to the grant price.
+
+<br/>
+
+It is to paint a reminder that options are potentially risky (potential zero value) while also providing benefit during an upswing in share price, based on the ratio of options to RSUs available to you.
