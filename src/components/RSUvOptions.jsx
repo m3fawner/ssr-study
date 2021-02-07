@@ -40,7 +40,7 @@ const ComparisonChart = ({ dataRows }) => {
           data={rsusLine}
         />
       </XYPlot>
-      <DiscreteColorLegend items={[{ title: 'Options value', color: optionsLineColor }, { title: 'RSUs value', color: rsusLineColor }]} orientation="horizontal" width={200} height={45} />
+      <DiscreteColorLegend style={{ overflowY: 'hidden' }} items={[{ title: 'Options value', color: optionsLineColor }, { title: 'RSUs value', color: rsusLineColor }]} orientation="horizontal" width={200} height={45} />
     </Flex>
   );
 };

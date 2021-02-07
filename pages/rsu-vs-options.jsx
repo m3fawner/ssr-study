@@ -18,7 +18,6 @@ RSUvsOptionsPage.propTypes = {
   initialSharePrice: PropTypes.number.isRequired,
   extraInfo: PropTypes.string.isRequired,
 };
-
 export const getStaticProps = async () => ({
   props: {
     initialSharePrice: parseFloat((await getDataFromSymbol('Z')).data.price),
