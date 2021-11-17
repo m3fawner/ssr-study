@@ -121,7 +121,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
     defaultValues: {
       sharePrice: initialSharePrice,
       grantPrice: initialSharePrice,
-      optionRatio: 5,
+      optionRatio: 3,
       grantAmount: 1,
     },
   }, rsuVOptionsSchema);
