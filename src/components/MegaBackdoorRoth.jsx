@@ -9,11 +9,10 @@ import { getDollar } from '../util/formatters';
 import RHFInput from './RHFInput';
 import RHFCheckbox from './RHFCheckbox';
 
-// TODO: Adjust for over 55 (add input for swapping)
-const TOTAL_401K_LIMIT_OVER_55 = 64500;
-const TOTAL_401K_LIMIT = 58000;
-const BASE_401K_LIMIT_OVER_55 = 26000;
-const BASE_401K_LIMIT = 19500;
+const TOTAL_401K_LIMIT_OVER_55 = 67500;
+const TOTAL_401K_LIMIT = 61000;
+const BASE_401K_LIMIT_OVER_55 = 27000;
+const BASE_401K_LIMIT = 20500;
 const afterTaxSpaceSchema = yup.object({
   over55: yup.bool(),
   flatMatch: yup.bool(),
@@ -88,7 +87,7 @@ AfterTaxSpaceCalculator.propTypes = {
 };
 const PerPaycheck = ({ limit, employeeContributions }) => {
   const { getInputProps, watch } = useForm({
-    defaultValues: { noOfPaychecks: 26, traditional: true },
+    defaultValues: { noOfPaychecks: 24, traditional: true },
   });
   const { noOfPaychecks, traditional } = watch();
   const getPaycheckForAmount = useCallback(
