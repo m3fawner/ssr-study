@@ -131,7 +131,7 @@ const EstimatedNetGrant = () => {
       <FormControl>
         <FormLabel htmlFor="symbol">Ticker symbol</FormLabel>
         <Flex>
-          <Input name="symbol" ref={register} />
+          <Input {...register('symbol')} />
           <Button ml="2" onClick={updatePrice}>Get data</Button>
         </Flex>
       </FormControl>

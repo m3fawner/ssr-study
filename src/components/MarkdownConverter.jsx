@@ -4,7 +4,6 @@ import {
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import gfm from 'remark-gfm';
-import { createElement } from 'react';
 
 const HEADING_LEVELS = [
   '4xl',
@@ -21,30 +20,32 @@ const HEADING_LEVELS = [
   as: `h${level}`,
 }));
 /* eslint-disable react/prop-types */
-const renderers = {
+const HEADING_COMPONENTS = new Array(6).fill(null).map((_, i) => `h${i + 1}`).reduce((acc, ele) => ({
+  ...acc,
+  [ele]: ({ level, children }) => <Heading {...HEADING_LEVELS[level]}>{children}</Heading>,
+}), {});
+const components = {
   code: ({ value }) => <Code>{value}</Code>,
   em: ({ value }) => <Text as="em">{value}</Text>,
-  heading: ({ level, children }) => <Heading {...HEADING_LEVELS[level]}>{children}</Heading>,
+  ...HEADING_COMPONENTS,
   link: ({ children, ...props }) => <Link color="brand.600" {...props}>{children}</Link>,
-  linkReference: ({ children, ...props }) => <Link color="brand.600" {...props}>{children}</Link>,
-  list: ({ ordered, children }) => createElement(
-    ordered ? OrderedList : UnorderedList,
-    { children },
-  ),
-  listItem: ({ children }) => <ListItem>{children}</ListItem>,
+  ol: OrderedList,
+  ul: UnorderedList,
+  li: ({ children }) => <ListItem>{children}</ListItem>,
   p: Text,
   table: ({ children }) => <Table variant="simple">{children}</Table>,
-  tableBody: ({ children }) => <Tbody>{children}</Tbody>,
-  tableCell: ({ isHeader, children }) => createElement(isHeader ? Th : Td, { children }),
-  tableHead: ({ children }) => <Thead>{children}</Thead>,
-  tableRow: ({ children }) => <Tr>{children}</Tr>,
-  text: ({ value }) => <Text as="span">{value}</Text>,
+  tbody: ({ children }) => <Tbody>{children}</Tbody>,
+  td: Td,
+  th: Th,
+  thead: ({ children }) => <Thead>{children}</Thead>,
+  tr: ({ children }) => <Tr>{children}</Tr>,
+  text: ({ children }) => <Text dangerouslySetInnerHTML={{ __html: children }} />,
 };
 /* eslint-enable react/prop-types */
 const MarkdownConverter = ({ markdown, ...props }) => (markdown
   ? (
     <Box {...props}>
-      <ReactMarkdown renderers={renderers} plugins={[gfm]} allowDangerousHtml>
+      <ReactMarkdown components={components} plugins={[gfm]} allowDangerousHtml>
         {markdown}
       </ReactMarkdown>
     </Box>

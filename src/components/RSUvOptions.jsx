@@ -128,30 +128,32 @@ const RSUvOptions = ({ initialSharePrice }) => {
   const {
     sharePrice, optionRatio, grantPrice, grantAmount,
   } = watch();
-  const dataRows = useMemo(() => new Array(RANGE / PERCENTAGE_INTERVAL)
-    .fill(null, 0, RANGE / PERCENTAGE_INTERVAL)
-    .reduce((result, _, i) => [
+  const dataRows = useMemo(
+    () => new Array(RANGE / PERCENTAGE_INTERVAL)
+      .fill(null, 0, RANGE / PERCENTAGE_INTERVAL)
+      .reduce((result, _, i) => [
       // exclude one of the midpoints
-      (i !== 0 && (1 - (i * (PERCENTAGE_INTERVAL / 100))) * sharePrice),
-      ...result,
-      (1 + (i * (PERCENTAGE_INTERVAL / 100))) * sharePrice,
-    ], [])
-    .filter(Boolean)
-    .map((rowPrice) => {
-      const rsuValue = toTwoDecimalFloat(rowPrice);
-      const optionValue = toTwoDecimalFloat(
-        optionRatio
+        (i !== 0 && (1 - (i * (PERCENTAGE_INTERVAL / 100))) * sharePrice),
+        ...result,
+        (1 + (i * (PERCENTAGE_INTERVAL / 100))) * sharePrice,
+      ], [])
+      .filter(Boolean)
+      .map((rowPrice) => {
+        const rsuValue = toTwoDecimalFloat(rowPrice);
+        const optionValue = toTwoDecimalFloat(
+          optionRatio
         * (Math.max(grantPrice, rowPrice) - grantPrice),
-      );
-      const difference = Math.max(rsuValue, optionValue) - Math.min(rsuValue, optionValue);
-      return ({
-        rowPrice: toTwoDecimalFloat(rowPrice),
-        rsuValue,
-        optionValue,
-        difference,
-      });
-    }),
-  [sharePrice, optionRatio, grantPrice, grantAmount]);
+        );
+        const difference = Math.max(rsuValue, optionValue) - Math.min(rsuValue, optionValue);
+        return ({
+          rowPrice: toTwoDecimalFloat(rowPrice),
+          rsuValue,
+          optionValue,
+          difference,
+        });
+      }),
+    [sharePrice, optionRatio, grantPrice, grantAmount],
+  );
   const breakEvenPrice = useMemo(
     () => (1 + (1 / (optionRatio - 1))) * grantPrice,
     [grantPrice, optionRatio],

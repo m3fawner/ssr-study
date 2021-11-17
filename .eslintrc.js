@@ -23,5 +23,9 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'max-len': 'off',
     'no-sparse-arrays': 'off',
+    'react/function-component-definition': ['error', {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function',
+    }],
   },
 };

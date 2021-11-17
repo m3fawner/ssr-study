@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import {
   FormControl,
   FormLabel,
@@ -11,9 +12,9 @@ import {
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 
-const RHFInput = ({
-  register, name, left, right, label, errors, help, ...props
-}) => {
+const RHFInput = forwardRef(({
+  name, onChange, onBlur, left, right, label, errors, help, ...props
+}, ref) => {
   const error = get(errors, name);
   return (
     <FormControl mt="4" isInvalid={!!error} {...props}>
@@ -22,16 +23,18 @@ const RHFInput = ({
       </FormLabel>
       <InputGroup>
         {left && <InputLeftAddon>{left}</InputLeftAddon>}
-        <Input ref={register} name={name} />
+        <Input ref={ref} onChange={onChange} onBlur={onBlur} name={name} />
         {right && <InputRightAddon>{right}</InputRightAddon>}
       </InputGroup>
       {help && <FormHelperText>{help}</FormHelperText>}
       <FormErrorMessage>{error?.message}</FormErrorMessage>
     </FormControl>
   );
-};
+});
 RHFInput.propTypes = {
-  register: PropTypes.func.isRequired,
+  ref: PropTypes.oneOfType([PropTypes.instanceOf(typeof window === 'undefined' ? null : HTMLElement), PropTypes.func]).isRequired,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.onBlur,
   name: PropTypes.string.isRequired,
   left: PropTypes.node,
   right: PropTypes.node,
@@ -40,6 +43,8 @@ RHFInput.propTypes = {
   help: PropTypes.string,
 };
 RHFInput.defaultProps = {
+  onChange: null,
+  onBlur: null,
   left: null,
   right: null,
   help: null,
