@@ -144,7 +144,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
           optionRatio
         * (Math.max(grantPrice, rowPrice) - grantPrice),
         );
-        const difference = Math.max(rsuValue, optionValue) - Math.min(rsuValue, optionValue);
+        const difference = (Math.max(rsuValue, optionValue) - Math.min(rsuValue, optionValue)) * grantAmount;
         return ({
           rowPrice: toTwoDecimalFloat(rowPrice),
           rsuValue,
