@@ -32,19 +32,19 @@ const RHFInput = forwardRef(({
   );
 });
 RHFInput.propTypes = {
-  ref: PropTypes.oneOfType([PropTypes.instanceOf(typeof window === 'undefined' ? null : HTMLElement), PropTypes.func]).isRequired,
   onChange: PropTypes.func,
-  onBlur: PropTypes.onBlur,
+  onBlur: PropTypes.func,
   name: PropTypes.string.isRequired,
   left: PropTypes.node,
   right: PropTypes.node,
   label: PropTypes.node.isRequired,
-  errors: PropTypes.shape().isRequired,
+  errors: PropTypes.shape(),
   help: PropTypes.string,
 };
 RHFInput.defaultProps = {
-  onChange: null,
-  onBlur: null,
+  errors: {},
+  onChange: () => {},
+  onBlur: () => {},
   left: null,
   right: null,
   help: null,

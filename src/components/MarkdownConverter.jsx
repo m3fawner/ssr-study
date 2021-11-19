@@ -39,13 +39,12 @@ const components = {
   th: Th,
   thead: ({ children }) => <Thead>{children}</Thead>,
   tr: ({ children }) => <Tr>{children}</Tr>,
-  text: ({ children }) => <Text dangerouslySetInnerHTML={{ __html: children }} />,
 };
 /* eslint-enable react/prop-types */
 const MarkdownConverter = ({ markdown, ...props }) => (markdown
   ? (
     <Box {...props}>
-      <ReactMarkdown components={components} plugins={[gfm]} allowDangerousHtml>
+      <ReactMarkdown components={components} plugins={[gfm]}>
         {markdown}
       </ReactMarkdown>
     </Box>

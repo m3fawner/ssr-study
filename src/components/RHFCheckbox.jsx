@@ -15,15 +15,15 @@ const RHFCheckbox = forwardRef(({
   );
 });
 RHFCheckbox.propTypes = {
-  ref: PropTypes.oneOfType([PropTypes.instanceOf(typeof window === 'undefined' ? null : HTMLElement), PropTypes.func]).isRequired,
   onChange: PropTypes.func,
-  onBlur: PropTypes.onBlur,
+  onBlur: PropTypes.func,
   name: PropTypes.string.isRequired,
   label: PropTypes.node.isRequired,
-  errors: PropTypes.shape().isRequired,
+  errors: PropTypes.shape(),
 };
 RHFCheckbox.defaultProps = {
-  onChange: null,
-  onBlur: null,
+  errors: {},
+  onChange: () => {},
+  onBlur: () => {},
 };
 export default RHFCheckbox;
