@@ -4,6 +4,7 @@ import {
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import gfm from 'remark-gfm';
+import { Children } from 'react';
 
 const HEADING_LEVELS = [
   '4xl',
@@ -19,10 +20,23 @@ const HEADING_LEVELS = [
   size,
   as: `h${level}`,
 }));
-/* eslint-disable react/prop-types */
+const flatten = (text, child) => (typeof child === 'string'
+  ? text + child
+  : Children.toArray(child.props.children).reduce(flatten, text));
+const slugGenerator = (children) => {
+  const arr = Children.toArray(children);
+  const text = arr.reduce(flatten, '');
+  return text.toLowerCase().replace(/\W/g, '-');
+};
 const HEADING_COMPONENTS = new Array(6).fill(null).map((_, i) => `h${i + 1}`).reduce((acc, ele) => ({
   ...acc,
-  [ele]: ({ level, children }) => <Heading {...HEADING_LEVELS[level]}>{children}</Heading>,
+  [ele]: ({ level, children }) => (
+    <Heading {...HEADING_LEVELS[level]}>
+      {/* eslint-disable-next-line jsx-a11y/anchor-has-content,jsx-a11y/anchor-is-valid */}
+      <a name={slugGenerator(children)} />
+      {children}
+    </Heading>
+  ),
 }), {});
 const components = {
   code: ({ value }) => <Code>{value}</Code>,
