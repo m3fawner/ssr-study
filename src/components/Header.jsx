@@ -21,6 +21,10 @@ const ROUTES = {
   '/rsu-vs-options': 'RSU vs Options',
   '/mega-backdoor-roth': 'Megabackdoor Roth',
   '/roth-trad-after-tax': 'Roth, traditional, after tax?',
+  '/tax-optimizations': 'Tax optimizations',
+  '/asset-allocation': 'Asset allocation',
+  '/diversification': 'Diversification',
+  '/rebalancing': 'Rebalancing',
 };
 const PageMenu = ({ isOpen, onClose }) => (
   <Drawer
