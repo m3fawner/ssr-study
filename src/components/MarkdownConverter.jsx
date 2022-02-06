@@ -54,7 +54,7 @@ const components = {
   thead: ({ children }) => <Thead>{children}</Thead>,
   tr: ({ children }) => <Tr>{children}</Tr>,
 };
-/* eslint-enable react/prop-types */
+
 const MarkdownConverter = ({ markdown, ...props }) => (markdown
   ? (
     <Box {...props}>
