@@ -42,7 +42,7 @@ const components = {
   code: ({ value }) => <Code>{value}</Code>,
   em: ({ value }) => <Text as="em">{value}</Text>,
   ...HEADING_COMPONENTS,
-  link: ({ children, ...props }) => <Link color="brand.600" {...props}>{children}</Link>,
+  a: ({ children, ...props }) => <Link color="brand.600" {...props}>{children}</Link>,
   ol: OrderedList,
   ul: UnorderedList,
   li: ({ children }) => <ListItem>{children}</ListItem>,
