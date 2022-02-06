@@ -2,12 +2,13 @@
 
 &nbsp;  
 
-1. [Vesting schedules](#vesting-schedules)
-1. [Tax withholding](#tax-withholding-of-equity-compensation)
-   1. [Covering taxes](#covering-taxes)
-   1. [Fair market value & cost basis](#fair-market-value-and-cost-basis)
-   1. [Capital gains](#capital-gains-losses)
-
+- [Equity compensation](#equity-compensation)
+  - [Vesting Schedules](#vesting-schedules)
+  - [Tax withholding of equity compensation](#tax-withholding-of-equity-compensation)
+    - [Covering taxes](#covering-taxes)
+    - [Fair market value and cost basis](#fair-market-value-and-cost-basis)
+    - [Capital gains/losses](#capital-gainslosses)
+    - [Tax considerations](#tax-considerations)
 
 &nbsp;  
 
@@ -63,3 +64,13 @@ Your cost basis is established at the time of vesting/exercising. The cost basis
 The emphasis on the "hold the share" is that it is how long the share itself is in your account. It doesn't matter when it was granted, or that the option to buy the share is more than a year past vesting. You have to have the actual share for over a year.
 
 From my perspective, the inherent risk of holding your company stock for a year or more is not worth the tax difference (I prefer to diversify) given the gains/losses are for a very short period of time from vesting to sale (as soon as I can).  
+
+&nbsp;  
+
+###### Tax considerations  
+
+&nbsp;  
+
+As any employee who has been compensated in an unpredictable way knows, withholding your taxes can be challenging. The key thing to understand is that your salary is generally very predictable and withheld according to the tax tables by your employer. For the most part, entering your dependent count on your W-4 (tax withholding document submitted to tell your employer how to withhold taxes based on dependents, other income, etc).
+However, with unpredictable income in the form of bonuses or equity based compensation with a volatile stock, is very difficult to predict at the beginning of the year. My perspective is that you should check your withholdings a few times a year. I typically do so in February, August, and re-check in October. My reasoning: in February you will know your general compensation picture in terms of salary increases for the year. August, you will have 3/4ths of your stock compensation determined (and those who make above FICA limits will start seeing that drop off). In October, you have a few months to make up the difference if you need to do extra withholdings.
+The way I determine if extra withholdings need to be done is to use the [IRS withholding calculator](https://www.irs.gov/individuals/tax-withholding-estimator). It’s a bit of a process, but is generally a pretty good tool, in my experience.
