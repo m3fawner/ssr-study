@@ -5,7 +5,7 @@ import getMarkdown from '../markdown/getMarkdown';
 
 const EquityCompensation = ({ equityComp }) => (
   <>
-    <Head title="Equity compensation" description="A calculator for determining how much your net proceeds should be for an RSU grant. Simply enter your company stock ticker, fill out the subsequent share form, and find out how much to expect after taxes are paid!" url="net-proceeds" />
+    <Head title="Equity compensation" description="A short read with regards to being compensated via equity, such as RSUs or options." url="equity-compensation" />
     <MarkdownConverter pt="5" markdown={equityComp} />
   </>
 );
