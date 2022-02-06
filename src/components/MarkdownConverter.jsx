@@ -58,7 +58,7 @@ const components = {
 const MarkdownConverter = ({ markdown, ...props }) => (markdown
   ? (
     <Box {...props}>
-      <ReactMarkdown components={components} plugins={[gfm]}>
+      <ReactMarkdown components={components} remarkPlugins={[gfm]}>
         {markdown}
       </ReactMarkdown>
     </Box>
