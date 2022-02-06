@@ -20,6 +20,7 @@ const ROUTES = {
   '/net-proceeds': 'Net Proceeds',
   '/rsu-vs-options': 'RSU vs Options',
   '/mega-backdoor-roth': 'Megabackdoor Roth',
+  '/roth-trad-after-tax': 'Roth, traditional, after tax?',
 };
 const PageMenu = ({ isOpen, onClose }) => (
   <Drawer
