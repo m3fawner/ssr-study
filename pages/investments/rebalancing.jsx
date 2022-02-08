@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import Head from '../src/components/Head';
-import MarkdownConverter from '../src/components/MarkdownConverter';
-import getMarkdown from '../markdown/getMarkdown';
+import Head from '../../src/components/Head';
+import MarkdownConverter from '../../src/components/MarkdownConverter';
+import getMarkdown from '../../markdown/getMarkdown';
 
 const Rebalancing = ({ rebalancing }) => (
   <>
-    <Head title="Rebalancing" description="A brief article describing the act of rebalancing investments." url="/rebalancing" />
+    <Head title="Rebalancing" description="A brief article describing the act of rebalancing investments." url="investments/rebalancing" />
     <MarkdownConverter pt="5" markdown={rebalancing} />
   </>
 );

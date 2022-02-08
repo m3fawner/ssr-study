@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import Head from '../src/components/Head';
-import MarkdownConverter from '../src/components/MarkdownConverter';
-import getMarkdown from '../markdown/getMarkdown';
+import Head from '../../src/components/Head';
+import MarkdownConverter from '../../src/components/MarkdownConverter';
+import getMarkdown from '../../markdown/getMarkdown';
 
 const AssetAllocation = ({ assetAllocation }) => (
   <>
-    <Head title="Asset allocation" description="A brief article describing asset allocation with regards to investments." url="/asset-allocation" />
+    <Head title="Asset allocation" description="A brief article describing asset allocation with regards to investments." url="investments/asset-allocation" />
     <MarkdownConverter pt="5" markdown={assetAllocation} />
   </>
 );

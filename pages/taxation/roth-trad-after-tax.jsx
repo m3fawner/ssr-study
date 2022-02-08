@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import Head from '../src/components/Head';
-import MarkdownConverter from '../src/components/MarkdownConverter';
-import getMarkdown from '../markdown/getMarkdown';
+import Head from '../../src/components/Head';
+import MarkdownConverter from '../../src/components/MarkdownConverter';
+import getMarkdown from '../../markdown/getMarkdown';
 
 const RothTradAfterTax = ({ rothTradAfterTax }) => (
   <>
-    <Head title="Roth, traditional, after tax?" description="An introduction to the various types of tax treatments and how they can impact your present and future tax situation." url="roth-trad-after-tax" />
+    <Head title="Roth, traditional, after tax?" description="An introduction to the various types of tax treatments and how they can impact your present and future tax situation." url="taxation/roth-trad-after-tax" />
     <MarkdownConverter pt="5" markdown={rothTradAfterTax} />
   </>
 );

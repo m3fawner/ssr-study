@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import Head from '../src/components/Head';
-import MarkdownConverter from '../src/components/MarkdownConverter';
-import getMarkdown from '../markdown/getMarkdown';
+import Head from '../../src/components/Head';
+import MarkdownConverter from '../../src/components/MarkdownConverter';
+import getMarkdown from '../../markdown/getMarkdown';
 
 const EquityCompensation = ({ equityComp }) => (
   <>

@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import getMarkdown from '../markdown/getMarkdown';
-import RSUvOptions from '../src/components/RSUvOptions';
-import MarkdownConverter from '../src/components/MarkdownConverter';
-import Head from '../src/components/Head';
-import { getDataFromSymbol } from './api/alphaVantage/[symbol]';
+import getMarkdown from '../../markdown/getMarkdown';
+import RSUvOptions from '../../src/components/RSUvOptions';
+import MarkdownConverter from '../../src/components/MarkdownConverter';
+import Head from '../../src/components/Head';
+import { getDataFromSymbol } from '../api/alphaVantage/[symbol]';
 
 const RSUvsOptionsPage = ({ intro, extraInfo, initialSharePrice }) => (
   <>
-    <Head title="RSUs vs Options" description="A calculator to help determine if you should take options, RSUs, or both" url="rsu-vs-options" />
+    <Head title="RSUs vs Options" description="A calculator to help determine if you should take options, RSUs, or both" url="equity-compensation/rsu-vs-options" />
     <MarkdownConverter pt="5" markdown={intro} />
     <RSUvOptions initialSharePrice={initialSharePrice} />
     <MarkdownConverter pt="5" markdown={extraInfo} />

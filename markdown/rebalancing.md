@@ -2,9 +2,9 @@
 
 &nbsp;  
 
-Rebalancing is the act of exchanging one type of asset for another. This occurs when new investments are purchased, growth of investments occurs, or losses are seen in one asset class or another. With a properly [diversified portfolio](/diversification), you should see asset classes becoming out of sync as equities are likely to outpace bonds. This especially holds true if you are investing additional funds into equities in other accounts and don’t add new bonds.
+Rebalancing is the act of exchanging one type of asset for another. This occurs when new investments are purchased, growth of investments occurs, or losses are seen in one asset class or another. With a properly [diversified portfolio](/investments/diversification), you should see asset classes becoming out of sync as equities are likely to outpace bonds. This especially holds true if you are investing additional funds into equities in other accounts and don’t add new bonds.
 
-Once you have identified your [asset allocation](/asset-allocation) target, you should aim to keep it roughly at that balance. 
+Once you have identified your [asset allocation](/investments/asset-allocation) target, you should aim to keep it roughly at that balance. 
 
 &nbsp;  
 

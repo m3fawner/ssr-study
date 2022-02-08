@@ -26,7 +26,11 @@ const flatten = (text, child) => (typeof child === 'string'
 const slugGenerator = (children) => {
   const arr = Children.toArray(children);
   const text = arr.reduce(flatten, '');
-  return text.toLowerCase().replace(/\W/g, '-');
+  return text.toLowerCase()
+    .replace(/\W/g, '-')
+    .replace(/-{2,}/g, '')
+    .replace(/^-+/g, '')
+    .replace(/-+$/g, '');
 };
 const HEADING_COMPONENTS = new Array(6).fill(null).map((_, i) => `h${i + 1}`).reduce((acc, ele) => ({
   ...acc,

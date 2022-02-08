@@ -2,10 +2,11 @@
 
 &nbsp;  
 
+- [Roth, Traditional, After tax?](#roth-traditional-after-tax)
   - [Roth](#roth)
   - [Traditional](#traditional)
   - [After tax](#after-tax)
-  - [Which do I prioritize?](#which-do-i-prioritize-)
+  - [Which do I prioritize?](#which-do-i-prioritize)
 
 &nbsp;  
 
@@ -35,7 +36,7 @@ Traditional accounts have an added caveat of required minimum distributions, whi
 
 &nbsp;  
 
-This is a special bucket of money that is taxed on the front end and the gains in this type would be taxed on the withdrawal (however, see [Mega-backdoor Roth](/mega-backdoor-roth)).
+This is a special bucket of money that is taxed on the front end and the gains in this type would be taxed on the withdrawal (however, see [Mega-backdoor Roth](/401k/mega-backdoor-roth)).
 
 In addition, there is also the concept of after-tax investing in a brokerage account. This is more flexible than 401k/IRA or other tax advantaged accounts, as you can withdraw the investments from the account at any time without penalty. These investments, however, are less tax efficient as you are taxed on the income it took to fund it, as well as the dividends and any capital gains realized.
 
@@ -62,6 +63,6 @@ The key thing to evaluate for your individual scenario, is to look at your curre
 
 In addition, I advocate for Traditional investments where you can at higher income levels because there is a limited number. Married couples who make more than $129,000 combined cannot deduct a single dollar of traditional IRA contributions, for instance. This leaves only sources like 401(k)s and HSA contributions that are tax deductible for high earners.
 
-On the other hand, you have $6,000 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in Megabackdoor Roth 401k space (see [Mega-backdoor Roth](/mega-backdoor-roth)). 
+On the other hand, you have $6,000 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in Megabackdoor Roth 401k space (see [Mega-backdoor Roth](/401k/mega-backdoor-roth)). 
 
 All in all, **do the math**. Only you know your full tax picture, goals, timelines, etc.
