@@ -24,7 +24,7 @@ const ComparisonChart = ({ dataRows }) => {
   const [optionsLineColor, rsusLineColor] = useToken('colors', ['orange.500', 'teal.500']);
   const chartHeight = useBreakpointValue({ base: 180, md: 320 }) ?? 180;
   const chartWidth = useBreakpointValue({ base: 320, md: 540 }) ?? 320;
-  return (
+  return typeof window === 'undefined' ? null : (
     <Flex justifyContent="center" flexDir={['column',, 'row']}>
       <XYPlot width={chartWidth} height={chartHeight} animation onMouseLeave={() => setCrosshairValues(null)}>
         <Crosshair values={crosshairValues} itemsFormat={([{ y: options }, { y: rsus }]) => [{ title: 'Option value', value: options }, { title: 'RSUs value', value: rsus }]} />

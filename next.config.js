@@ -3,9 +3,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  experimental: {
-    esmExternals: false,
-  },
   pageExtensions: ['jsx', 'js'],
   i18n: {
     locales: ['en-US'],
