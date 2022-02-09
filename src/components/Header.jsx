@@ -19,6 +19,7 @@ const ROUTE_KEYS = {
   '401K': '401K',
   ASSET_ALLOCATION: 'ASSET_ALLOCATION',
   CAPITAL_GAINS: 'CAPITAL_GAINS',
+  DONATIONS: 'DONATIONS',
   DIVERSIFICATION: 'DIVERSIFICATION',
   EQUITY_COMPENSATION: 'EQUITY_COMPENSATION',
   FSA: 'FSA',
@@ -34,6 +35,7 @@ const ROUTES = {
   [ROUTE_KEYS['401K']]: '/401k',
   [ROUTE_KEYS.ASSET_ALLOCATION]: '/investments/asset-allocation',
   [ROUTE_KEYS.CAPITAL_GAINS]: '/taxation/capital-gains',
+  [ROUTE_KEYS.DONATIONS]: '/taxation/donations',
   [ROUTE_KEYS.DIVERSIFICATION]: '/investments/diversification',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: '/equity-compensation',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/401k/megabackdoor-roth',
@@ -48,6 +50,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS['401K']]: '401(k)',
   [ROUTE_KEYS.ASSET_ALLOCATION]: 'Asset allocation',
   [ROUTE_KEYS.CAPITAL_GAINS]: 'Capital gains',
+  [ROUTE_KEYS.DONATIONS]: 'Donations',
   [ROUTE_KEYS.DIVERSIFICATION]: 'Diversification',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Equity compensation',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
@@ -75,6 +78,7 @@ const TAXATION = {
     ROUTE_KEYS.TAX_OPTIMIZATIONS,
     ROUTE_KEYS.ROTH_TRAD_AT,
     ROUTE_KEYS.TAX_HARVESTING,
+    ROUTE_KEYS.DONATIONS,
   ],
 };
 const FOUR_OH_ONE_K = {
