@@ -1,7 +1,7 @@
-#### Welcome to FIcarious!
+# Welcome to FIcarious!
 
 &nbsp;  
-##### What is this site?
+## What is this site?
 
 &nbsp;  
 
@@ -13,7 +13,7 @@
 
 &nbsp;  
 
-##### What's here?
+## What's here?
 
 &nbsp;  
 
@@ -21,7 +21,7 @@
 
 &nbsp;  
 
-##### Why the disclaimer in the footer of every page?
+## Why the disclaimer in the footer of every page?
 
 &nbsp;  
 
@@ -29,7 +29,7 @@
 
 &nbsp;
 
-##### About me
+## About me
 
 &nbsp;
 

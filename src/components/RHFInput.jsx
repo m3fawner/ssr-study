@@ -26,7 +26,7 @@ const RHFInput = forwardRef(({
         <Input ref={ref} onChange={onChange} onBlur={onBlur} name={name} />
         {right && <InputRightAddon>{right}</InputRightAddon>}
       </InputGroup>
-      {help && <FormHelperText>{help}</FormHelperText>}
+      {help && <FormHelperText color="gray.600">{help}</FormHelperText>}
       <FormErrorMessage>{error?.message}</FormErrorMessage>
     </FormControl>
   );

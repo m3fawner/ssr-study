@@ -1,4 +1,4 @@
-#### Donations
+# Donations
 - [Donations](#donations)
   - [Donations of appreciated assets](#donations-of-appreciated-assets)
   - [Donor advised fund](#donor-advised-fund)
@@ -11,7 +11,7 @@
 
 &nbsp;  
 
-##### Donations of appreciated assets
+## Donations of appreciated assets
 
 &nbsp;  
 
@@ -70,7 +70,7 @@ Taxes deducted: $180
 
 &nbsp;  
 
-##### Donor advised fund
+## Donor advised fund
 
 &nbsp;  
 

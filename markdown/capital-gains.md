@@ -1,8 +1,8 @@
-#### Capital gains taxes
+# Capital gains taxes
 
 &nbsp;  
 
-##### Introduction
+## Introduction
 
 &nbsp;  
 
@@ -14,7 +14,15 @@
 
 &nbsp;  
 
-##### Tax rate
+## Capital losses  
+
+&nbsp;  
+
+  Capital losses are just negative gains! They do also have tax implications. Capital losses can be used to offset capital gains of the same treatment (i.e. long term offsets long term). Short term capital losses can also be used to offset ordinary income up to $3,000 and the remainder can be carried over to future tax years. This is useful for [tax loss harvesting](/taxation/tax-harvesting#tax-loss-harvesting).
+
+&nbsp;  
+
+## Tax rate
 
 &nbsp;  
 
@@ -32,7 +40,7 @@
 
 &nbsp;  
 
-##### How this plays into retirement
+## How this plays into retirement
 
 &nbsp;  
 

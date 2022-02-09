@@ -16,7 +16,7 @@ const Footer = () => (
     <Text fontSize="sm">
       Also, this is open source. Please check out
       {' '}
-      <Link color="brand.600" isExternal href="https://github.com/m3fawner/ssr-study">the github repository.</Link>
+      <Link color="brand.800" isExternal href="https://github.com/m3fawner/ssr-study">the github repository.</Link>
     </Text>
   </Box>
 );

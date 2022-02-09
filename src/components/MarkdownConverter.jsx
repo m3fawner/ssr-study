@@ -7,8 +7,6 @@ import gfm from 'remark-gfm';
 import { Children } from 'react';
 
 const HEADING_LEVELS = [
-  '4xl',
-  '3xl',
   '2xl',
   'xl',
   'lg',
@@ -46,7 +44,7 @@ const components = {
   code: ({ value }) => <Code>{value}</Code>,
   em: ({ value }) => <Text as="em">{value}</Text>,
   ...HEADING_COMPONENTS,
-  a: ({ children, ...props }) => <Link color="brand.600" {...props}>{children}</Link>,
+  a: ({ children, ...props }) => <Link color="brand.800" {...props}>{children}</Link>,
   ol: OrderedList,
   ul: UnorderedList,
   li: ({ children }) => <ListItem>{children}</ListItem>,

@@ -1,4 +1,4 @@
-#### Roth, Traditional, After tax?  
+# Roth, Traditional, After tax?  
 
 &nbsp;  
 
@@ -10,7 +10,7 @@
 
 &nbsp;  
 
-##### Roth
+## Roth
 
 &nbsp;  
 
@@ -26,7 +26,7 @@
 
 &nbsp;  
 
-##### Traditional  
+## Traditional  
 
 &nbsp;  
 
@@ -38,7 +38,7 @@
 
 &nbsp;  
 
-##### After tax  
+## After tax  
 
 &nbsp;  
 
@@ -63,7 +63,7 @@
 
 &nbsp;  
 
-##### Which do I prioritize?
+## Which do I prioritize?
 
 &nbsp;  
 

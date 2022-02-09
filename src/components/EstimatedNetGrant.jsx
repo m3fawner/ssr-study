@@ -45,7 +45,7 @@ const getSSTaxableProceeds = (ssEarnings, proceeds) => {
 const LineItem = ({ label, amount }) => (
   <Flex justifyContent="space-between">
     <Text as="strong">{label}</Text>
-    <Text ml="1" color={amount > 0 ? 'green.400' : 'red.400'}>{getDollar(amount)}</Text>
+    <Text ml="1" color={amount > 0 ? 'green.700' : 'red.700'}>{getDollar(amount)}</Text>
   </Flex>
 );
 LineItem.propTypes = {
@@ -127,11 +127,11 @@ const EstimatedNetGrant = () => {
   const stateTaxesApplicable = stateTaxes !== 0 && stateTaxes;
   return (
     <Box as="form" w="100%" pb="4">
-      <Heading size="lg" pt="2">Net RSU grant proceeds calculator</Heading>
+      <Heading size="lg" pt="2" as="h1">Net RSU grant proceeds calculator</Heading>
       <FormControl>
         <FormLabel htmlFor="symbol">Ticker symbol</FormLabel>
         <Flex>
-          <Input {...register('symbol')} />
+          <Input {...register('symbol')} id="symbol" />
           <Button ml="2" onClick={updatePrice}>Get data</Button>
         </Flex>
       </FormControl>

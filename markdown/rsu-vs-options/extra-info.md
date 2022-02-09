@@ -1,4 +1,4 @@
-#### Arguments for RSUs
+## Arguments for RSUs
 
 &nbsp;  
 
@@ -14,7 +14,7 @@
 
 &nbsp;  
 
-#### Arguments for Options
+## Arguments for Options
 
 &nbsp;  
 
@@ -30,7 +30,7 @@
 
 &nbsp;  
 
-#### Tax considerations
+## Tax considerations
 
 &nbsp;  
 

@@ -1,4 +1,4 @@
-#### Tax gain/loss harvesting
+# Tax gain/loss harvesting
 
 &nbsp;  
 
@@ -6,7 +6,7 @@
 
 &nbsp;  
 
-##### Tax loss harvesting
+## Tax loss harvesting
 
 &nbsp;  
 
@@ -15,7 +15,7 @@
 
 &nbsp;  
 
-###### Wash sale
+### Wash sale
 
 &nbsp;  
 
@@ -23,7 +23,7 @@
 
 &nbsp;  
 
-##### Tax gain harvesting
+## Tax gain harvesting
 
 &nbsp;  
 

@@ -21,7 +21,7 @@ const ComparisonChart = ({ dataRows }) => {
     optionsLine: [],
     rsusLine: [],
   }), [dataRows]);
-  const [optionsLineColor, rsusLineColor] = useToken('colors', ['orange.500', 'teal.500']);
+  const [optionsLineColor, rsusLineColor] = useToken('colors', ['red.700', 'blue.700']);
   const chartHeight = useBreakpointValue({ base: 180, md: 320 }) ?? 180;
   const chartWidth = useBreakpointValue({ base: 320, md: 540 }) ?? 320;
   return typeof window === 'undefined' ? null : (
@@ -59,9 +59,9 @@ const getColorForValue = (value, compareTo) => {
   if (value === compareTo) {
     return 'gray.800';
   } if (value > compareTo) {
-    return 'green.400';
+    return 'green.800';
   }
-  return 'red.400';
+  return 'red.800';
 };
 const ComparisonTableView = ({
   dataRows, sharePrice, grantAmount, ...props

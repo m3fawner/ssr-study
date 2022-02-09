@@ -1,4 +1,4 @@
-#### Equity compensation  
+# Equity compensation  
 
 &nbsp;  
 
@@ -12,7 +12,7 @@
 
 &nbsp;  
 
-##### Vesting Schedules  
+## Vesting Schedules  
 
 &nbsp;  
 
@@ -24,7 +24,7 @@
 
 &nbsp;  
 
-##### Tax withholding of equity compensation 
+## Tax withholding of equity compensation 
 
 &nbsp;  
 
@@ -39,7 +39,7 @@
   The income taxable amount of your options is the difference between the exercise price and the grant price. So if you sold an option with a $10 grant price and was exercised at $50, your income for that option would be $40. This is subject to all applicable income taxes.  
 
 &nbsp;  
-###### Covering taxes  
+### Covering taxes  
 
 &nbsp;  
 
@@ -54,7 +54,7 @@
   _In my opinion_ sell to cover is a stronger choice because "pay cash" is equivalent to taking cash from elsewhere in your accounts to effectively buy your RSUs/Options that would've otherwise been sold.  
 
 &nbsp;  
-###### Fair market value and cost basis 
+### Fair market value and cost basis 
 
 &nbsp;  
 
@@ -65,7 +65,7 @@
   Given the capital loss/gain is taxed at income rates, this is effectively the same thing as your company knowing exactly what it was sold for.  
 
 &nbsp;  
-###### Capital gains/losses  
+### Capital gains/losses  
 
 &nbsp;  
 
@@ -85,7 +85,7 @@
 
 &nbsp;  
 
-###### Tax considerations  
+### Tax considerations  
 
 &nbsp;  
 
