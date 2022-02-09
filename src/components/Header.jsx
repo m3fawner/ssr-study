@@ -18,6 +18,7 @@ import MenuIcon from '../svgs/menu.svg';
 const ROUTE_KEYS = {
   '401K': '401K',
   ASSET_ALLOCATION: 'ASSET_ALLOCATION',
+  CAPITAL_GAINS: 'CAPITAL_GAINS',
   DIVERSIFICATION: 'DIVERSIFICATION',
   EQUITY_COMPENSATION: 'EQUITY_COMPENSATION',
   FSA: 'FSA',
@@ -26,11 +27,13 @@ const ROUTE_KEYS = {
   REBALANCING: 'REBALANCING',
   ROTH_TRAD_AT: 'ROTH_TRAD_AT',
   RSU_V_OPTIONS: 'RSU_V_OPTIONS',
+  TAX_HARVESTING: 'TAX_HARVESTING',
   TAX_OPTIMIZATIONS: 'TAX_OPTIMIZATIONS',
 };
 const ROUTES = {
   [ROUTE_KEYS['401K']]: '/401k',
   [ROUTE_KEYS.ASSET_ALLOCATION]: '/investments/asset-allocation',
+  [ROUTE_KEYS.CAPITAL_GAINS]: '/taxation/capital-gains',
   [ROUTE_KEYS.DIVERSIFICATION]: '/investments/diversification',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: '/equity-compensation',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/401k/megabackdoor-roth',
@@ -38,11 +41,13 @@ const ROUTES = {
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
   [ROUTE_KEYS.ROTH_TRAD_AT]: '/taxation/roth-trad-after-tax',
   [ROUTE_KEYS.RSU_V_OPTIONS]: '/equity-compensation/rsu-vs-options',
+  [ROUTE_KEYS.TAX_HARVESTING]: '/taxation/tax-harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: '/taxation/optimizations',
 };
 const ROUTE_NAMES = {
   [ROUTE_KEYS['401K']]: '401(k)',
   [ROUTE_KEYS.ASSET_ALLOCATION]: 'Asset allocation',
+  [ROUTE_KEYS.CAPITAL_GAINS]: 'Capital gains',
   [ROUTE_KEYS.DIVERSIFICATION]: 'Diversification',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Equity compensation',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
@@ -50,6 +55,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',
   [ROUTE_KEYS.ROTH_TRAD_AT]: 'Roth, traditional, after tax treatments',
   [ROUTE_KEYS.RSU_V_OPTIONS]: 'RSUs vs options',
+  [ROUTE_KEYS.TAX_HARVESTING]: 'Tax harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: 'Tax optimizations',
 };
 const CATEGORY_LOOKUP = {
@@ -65,8 +71,10 @@ const CATEGORY_LOOKUP = {
 const TAXATION = {
   label: 'Taxation',
   routes: [
+    ROUTE_KEYS.CAPITAL_GAINS,
     ROUTE_KEYS.TAX_OPTIMIZATIONS,
     ROUTE_KEYS.ROTH_TRAD_AT,
+    ROUTE_KEYS.TAX_HARVESTING,
   ],
 };
 const FOUR_OH_ONE_K = {
