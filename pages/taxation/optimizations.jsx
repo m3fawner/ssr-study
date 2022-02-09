@@ -5,7 +5,7 @@ import getMarkdown from '../../markdown/getMarkdown';
 
 const TaxOptimizations = ({ taxOptimizations }) => (
   <>
-    <Head title="Tax optimizations" description="An article discussing tax optimizations for investments, highlighting how to leverage tax treatments and investment vehicles to minimize taxation." url="tax/optimizations" />
+    <Head title="Tax optimizations" description="An article discussing tax optimizations for investments, highlighting how to leverage tax treatments and investment vehicles to minimize taxation." url="taxation/optimizations" />
     <MarkdownConverter pt="5" markdown={taxOptimizations} />
   </>
 );

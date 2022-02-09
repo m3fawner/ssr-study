@@ -5,7 +5,7 @@ import getMarkdown from '../../markdown/getMarkdown';
 
 const TaxHarvesting = ({ taxHarvesting }) => (
   <>
-    <Head title="Tax harvesting" description="An article detailing the act of selling investments to capture losses or gains at advantageous times to lower tax liabilities." url="tax/tax-harvesting" />
+    <Head title="Tax harvesting" description="An article detailing the act of selling investments to capture losses or gains at advantageous times to lower tax liabilities." url="taxation/tax-harvesting" />
     <MarkdownConverter pt="5" markdown={taxHarvesting} />
   </>
 );

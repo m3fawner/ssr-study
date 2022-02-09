@@ -5,7 +5,7 @@ import getMarkdown from '../../markdown/getMarkdown';
 
 const CapitalGains = ({ capitalGains }) => (
   <>
-    <Head title="Capital gains taxes" description="A very brief article describing capital gains taxes." url="tax/capital-gains" />
+    <Head title="Capital gains taxes" description="A very brief article describing capital gains taxes." url="taxation/capital-gains" />
     <MarkdownConverter pt="5" markdown={capitalGains} />
   </>
 );
