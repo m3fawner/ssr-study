@@ -31,6 +31,7 @@ const ROUTE_KEYS = {
   RSU_V_OPTIONS: 'RSU_V_OPTIONS',
   TAX_HARVESTING: 'TAX_HARVESTING',
   TAX_OPTIMIZATIONS: 'TAX_OPTIMIZATIONS',
+  TRUE_UP_CONTRIBUTIONS: 'TRUE_UP_CONTRIBUTIONS',
 };
 const ROUTES = {
   [ROUTE_KEYS['401K']]: '/401k',
@@ -47,6 +48,7 @@ const ROUTES = {
   [ROUTE_KEYS.RSU_V_OPTIONS]: '/equity-compensation/rsu-vs-options',
   [ROUTE_KEYS.TAX_HARVESTING]: '/taxation/tax-harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: '/taxation/optimizations',
+  [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: '/401k/true-up-contributions',
 };
 const ROUTE_NAMES = {
   [ROUTE_KEYS['401K']]: '401(k)',
@@ -63,6 +65,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.RSU_V_OPTIONS]: 'RSUs vs options',
   [ROUTE_KEYS.TAX_HARVESTING]: 'Tax harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: 'Tax optimizations',
+  [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: 'True-up contributions',
 };
 const CATEGORY_LOOKUP = {
   TAXATION: 'TAXATION',
@@ -90,6 +93,7 @@ const FOUR_OH_ONE_K = {
   topLevel: ROUTE_KEYS['401K'],
   routes: [
     ROUTE_KEYS.MEGABACKDOOR_ROTH,
+    ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS,
   ],
 };
 const EQUITY_COMPENSATION = {
