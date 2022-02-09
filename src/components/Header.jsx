@@ -22,6 +22,7 @@ const ROUTE_KEYS = {
   DONATIONS: 'DONATIONS',
   DIVERSIFICATION: 'DIVERSIFICATION',
   EQUITY_COMPENSATION: 'EQUITY_COMPENSATION',
+  FILING_YOUR_TAXES: 'FILING_YOUR_TAXES',
   FSA: 'FSA',
   MEGABACKDOOR_ROTH: 'MEGABACKDOOR_ROTH',
   NET_PROCEEDS: 'NET_PROCEEDS',
@@ -38,6 +39,7 @@ const ROUTES = {
   [ROUTE_KEYS.DONATIONS]: '/taxation/donations',
   [ROUTE_KEYS.DIVERSIFICATION]: '/investments/diversification',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: '/equity-compensation',
+  [ROUTE_KEYS.FILING_YOUR_TAXES]: '/taxation/filing-your-taxes',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/401k/megabackdoor-roth',
   [ROUTE_KEYS.NET_PROCEEDS]: '/equity-compensation/net-proceeds',
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
@@ -53,6 +55,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.DONATIONS]: 'Donations',
   [ROUTE_KEYS.DIVERSIFICATION]: 'Diversification',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Equity compensation',
+  [ROUTE_KEYS.FILING_YOUR_TAXES]: 'Filing your taxes',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
   [ROUTE_KEYS.NET_PROCEEDS]: 'Net proceeds',
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',
@@ -79,6 +82,7 @@ const TAXATION = {
     ROUTE_KEYS.ROTH_TRAD_AT,
     ROUTE_KEYS.TAX_HARVESTING,
     ROUTE_KEYS.DONATIONS,
+    ROUTE_KEYS.FILING_YOUR_TAXES,
   ],
 };
 const FOUR_OH_ONE_K = {
