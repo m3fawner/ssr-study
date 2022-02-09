@@ -10,7 +10,7 @@ Tax gain/loss harvesting is the act of selling your investments (either at a los
 
 &nbsp;  
 
-Tax loss harvesting is the act of selling a capital asset at a loss. This loss is able to offset ordinary income to the tune of $3,000 a year, with any excess capital losses able to be carried over to future tax years. Additionally, capital losses can offset capital gains. The distinction is long term capital losses offset long term capital gains, and short term for short term.
+Tax loss harvesting is the act of selling a capital asset at a loss. This loss is able to offset ordinary income to the tune of $3,000 a year, with any excess capital losses able to be carried over to future tax years. Additionally, capital losses can offset [capital gains](/taxation/capital-gains). The distinction is long term capital losses offset long term capital gains, and short term for short term.
 
 
 &nbsp;  
