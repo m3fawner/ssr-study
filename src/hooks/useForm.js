@@ -1,5 +1,5 @@
 import { useForm as rhfUseForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup/dist/yup.umd';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 const useForm = (formArgs, schema) => {
   const { register, errors, ...rest } = rhfUseForm({
