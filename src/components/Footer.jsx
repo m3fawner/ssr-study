@@ -1,7 +1,7 @@
 import { Text, Box, Link } from '@chakra-ui/react';
 
-const Footer = () => (
-  <Box as="footer" px="4" mt="4">
+const Footer = (props) => (
+  <Box as="footer" {...props}>
     <Text fontSize="sm">
       I am not a certified financial advisor or tax preparer. The information on this site is purely
       for informative purposes and you should further investigate any information you may find here.
