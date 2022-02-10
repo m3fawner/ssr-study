@@ -17,6 +17,7 @@ import MenuIcon from '../svgs/menu.svg';
 
 const ROUTE_KEYS = {
   '401K': '401K',
+  529: '529',
   ASSET_ALLOCATION: 'ASSET_ALLOCATION',
   CAPITAL_GAINS: 'CAPITAL_GAINS',
   CONTRIBUTION_TIMING: 'CONTRIBUTION_TIMING',
@@ -38,6 +39,7 @@ const ROUTE_KEYS = {
 };
 const ROUTES = {
   [ROUTE_KEYS['401K']]: '/tax-advantaged-accounts/401k',
+  [ROUTE_KEYS['529']]: '/tax-advantaged-accounts/529',
   [ROUTE_KEYS.ASSET_ALLOCATION]: '/investments/asset-allocation',
   [ROUTE_KEYS.CAPITAL_GAINS]: '/taxation/capital-gains',
   [ROUTE_KEYS.CONTRIBUTION_TIMING]: '/investments/contribution-timing',
@@ -59,6 +61,7 @@ const ROUTES = {
 };
 const ROUTE_NAMES = {
   [ROUTE_KEYS['401K']]: '401(k)',
+  [ROUTE_KEYS['529']]: '529',
   [ROUTE_KEYS.ASSET_ALLOCATION]: 'Asset allocation',
   [ROUTE_KEYS.CAPITAL_GAINS]: 'Capital gains',
   [ROUTE_KEYS.CONTRIBUTION_TIMING]: 'Contribution timing',
@@ -130,6 +133,7 @@ const GENERAL_FINANCE = {
   routes: [
     ROUTE_KEYS.EMERGENCY_FUNDS,
     ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS,
+    ROUTE_KEYS['529'],
   ],
 };
 const CATEGORIES = {
