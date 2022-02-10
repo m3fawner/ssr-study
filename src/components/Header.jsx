@@ -37,7 +37,7 @@ const ROUTE_KEYS = {
   TRUE_UP_CONTRIBUTIONS: 'TRUE_UP_CONTRIBUTIONS',
 };
 const ROUTES = {
-  [ROUTE_KEYS['401K']]: '/401k',
+  [ROUTE_KEYS['401K']]: '/tax-advantaged-accounts/401k',
   [ROUTE_KEYS.ASSET_ALLOCATION]: '/investments/asset-allocation',
   [ROUTE_KEYS.CAPITAL_GAINS]: '/taxation/capital-gains',
   [ROUTE_KEYS.CONTRIBUTION_TIMING]: '/investments/contribution-timing',
@@ -46,7 +46,8 @@ const ROUTES = {
   [ROUTE_KEYS.EMERGENCY_FUNDS]: '/general/emergency-funds',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: '/equity-compensation',
   [ROUTE_KEYS.FILING_YOUR_TAXES]: '/taxation/filing-your-taxes',
-  [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/401k/megabackdoor-roth',
+  [ROUTE_KEYS.FSA]: '/tax-advantaged-accounts/fsa',
+  [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/tax-advantaged-accounts/401k/megabackdoor-roth',
   [ROUTE_KEYS.NET_PROCEEDS]: '/equity-compensation/net-proceeds',
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
   [ROUTE_KEYS.ROTH_TRAD_AT]: '/taxation/roth-trad-after-tax',
@@ -54,7 +55,7 @@ const ROUTES = {
   [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: '/general/short-v-long-term-savings',
   [ROUTE_KEYS.TAX_HARVESTING]: '/taxation/tax-harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: '/taxation/optimizations',
-  [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: '/401k/true-up-contributions',
+  [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: '/tax-advantaged-accounts/401k/true-up-contributions',
 };
 const ROUTE_NAMES = {
   [ROUTE_KEYS['401K']]: '401(k)',
@@ -66,6 +67,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.EMERGENCY_FUNDS]: 'Emergency funds',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Equity compensation',
   [ROUTE_KEYS.FILING_YOUR_TAXES]: 'Filing your taxes',
+  [ROUTE_KEYS.FSA]: 'Flexible Savings Accounts (FSA)',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
   [ROUTE_KEYS.NET_PROCEEDS]: 'Net proceeds',
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import Head from '../../src/components/Head';
-import MarkdownConverter from '../../src/components/MarkdownConverter';
-import getMarkdown from '../../markdown/getMarkdown';
+import Head from '../../../src/components/Head';
+import MarkdownConverter from '../../../src/components/MarkdownConverter';
+import getMarkdown from '../../../markdown/getMarkdown';
 
 const FourOhOneK = ({ fourOhOneK }) => (
   <>
-    <Head title="401k" description="An introduction to 401(k)s, a tax-advantaged account." url="401k" />
+    <Head title="401k" description="An introduction to 401(k)s, a tax-advantaged account." url="tax-advantaged-accounts/401k" />
     <MarkdownConverter pt="5" markdown={fourOhOneK} />
   </>
 );
