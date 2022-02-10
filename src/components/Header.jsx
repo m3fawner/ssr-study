@@ -31,6 +31,7 @@ const ROUTE_KEYS = {
   REBALANCING: 'REBALANCING',
   ROTH_TRAD_AT: 'ROTH_TRAD_AT',
   RSU_V_OPTIONS: 'RSU_V_OPTIONS',
+  SHORT_V_LONG_TERM_SAVINGS: 'SHORT_V_LONG_TERM_SAVINGS',
   TAX_HARVESTING: 'TAX_HARVESTING',
   TAX_OPTIMIZATIONS: 'TAX_OPTIMIZATIONS',
   TRUE_UP_CONTRIBUTIONS: 'TRUE_UP_CONTRIBUTIONS',
@@ -50,6 +51,7 @@ const ROUTES = {
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
   [ROUTE_KEYS.ROTH_TRAD_AT]: '/taxation/roth-trad-after-tax',
   [ROUTE_KEYS.RSU_V_OPTIONS]: '/equity-compensation/rsu-vs-options',
+  [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: '/general/short-v-long-term-savings',
   [ROUTE_KEYS.TAX_HARVESTING]: '/taxation/tax-harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: '/taxation/optimizations',
   [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: '/401k/true-up-contributions',
@@ -69,6 +71,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',
   [ROUTE_KEYS.ROTH_TRAD_AT]: 'Roth, traditional, after tax treatments',
   [ROUTE_KEYS.RSU_V_OPTIONS]: 'RSUs vs options',
+  [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: 'Short vs long term savings',
   [ROUTE_KEYS.TAX_HARVESTING]: 'Tax harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: 'Tax optimizations',
   [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: 'True-up contributions',
@@ -124,6 +127,7 @@ const GENERAL_FINANCE = {
   label: 'General finance',
   routes: [
     ROUTE_KEYS.EMERGENCY_FUNDS,
+    ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS,
   ],
 };
 const CATEGORIES = {
