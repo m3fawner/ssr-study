@@ -42,7 +42,7 @@
 
 &nbsp;  
 
-  This is a special bucket of money that is taxed on the front end and the gains in this type would be taxed on the withdrawal (however, see [Mega-backdoor Roth](/401k/mega-backdoor-roth)).
+  This is a special bucket of money that is taxed on the front end and the gains in this type would be taxed on the withdrawal (however, see [Mega-backdoor Roth](/tax-advantaged-accounts/401k/megabackdoor-roth)).
 
 &nbsp;  
 
@@ -79,7 +79,7 @@
 
 &nbsp;  
 
-  On the other hand, you have $6,000 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in Megabackdoor Roth 401k space (see [Mega-backdoor Roth](/401k/mega-backdoor-roth)). 
+  On the other hand, you have $6,000 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in [Mega-backdoor Roth 401k space](/tax-advantaged-accounts/401k/megabackdoor-roth). 
 
 &nbsp;  
 
