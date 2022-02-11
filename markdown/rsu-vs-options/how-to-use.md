@@ -4,6 +4,8 @@
 
   The calculation involved with choosing RSUs vs options is pretty complicated, both in practice as well in taking personal considerations into account. This mental overhead is compounded by the fact that it determines your [equity compensation](/equity-compensation) & is generally fixed for the entirety of the stock grant. This tool can hopefully help visualize and explain how options & RSUs compare and contrast and help visually represent the math.
 
+&nbsp;
+
 ## How to use this tool
 
 &nbsp;  
