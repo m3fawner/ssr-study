@@ -19,6 +19,7 @@ const ROUTE_KEYS = {
   '401K': '401K',
   529: '529',
   ASSET_ALLOCATION: 'ASSET_ALLOCATION',
+  BACKDOOR_ROTH_IRA: 'BACKDOOR_ROTH_IRA',
   CAPITAL_GAINS: 'CAPITAL_GAINS',
   CONTRIBUTION_TIMING: 'CONTRIBUTION_TIMING',
   DONATIONS: 'DONATIONS',
@@ -29,6 +30,7 @@ const ROUTE_KEYS = {
   FSA: 'FSA',
   HSA: 'HSA',
   I_BONDS: 'I_BONDS',
+  IRA: 'IRA',
   MEGABACKDOOR_ROTH: 'MEGABACKDOOR_ROTH',
   NET_PROCEEDS: 'NET_PROCEEDS',
   REBALANCING: 'REBALANCING',
@@ -43,6 +45,7 @@ const ROUTES = {
   [ROUTE_KEYS['401K']]: '/tax-advantaged-accounts/401k',
   [ROUTE_KEYS['529']]: '/tax-advantaged-accounts/529',
   [ROUTE_KEYS.ASSET_ALLOCATION]: '/investments/asset-allocation',
+  [ROUTE_KEYS.BACKDOOR_ROTH_IRA]: '/tax-advantaged-accounts/ira/backdoor-roth-ira',
   [ROUTE_KEYS.CAPITAL_GAINS]: '/taxation/capital-gains',
   [ROUTE_KEYS.CONTRIBUTION_TIMING]: '/investments/contribution-timing',
   [ROUTE_KEYS.DONATIONS]: '/taxation/donations',
@@ -53,6 +56,7 @@ const ROUTES = {
   [ROUTE_KEYS.FSA]: '/tax-advantaged-accounts/fsa',
   [ROUTE_KEYS.HSA]: '/tax-advantaged-accounts/hsa',
   [ROUTE_KEYS.I_BONDS]: '/general/i-bonds',
+  [ROUTE_KEYS.IRA]: '/tax-advantaged-accounts/ira',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/tax-advantaged-accounts/401k/megabackdoor-roth',
   [ROUTE_KEYS.NET_PROCEEDS]: '/equity-compensation/net-proceeds',
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
@@ -67,6 +71,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS['401K']]: '401(k)',
   [ROUTE_KEYS['529']]: '529',
   [ROUTE_KEYS.ASSET_ALLOCATION]: 'Asset allocation',
+  [ROUTE_KEYS.BACKDOOR_ROTH_IRA]: 'Backdoor Roth IRA',
   [ROUTE_KEYS.CAPITAL_GAINS]: 'Capital gains',
   [ROUTE_KEYS.CONTRIBUTION_TIMING]: 'Contribution timing',
   [ROUTE_KEYS.DONATIONS]: 'Donations',
@@ -77,6 +82,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.FSA]: 'Flexible Savings Accounts (FSA)',
   [ROUTE_KEYS.HSA]: 'Health Savings Account (HSA)',
   [ROUTE_KEYS.I_BONDS]: 'I-Bonds',
+  [ROUTE_KEYS.IRA]: 'Individual Retirement Account (IRA)',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
   [ROUTE_KEYS.NET_PROCEEDS]: 'Net proceeds',
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',
@@ -117,6 +123,13 @@ const FOUR_OH_ONE_K = {
     ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS,
   ],
 };
+const IRA = {
+  label: 'Individual Retirement Account',
+  topLevel: ROUTE_KEYS.IRA,
+  routes: [
+    ROUTE_KEYS.BACKDOOR_ROTH_IRA,
+  ],
+};
 const EQUITY_COMPENSATION = {
   label: 'Equity compensation',
   topLevel: ROUTE_KEYS.EQUITY_COMPENSATION,
@@ -147,6 +160,7 @@ const TAX_ADVANTAGED_ACCOUNTS = {
   label: 'Tax advantaged accounts',
   categories: [
     CATEGORY_LOOKUP['401_K'],
+    CATEGORY_LOOKUP.IRA,
   ],
   routes: [
     ROUTE_KEYS.HSA,
@@ -158,6 +172,7 @@ const CATEGORIES = {
   [CATEGORY_LOOKUP.EQUITY_COMPENSATION]: EQUITY_COMPENSATION,
   [CATEGORY_LOOKUP.GENERAL_FINANCE]: GENERAL_FINANCE,
   [CATEGORY_LOOKUP.INVESTMENTS]: INVESTMENTS,
+  [CATEGORY_LOOKUP.IRA]: IRA,
   [CATEGORY_LOOKUP.TAX_ADVANTAGED_ACCOUNTS]: TAX_ADVANTAGED_ACCOUNTS,
   [CATEGORY_LOOKUP.TAXATION]: TAXATION,
 };
