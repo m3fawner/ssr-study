@@ -6,7 +6,7 @@ import MegaBackdoorRoth from '../../../src/components/MegaBackdoorRoth';
 
 const MegaBackdoorRothPage = ({ intro }) => (
   <>
-    <Head title="Megabackdoor Roth" description="Learn about the advantages of a megabackdoor Roth, calculate how much more Roth you can get out of your 401k per year, and calculate what your paycheck withholdings should look like to maximize it." url="tax-advantaged-accounts/401k/mega-backdoor-roth" />
+    <Head title="Megabackdoor Roth" description="Learn about the advantages of a megabackdoor Roth, calculate how much more Roth you can get out of your 401k per year, and calculate what your paycheck withholdings should look like to maximize it." url="tax-advantaged-accounts/401k/mega-backdoor-roth" keywords={['Megabackdoor Roth', 'Roth', '401k', 'IRA', 'Tax advantaged']} />
     <MarkdownConverter pt="5" markdown={intro} />
     <MegaBackdoorRoth />
   </>

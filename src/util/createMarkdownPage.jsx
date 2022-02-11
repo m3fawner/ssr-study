@@ -4,10 +4,10 @@ import Head from '../components/Head';
 import MarkdownConverter from '../components/MarkdownConverter';
 
 const MarkdownPage = ({
-  content, title, description, url,
+  content, title, description, url, keywords,
 }) => (
   <>
-    <Head title={title} description={description} url={url} />
+    <Head title={title} description={description} url={url} keywords={keywords} />
     <MarkdownConverter py="5" markdown={content} />
   </>
 );
@@ -16,9 +16,13 @@ MarkdownPage.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  keywords: PropTypes.arrayOf(PropTypes.string),
 };
-const createMarkdownPage = (markdown, title, description, url) => ({
-  Component: (props) => <MarkdownPage {...props} title={title} description={description} url={url} />,
+MarkdownPage.defaultProps = {
+  keywords: [],
+};
+const createMarkdownPage = (markdown, title, description, url, keywords) => ({
+  Component: (props) => <MarkdownPage {...props} title={title} description={description} url={url} keywords={keywords} />,
   _getStaticProps: async () => ({
     props: {
       content: await getMarkdown(markdown),
