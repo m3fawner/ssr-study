@@ -1,7 +1,7 @@
 import NextHead from 'next/head';
 import PropTypes from 'prop-types';
 
-const BASE_URL = 'https://ssr-study.ficarious.com';
+const BASE_URL = 'https://www.ficarious.com';
 const Head = ({ title, description, url }) => {
   const finalTitle = `FIcarious | ${title}`;
   return (
