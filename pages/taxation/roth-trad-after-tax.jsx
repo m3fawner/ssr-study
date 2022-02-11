@@ -1,21 +1,5 @@
-import PropTypes from 'prop-types';
-import Head from '../../src/components/Head';
-import MarkdownConverter from '../../src/components/MarkdownConverter';
-import getMarkdown from '../../markdown/getMarkdown';
+import createMarkdownPage from '../../src/util/createMarkdownPage';
 
-const RothTradAfterTax = ({ rothTradAfterTax }) => (
-  <>
-    <Head title="Roth, traditional, after tax?" description="An introduction to the various types of tax treatments and how they can impact your present and future tax situation." url="taxation/roth-trad-after-tax" />
-    <MarkdownConverter pt="5" markdown={rothTradAfterTax} />
-  </>
-);
-RothTradAfterTax.propTypes = {
-  rothTradAfterTax: PropTypes.string.isRequired,
-};
-
-export const getStaticProps = async () => ({
-  props: {
-    rothTradAfterTax: await getMarkdown('roth-trad-after-tax'),
-  },
-});
-export default RothTradAfterTax;
+const { Component, _getStaticProps } = createMarkdownPage('roth-trad-after-tax', 'Roth, traditional, after tax?', 'An article discussing tax optimizations for investments, highlighting how to leverage tax treatments and investment vehicles to minimize taxation.', 'taxation/roth-trad-after-tax');
+export const getStaticProps = _getStaticProps;
+export default Component;

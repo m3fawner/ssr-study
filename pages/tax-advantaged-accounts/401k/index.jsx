@@ -1,21 +1,5 @@
-import PropTypes from 'prop-types';
-import Head from '../../../src/components/Head';
-import MarkdownConverter from '../../../src/components/MarkdownConverter';
-import getMarkdown from '../../../markdown/getMarkdown';
+import createMarkdownPage from '../../../src/util/createMarkdownPage';
 
-const FourOhOneK = ({ fourOhOneK }) => (
-  <>
-    <Head title="401k" description="An introduction to 401(k)s, a tax-advantaged account." url="tax-advantaged-accounts/401k" />
-    <MarkdownConverter pt="5" markdown={fourOhOneK} />
-  </>
-);
-FourOhOneK.propTypes = {
-  fourOhOneK: PropTypes.string.isRequired,
-};
-
-export const getStaticProps = async () => ({
-  props: {
-    fourOhOneK: await getMarkdown('401k'),
-  },
-});
-export default FourOhOneK;
+const { Component, _getStaticProps } = createMarkdownPage('401k', '401k', 'An introduction to 401(k)s, a tax-advantaged account.', 'tax-advantaged-accounts/401k');
+export const getStaticProps = _getStaticProps;
+export default Component;

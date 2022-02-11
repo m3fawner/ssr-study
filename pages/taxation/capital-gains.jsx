@@ -1,21 +1,5 @@
-import PropTypes from 'prop-types';
-import Head from '../../src/components/Head';
-import MarkdownConverter from '../../src/components/MarkdownConverter';
-import getMarkdown from '../../markdown/getMarkdown';
+import createMarkdownPage from '../../src/util/createMarkdownPage';
 
-const CapitalGains = ({ capitalGains }) => (
-  <>
-    <Head title="Capital gains taxes" description="A very brief article describing capital gains taxes." url="taxation/capital-gains" />
-    <MarkdownConverter pt="5" markdown={capitalGains} />
-  </>
-);
-CapitalGains.propTypes = {
-  capitalGains: PropTypes.string.isRequired,
-};
-
-export const getStaticProps = async () => ({
-  props: {
-    capitalGains: await getMarkdown('capital-gains'),
-  },
-});
-export default CapitalGains;
+const { Component, _getStaticProps } = createMarkdownPage('capital-gains', 'Capital gains taxes', 'A very brief article describing capital gains taxes.', 'taxation/capital-gains');
+export const getStaticProps = _getStaticProps;
+export default Component;
