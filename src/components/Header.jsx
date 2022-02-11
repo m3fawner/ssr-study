@@ -27,6 +27,7 @@ const ROUTE_KEYS = {
   EQUITY_COMPENSATION: 'EQUITY_COMPENSATION',
   FILING_YOUR_TAXES: 'FILING_YOUR_TAXES',
   FSA: 'FSA',
+  I_BONDS: 'I_BONDS',
   MEGABACKDOOR_ROTH: 'MEGABACKDOOR_ROTH',
   NET_PROCEEDS: 'NET_PROCEEDS',
   REBALANCING: 'REBALANCING',
@@ -49,6 +50,7 @@ const ROUTES = {
   [ROUTE_KEYS.EQUITY_COMPENSATION]: '/equity-compensation',
   [ROUTE_KEYS.FILING_YOUR_TAXES]: '/taxation/filing-your-taxes',
   [ROUTE_KEYS.FSA]: '/tax-advantaged-accounts/fsa',
+  [ROUTE_KEYS.I_BONDS]: '/general/i-bonds',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/tax-advantaged-accounts/401k/megabackdoor-roth',
   [ROUTE_KEYS.NET_PROCEEDS]: '/equity-compensation/net-proceeds',
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
@@ -71,6 +73,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Equity compensation',
   [ROUTE_KEYS.FILING_YOUR_TAXES]: 'Filing your taxes',
   [ROUTE_KEYS.FSA]: 'Flexible Savings Accounts (FSA)',
+  [ROUTE_KEYS.I_BONDS]: 'I-Bonds',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
   [ROUTE_KEYS.NET_PROCEEDS]: 'Net proceeds',
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',
@@ -133,6 +136,7 @@ const GENERAL_FINANCE = {
   routes: [
     ROUTE_KEYS.EMERGENCY_FUNDS,
     ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS,
+    ROUTE_KEYS.I_BONDS,
     ROUTE_KEYS['529'],
   ],
 };
