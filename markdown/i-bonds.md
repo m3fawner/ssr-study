@@ -20,7 +20,7 @@
 - Government backed
 - Free of state & local taxes
 - Can use the proceeds to pay for qualified educational expenses tax free
-- `<insert “I’m doing my part” meme>` Helping the government save money on their debt
+- **insert “I’m doing my part” meme** Helping the government save money on their debt
 
 &nbsp;
 
