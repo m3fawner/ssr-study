@@ -11,7 +11,6 @@ const components = {
     },
   },
 };
-// Currently isn't used, but I do want to brand all the things
 const colors = {
   brand: {
     100: '#E0F3F5',
