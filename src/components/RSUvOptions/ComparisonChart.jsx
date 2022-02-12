@@ -16,7 +16,7 @@ const ComparisonChart = ({ dataRows }) => {
     optionsLine: [],
     rsusLine: [],
   }), [dataRows]);
-  const [optionsLineColor, rsusLineColor] = useToken('colors', ['red.700', 'blue.700']);
+  const [optionsLineColor, rsusLineColor] = useToken('colors', ['red.600', 'green.900']);
   const chartHeight = useBreakpointValue({ base: 180, md: 320 }) ?? 180;
   const chartWidth = useBreakpointValue({ base: 320, md: 540 }) ?? 320;
   return (
