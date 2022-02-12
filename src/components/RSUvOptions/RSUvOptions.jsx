@@ -1,58 +1,15 @@
 import {
-  Text, Flex, Table, Thead, Tbody, Tr, Th, Td, useToken, useBreakpointValue,
+  Text, Flex, Table, Thead, Tbody, Tr, Th, Td,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import { useMemo, useState } from 'react';
-import {
-  LineSeries, XAxis, XYPlot, YAxis, DiscreteColorLegend, Crosshair,
-} from 'react-vis';
-import useForm from '../hooks/useForm';
-import yup from '../util/yup';
-import { timeToFutureValue } from '../util/futureValue';
-import { getDollar, getFloatToPrecision } from '../util/formatters';
-import RHFInput from './RHFInput';
-
-const ComparisonChart = ({ dataRows }) => {
-  const [crosshairValues, setCrosshairValues] = useState();
-  const { optionsLine, rsusLine } = useMemo(() => dataRows.reduce(({ optionsLine: opts, rsusLine: rsus }, { rowPrice, rsuValue, optionValue }) => ({
-    optionsLine: [...opts, { x: rowPrice, y: optionValue }],
-    rsusLine: [...rsus, { x: rowPrice, y: rsuValue }],
-  }), {
-    optionsLine: [],
-    rsusLine: [],
-  }), [dataRows]);
-  const [optionsLineColor, rsusLineColor] = useToken('colors', ['red.700', 'blue.700']);
-  const chartHeight = useBreakpointValue({ base: 180, md: 320 }) ?? 180;
-  const chartWidth = useBreakpointValue({ base: 320, md: 540 }) ?? 320;
-  return typeof window === 'undefined' ? null : (
-    <Flex justifyContent="center" flexDir={['column',, 'row']}>
-      <XYPlot width={chartWidth} height={chartHeight} animation onMouseLeave={() => setCrosshairValues(null)}>
-        <Crosshair values={crosshairValues} itemsFormat={([{ y: options }, { y: rsus }]) => [{ title: 'Option value', value: options }, { title: 'RSUs value', value: rsus }]} />
-        <XAxis title="Grant price" tickFormat={getDollar} />
-        <YAxis title="Share price" tickFormat={getDollar} />
-        <LineSeries
-          color={optionsLineColor}
-          data={optionsLine}
-          onNearestX={(_, { index }) => setCrosshairValues([optionsLine[index], rsusLine[index]])}
-        />
-        <LineSeries
-          color={rsusLineColor}
-          data={rsusLine}
-        />
-      </XYPlot>
-      <DiscreteColorLegend style={{ overflowY: 'hidden' }} items={[{ title: 'Options value', color: optionsLineColor }, { title: 'RSUs value', color: rsusLineColor }]} orientation="horizontal" width={200} height={45} />
-    </Flex>
-  );
-};
-const dataRowsPropTypes = PropTypes.arrayOf(PropTypes.shape({
-  rowPrice: PropTypes.number.isRequired,
-  rsuValue: PropTypes.number.isRequired,
-  optionValue: PropTypes.number.isRequired,
-  difference: PropTypes.number.isRequired,
-}));
-ComparisonChart.propTypes = {
-  dataRows: dataRowsPropTypes.isRequired,
-};
+import { useMemo } from 'react';
+import useForm from '../../hooks/useForm';
+import yup from '../../util/yup';
+import { timeToFutureValue } from '../../util/futureValue';
+import { getDollar, getFloatToPrecision } from '../../util/formatters';
+import RHFInput from '../RHFInput';
+import { dataRowsPropTypes } from './propTypes';
+import DynamicallyImported from '../DynamicallyImported';
 
 const hiddenOnMobileCell = ['none',,, 'table-cell'];
 const getColorForValue = (value, compareTo) => {
@@ -167,7 +124,7 @@ const RSUvOptions = ({ initialSharePrice }) => {
           <RHFInput flexBasis={fullOnMobile} pr="2" right="per RSU" {...getInputProps('optionRatio', { valueAsNumber: true })} label="Options per RSU" />
           <RHFInput flexBasis={fullOnMobile} right="RSUs per vest period" {...getInputProps('grantAmount', { valueAsNumber: true })} label="RSUs granted" />
         </Flex>
-        <ComparisonChart dataRows={dataRows} />
+        <DynamicallyImported loader={() => import('./ComparisonChart')} dataRows={dataRows} />
       </Flex>
       {breakEvenPrice && (
         <>

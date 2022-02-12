@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import getMarkdown from '../../markdown/getMarkdown';
-import RSUvOptions from '../../src/components/RSUvOptions';
+import RSUvOptions from '../../src/components/RSUvOptions/RSUvOptions';
 import MarkdownConverter from '../../src/components/MarkdownConverter';
 import Head from '../../src/components/Head';
 import { getDataFromSymbol } from '../api/alphaVantage/[symbol]';

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Box, Flex, Divider } from '@chakra-ui/react';
-import 'react-vis/dist/style.css';
 import ThemeProvider from '../src/components/ThemeProvider';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
