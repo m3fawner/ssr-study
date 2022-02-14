@@ -255,7 +255,7 @@ const Header = () => {
   const { onOpen, isOpen, onClose } = useDisclosure();
   return (
     <Box p="4" bg="brand.200" as="header">
-      <Icon as={MenuIcon} onClick={onOpen} fill="brand.900" _hover={{ cursor: 'pointer' }} />
+      <Icon w={6} h={6} as={MenuIcon} onClick={onOpen} fill="brand.900" _hover={{ cursor: 'pointer' }} />
       <PageMenu isOpen={isOpen} onClose={onClose} />
     </Box>
   );
