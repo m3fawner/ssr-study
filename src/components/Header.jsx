@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import NextLink from 'next/link';
 import {
   Drawer,
   DrawerOverlay,
@@ -186,10 +185,7 @@ const NAVIGATION_HIERARCHY = {
 
 const NavigationLink = ({ label, href, ...props }) => (
   <Box {...props}>
-    <NextLink href={href} passHref>
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <Link color="brand.600">{label}</Link>
-    </NextLink>
+    <Link href={href} color="brand.600">{label}</Link>
   </Box>
 );
 NavigationLink.propTypes = {
