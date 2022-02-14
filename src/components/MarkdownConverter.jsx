@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import gfm from 'remark-gfm';
 import { Children } from 'react';
-import withoutHydration from 'react-without-hydration';
+import ServerSideOnly from './ServerSideOnly';
 
 const HEADING_LEVELS = [
   '2xl',
@@ -58,13 +58,14 @@ const components = {
   tr: ({ children }) => <Tr>{children}</Tr>,
 };
 
-const ServerSideOnlyMarkdown = withoutHydration()(ReactMarkdown);
 const MarkdownConverter = ({ markdown, ...props }) => (markdown
   ? (
     <Box {...props}>
-      <ServerSideOnlyMarkdown components={components} remarkPlugins={[gfm]}>
-        {markdown}
-      </ServerSideOnlyMarkdown>
+      <ServerSideOnly>
+        <ReactMarkdown components={components} remarkPlugins={[gfm]}>
+          {markdown}
+        </ReactMarkdown>
+      </ServerSideOnly>
     </Box>
   ) : null);
 MarkdownConverter.propTypes = {
