@@ -184,9 +184,7 @@ const NAVIGATION_HIERARCHY = {
 };
 
 const NavigationLink = ({ label, href, ...props }) => (
-  <Box {...props}>
-    <Link href={href} color="brand.600">{label}</Link>
-  </Box>
+  <Link href={href} color="brand.600" display="block" {...props}>{label}</Link>
 );
 NavigationLink.propTypes = {
   href: PropTypes.string.isRequired,
