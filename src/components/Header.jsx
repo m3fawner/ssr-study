@@ -236,7 +236,7 @@ const PageMenu = ({ isOpen, onClose }) => (
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>Menu</DrawerHeader>
-        <DrawerBody as="nav" onClick={onClose}>
+        <DrawerBody as="nav">
           <NavigationLink href="/" label={<Heading size="lg">Home</Heading>} />
           {Object.entries(NAVIGATION_HIERARCHY).map(([key, category]) => (
             <Category key={key} {...category} mt={4} />
