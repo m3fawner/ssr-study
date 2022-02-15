@@ -34,6 +34,7 @@ export default class SSRDocument extends Document {
             `,
             }}
           />
+          <script defer src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
           <script
            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{

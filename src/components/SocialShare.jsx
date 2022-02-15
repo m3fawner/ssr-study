@@ -15,6 +15,9 @@ const SocialShare = ({ keywords, description, url }) => (
         data-lazy="true"
         data-href={`${process.env.NEXT_PUBLIC_BASE_URL}/${url}`}
       />
+      <Box suppressHydrationWarning ml={4} lineHeight="20px">
+        <script suppressHydrationWarning type="IN/Share" data-url={`${process.env.NEXT_PUBLIC_BASE_URL}/${url}`} />
+      </Box>
     </Flex>
   </>
 );
