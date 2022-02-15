@@ -7,6 +7,10 @@ export default class SSRDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="preconnect" href="https://www.google-analytics.com" />
+          <link rel="preconnect" href="https://connect.facebook.net" />
+          <link rel="preconnect" href="https://platform.twitter.com" />
+          <link rel="preconnect" href="https://platform.linkedin.com" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
@@ -22,6 +26,7 @@ export default class SSRDocument extends Document {
                 js = d.createElement(s);
                 js.id = id;
                 js.src = "https://platform.twitter.com/widgets.js";
+                js.defer = true;
                 fjs.parentNode.insertBefore(js, fjs);
               
                 t._e = [];
@@ -44,6 +49,7 @@ export default class SSRDocument extends Document {
               if (d.getElementById(id)) return;
               js = d.createElement(s); js.id = id;
               js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+              js.defer = true;
               fjs.parentNode.insertBefore(js, fjs);
               }(document, 'script', 'facebook-jssdk'));
              `,
