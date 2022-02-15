@@ -32,3 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# generated public files
+public/sw*
+public/workbox*
