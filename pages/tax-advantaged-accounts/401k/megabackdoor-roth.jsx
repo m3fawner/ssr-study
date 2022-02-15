@@ -4,19 +4,26 @@ import Head from '../../../src/components/Head';
 import MarkdownConverter from '../../../src/components/MarkdownConverter';
 import MegaBackdoorRoth from '../../../src/components/MegaBackdoorRoth';
 
-const MegaBackdoorRothPage = ({ intro }) => (
+const MegaBackdoorRothPage = ({
+  intro, title, description, url, keywords,
+}) => (
   <>
-    <Head title="Megabackdoor Roth" description="Learn about the advantages of a megabackdoor Roth, calculate how much more Roth you can get out of your 401k per year, and calculate what your paycheck withholdings should look like to maximize it." url="tax-advantaged-accounts/401k/mega-backdoor-roth" keywords={['Megabackdoor Roth', 'Roth', '401k', 'IRA', 'Tax advantaged']} />
+    <Head title={title} description={description} url={url} keywords={keywords} />
     <MarkdownConverter pt="5" markdown={intro} />
     <MegaBackdoorRoth />
   </>
 );
 MegaBackdoorRothPage.propTypes = {
   intro: PropTypes.string.isRequired,
+  ...Head.propTypes,
 };
 export const getStaticProps = async () => ({
   props: {
     intro: await getMarkdown('megabackdoor-roth-intro'),
+    title: 'Megabackdoor Roth',
+    description: 'Learn about the advantages of a megabackdoor Roth, calculate how much more Roth you can get out of your 401k per year, and calculate what your paycheck withholdings should look like to maximize it.',
+    url: 'tax-advantaged-accounts/401k/mega-backdoor-roth',
+    keywords: ['Megabackdoor Roth', 'Roth', '401k', 'IRA', 'Tax advantaged'],
   },
 });
 export default MegaBackdoorRothPage;

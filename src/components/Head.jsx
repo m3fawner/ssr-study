@@ -1,7 +1,6 @@
 import NextHead from 'next/head';
 import PropTypes from 'prop-types';
 
-const BASE_URL = 'https://www.ficarious.com';
 const Head = ({
   title, description, url, keywords,
 }) => {
@@ -14,7 +13,7 @@ const Head = ({
       <meta name="author" content="Evan Williams" />
       <meta name="og:title" content={finalTitle} />
       <meta name="og:description" content={description} />
-      <meta name="og:url" content={`${BASE_URL}/${url}`} />
+      <meta name="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}/${url}`} />
       <meta name="og:image" content="/favicon-32x32.png" />
       <link rel="icon" href="/favicon-32x32.png" />
     </NextHead>

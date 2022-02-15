@@ -26,6 +26,10 @@ const createMarkdownPage = (markdown, title, description, url, keywords) => ({
   _getStaticProps: async () => ({
     props: {
       content: await getMarkdown(markdown),
+      title,
+      description,
+      url,
+      keywords,
     },
   }),
 });

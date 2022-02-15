@@ -1,10 +1,21 @@
 import EstimatedNetGrant from '../../src/components/EstimatedNetGrant';
 import Head from '../../src/components/Head';
 
-const NetProceeds = () => (
+const NetProceeds = ({
+  title, description, url, keywords,
+}) => (
   <>
-    <Head title="Net RSU grant proceeds" description="A calculator for determining how much your net proceeds should be for an RSU grant. Simply enter your company stock ticker, fill out the subsequent share form, and find out how much to expect after taxes are paid!" url="equity-compensation/net-proceeds" keywords={['rsus', 'equity', 'grant', 'taxes', 'net proceeds']} />
+    <Head title={title} description={description} url={url} keywords={keywords} />
     <EstimatedNetGrant />
   </>
 );
+NetProceeds.propTypes = Head.propTypes;
+export const getStaticProps = async () => ({
+  props: {
+    title: 'Net RSU grant proceeds',
+    description: 'A calculator for determining how much your net proceeds should be for an RSU grant. Simply enter your company stock ticker, fill out the subsequent share form, and find out how much to expect after taxes are paid!',
+    url: 'equity-compensation/net-proceeds',
+    keywords: ['rsus', 'equity', 'grant', 'taxes', 'net proceeds'],
+  },
+});
 export default NetProceeds;
