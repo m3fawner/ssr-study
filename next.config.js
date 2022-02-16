@@ -25,8 +25,7 @@ module.exports = withPWA(withBundleAnalyzer({
       use: ['raw-loader'],
     });
     if (!isServer) {
-      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/react-markdown/, path.join(__dirname, 'empty.jsx')));
-      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/remark-gfm/, path.join(__dirname, 'empty.jsx')));
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/sso\.jsx/, path.join(__dirname, 'empty.jsx')));
     }
 
     return config;
