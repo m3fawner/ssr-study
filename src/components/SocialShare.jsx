@@ -5,7 +5,7 @@ const SocialShare = ({ keywords, description, url }) => (
   <>
     <Text mb={2}>Did you like what you read? Was it helpful? Help spread the information! I don&apos;t advertise and I surely can&apos;t compete on SEO alone.</Text>
     <Flex alignItems="center">
-      <a className="twitter-share-button" href="https://twitter.com/intent/tweet" data-hashtags={keywords?.map((keyword) => keyword.replace(/\W/g, '')).join(',')} data-text={description} data-via="angular_evan">Tweet</a>
+      <a suppressHydrationWarning className="twitter-share-button" href="https://twitter.com/intent/tweet" data-hashtags={keywords?.map((keyword) => keyword.replace(/\W/g, '')).join(',')} data-text={description} data-via="angular_evan">Tweet</a>
       <Box
         suppressHydrationWarning
         ml={4}
