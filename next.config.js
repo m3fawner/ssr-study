@@ -3,6 +3,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
+const path = require('path');
 
 module.exports = withPWA(withBundleAnalyzer({
   pwa: {
@@ -14,7 +15,7 @@ module.exports = withPWA(withBundleAnalyzer({
     locales: ['en-US'],
     defaultLocale: 'en-US',
   },
-  webpack(config) {
+  webpack(config, { isServer, webpack }) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
@@ -23,6 +24,10 @@ module.exports = withPWA(withBundleAnalyzer({
       test: /\.md$/,
       use: ['raw-loader'],
     });
+    if (!isServer) {
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/react-markdown/, path.join(__dirname, 'empty.jsx')));
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/remark-gfm/, path.join(__dirname, 'empty.jsx')));
+    }
 
     return config;
   },
