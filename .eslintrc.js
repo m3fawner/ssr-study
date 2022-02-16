@@ -1,4 +1,5 @@
 module.exports = {
+  ignorePatterns: ['node_modules/*', '.next/*', 'public/*'],
   env: {
     browser: true,
     es2021: true,
