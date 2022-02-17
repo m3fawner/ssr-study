@@ -26,6 +26,7 @@ module.exports = withPWA(withBundleAnalyzer({
     });
     if (!isServer) {
       config.plugins.push(new webpack.NormalModuleReplacementPlugin(/sso\.jsx/, path.join(__dirname, 'empty.jsx')));
+      config.plugins.push(new webpack.IgnorePlugin({ resourceRegExp: /\.md$/ }));
     }
 
     return config;

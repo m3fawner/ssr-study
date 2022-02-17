@@ -70,7 +70,6 @@ export default class SSRDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <div id="fb-root" />
         </body>
       </Html>
     );
