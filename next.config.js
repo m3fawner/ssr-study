@@ -10,6 +10,7 @@ module.exports = withPWA(withBundleAnalyzer({
   pwa: {
     dest: 'public',
     runtimeCaching,
+    disable: process.env.NODE_ENV === 'development',
   },
   pageExtensions: ['jsx', 'js'],
   i18n: {
