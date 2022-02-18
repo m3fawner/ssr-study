@@ -6,6 +6,7 @@ const runtimeCaching = require('next-pwa/cache');
 const path = require('path');
 
 module.exports = withPWA(withBundleAnalyzer({
+  swcMinify: true,
   pwa: {
     dest: 'public',
     runtimeCaching,
