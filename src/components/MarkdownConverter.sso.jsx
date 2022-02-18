@@ -48,7 +48,13 @@ const components = {
   ol: ({ ordered, node, ...props }) => <OrderedList {...props} />,
   ul: ({ ordered, node, ...props }) => <UnorderedList {...props} />,
   li: ({ ordered, node, ...props }) => <ListItem paddingY={2} {...props} />,
-  p: ({ node, ...props }) => <Text {...props} />,
+  p: ({ node, ...props }) => {
+    const children = Children.toArray(props.children);
+    if (children.length === 1 && children[0] === ' ') {
+      return <br />;
+    }
+    return <Text {...props} />;
+  },
   table: ({ children }) => <Table variant="simple">{children}</Table>,
   tbody: ({ children }) => <Tbody>{children}</Tbody>,
   td: ({ node, ...props }) => <Td {...props} />,
