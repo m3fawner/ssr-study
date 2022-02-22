@@ -2,7 +2,7 @@
 
 &nbsp;
 
-  A backdoor Roth [IRA](/tax-advantaged-accounts/ira) is a mechanism similar to the [megabackdoor Roth 401(k)](/tax-advantaged-accounts/401k/megabackdoor-roth), but applied to your Roth IRA. The general process is as follows:
+A backdoor Roth [IRA](/tax-advantaged-accounts/ira) is a mechanism similar to the [megabackdoor Roth 401(k)](/tax-advantaged-accounts/401k/megabackdoor-roth), but applied to your Roth IRA. The general process is as follows:
 
 &nbsp;
 
@@ -19,7 +19,7 @@
 
 &nbsp;
 
-  Pro-rata taxation occurs when a partial conversion of an IRA is performed (see [How the IRS views IRAs](/tax-advantaged-accounts/ira#how-the-irs-views-iras)). The IRS isn’t able to determine which dollars were converted and is unable to ensure that you are paying the appropriate income taxes on the distribution (the conversion being said distribution). As a result, the IRS taxes you a ratio of the untaxed dollars (the traditional balance) and the taxable conversion. I found [this article](https://cjwealth.com/calculating-pro-rata-rule/) to be the most concise way of calculating what the cost of pro-rata taxation would cost on a backdoor Roth IRA.
+Pro-rata taxation occurs when a partial conversion of an IRA is performed (see [How the IRS views IRAs](/tax-advantaged-accounts/ira#how-the-irs-views-iras)). The IRS isn’t able to determine which dollars were converted and is unable to ensure that you are paying the appropriate income taxes on the distribution (the conversion being said distribution). As a result, the IRS taxes you a ratio of the untaxed dollars (the traditional balance) and the taxable conversion. I found [this article](https://cjwealth.com/calculating-pro-rata-rule/) to be the most concise way of calculating what the cost of pro-rata taxation would cost on a backdoor Roth IRA.
 
 &nbsp;
 

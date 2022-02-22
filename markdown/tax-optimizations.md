@@ -2,15 +2,15 @@
 
 &nbsp;
 
-  Before getting into optimal tax placement of investments, it is worth calling out: if you have tax advantaged space available, it is (almost) always more tax efficient to invest in those! American investment accounts are “use it or lose it” caps, so if you have open cap space in your 401k, IRA, HSA, etc, you should consider using that first.
+Before getting into optimal tax placement of investments, it is worth calling out: if you have tax advantaged space available, it is (almost) always more tax efficient to invest in those! American investment accounts are “use it or lose it” caps, so if you have open cap space in your 401k, IRA, HSA, etc, you should consider using that first.
 
 &nbsp;  
 
-  This article is intended to be paired very closely with [asset allocation](/investments/asset-allocation), as where you place particular asset classes impacts your tax picture.
+This article is intended to be paired very closely with [asset allocation](/investments/asset-allocation), as where you place particular asset classes impacts your tax picture.
 
 &nbsp;  
 	
-  [The holy grail of tax optimization](https://www.bogleheads.org/wiki/Tax-efficient_fund_placement). If you have the time, please read the full wiki as it will have much more information than I will provide here. I will provide a tl;dr:
+[The holy grail of tax optimization](https://www.bogleheads.org/wiki/Tax-efficient_fund_placement). If you have the time, please read the full wiki as it will have much more information than I will provide here. I will provide a tl;dr:
 
 &nbsp;  
 
@@ -40,12 +40,12 @@ Investments with special tax treatment should be held in taxable accounts. Munic
 
 &nbsp;  
 
-  There is a challenge with this approach, though. There is limited tax-advantaged space. As your income increases, the amount of tax-advantaged space decreases further. This means there are limitations on the optimization of tax liabilities.  
+There is a challenge with this approach, though. There is limited tax-advantaged space. As your income increases, the amount of tax-advantaged space decreases further. This means there are limitations on the optimization of tax liabilities.  
 
 &nbsp;  
 
-  In addition, by holding only one asset class in your accounts, it makes it more difficult to [rebalance](/investments/rebalancing) if the market makes a massive shift. For instance, in a raging bull market, I would want to decrease my stock holdings to rebalance more into bonds. If I hold equities only in Roth, I have to rebalance within the Roth account. This goes against the logic above. On the flip side, in a bear market, I would want to increase equities, which means buying equities in a tax deferred account. When the market rebounds, all of that growth will be taking place in traditional, and thus less efficient than Roth.
+In addition, by holding only one asset class in your accounts, it makes it more difficult to [rebalance](/investments/rebalancing) if the market makes a massive shift. For instance, in a raging bull market, I would want to decrease my stock holdings to rebalance more into bonds. If I hold equities only in Roth, I have to rebalance within the Roth account. This goes against the logic above. On the flip side, in a bear market, I would want to increase equities, which means buying equities in a tax deferred account. When the market rebounds, all of that growth will be taking place in traditional, and thus less efficient than Roth.
 
 &nbsp; 
 
-  While these are certainly drawbacks, the long term impact of these situations is likely minimal, and the benefits of having tax efficient investment placement ought to outweigh the impact of rebalancing inefficiently.
+While these are certainly drawbacks, the long term impact of these situations is likely minimal, and the benefits of having tax efficient investment placement ought to outweigh the impact of rebalancing inefficiently.
