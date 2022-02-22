@@ -7,6 +7,10 @@ const Head = ({
   const finalTitle = `FIcarious | ${title}`;
   return (
     <NextHead key={title}>
+      <link rel="preconnect" href="https://connect.facebook.net" />
+      <link rel="preconnect" href="https://platform.twitter.com" />
+      <link rel="preconnect" href="https://platform.linkedin.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
       <title>{finalTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />

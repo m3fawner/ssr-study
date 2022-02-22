@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import { Box, Flex, Divider } from '@chakra-ui/react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import Header from '../src/components/Header';
-import SocialShare from '../src/components/SocialShare';
+import SocialShare, { SocialScripts } from '../src/components/SocialShare';
+import GoogleAnalytics from '../src/components/GoogleAnalytics';
 import Footer from '../src/components/Footer';
 
 const App = ({ Component, pageProps }) => (
@@ -19,6 +20,8 @@ const App = ({ Component, pageProps }) => (
         </Box>
       </Box>
     </Flex>
+    <SocialScripts />
+    <GoogleAnalytics />
   </ThemeProvider>
 );
 App.propTypes = {

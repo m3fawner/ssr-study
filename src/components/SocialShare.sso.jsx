@@ -1,12 +1,12 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
-import Head from './Head';
+import PropTypes from 'prop-types';
 
 const SocialShare = ({ keywords, description, url }) => (
   <>
     <Text mb={2}>Did you like what you read? Was it helpful? Help spread the information! I don&apos;t advertise and I surely can&apos;t compete on SEO alone.</Text>
     <Flex alignItems="center">
       <div id="fb-root" />
-      <a suppressHydrationWarning className="twitter-share-button" href="https://twitter.com/intent/tweet" data-hashtags={keywords?.map((keyword) => keyword.replace(/\W/g, '')).join(',')} data-text={description} data-via="angular_evan">Tweet</a>
+      <a suppressHydrationWarning className="twitter-share-button" href="https://twitter.com/intent/tweet" data-hashtags={keywords.map((keyword) => keyword.replace(/\W/g, '')).join(',')} data-text={description} data-via="angular_evan">Tweet</a>
       <Box
         suppressHydrationWarning
         ml={4}
@@ -22,6 +22,13 @@ const SocialShare = ({ keywords, description, url }) => (
     </Flex>
   </>
 );
-SocialShare.propTypes = Head.propTypes;
+SocialShare.propTypes = {
+  description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  keywords: PropTypes.arrayOf(PropTypes.string),
+};
+SocialShare.defaultProps = {
+  keywords: [],
+};
 
 export default SocialShare;
