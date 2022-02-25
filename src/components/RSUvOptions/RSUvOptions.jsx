@@ -1,8 +1,9 @@
 import {
-  Text, Flex, Table, Thead, Tbody, Tr, Th, Td,
+  Text, Flex, Tooltip, Icon, Table, Thead, Tbody, Tr, Th, Td, Box,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useMemo } from 'react';
+import QuestionIcon from '../../svgs/question.svg';
 import useForm from '../../hooks/useForm';
 import yup from '../../util/yup';
 import { timeToFutureValue } from '../../util/futureValue';
@@ -28,7 +29,14 @@ const ComparisonTableView = ({
       <Tr>
         <Th>Share price</Th>
         <Th>RSU value</Th>
-        <Th>Options value</Th>
+        <Th>
+          <Tooltip label="Options value is calculated by taking the options to RSU ratio, then multiplying it by the difference between market value and grant price. This is accounting for the value of the grant under the presumption of an 'exercise and sell' mechanic">
+            <Box>
+              Options value
+              <Icon ml={2} as={QuestionIcon} />
+            </Box>
+          </Tooltip>
+        </Th>
         <Th d={hiddenOnMobileCell}>Difference</Th>
       </Tr>
     </Thead>
