@@ -3,6 +3,7 @@ import { Box, Flex, Divider } from '@chakra-ui/react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import Header from '../src/components/Header';
 import SocialShare, { SocialScripts } from '../src/components/SocialShare';
+import Trello from '../src/components/Trello';
 import GoogleAnalytics from '../src/components/GoogleAnalytics';
 import Footer from '../src/components/Footer';
 
@@ -15,6 +16,8 @@ const App = ({ Component, pageProps }) => (
           <Component {...pageProps} />
           <Divider my={6} />
           <SocialShare {...pageProps} />
+          <Divider my={6} />
+          <Trello />
           <Divider my={6} />
           <Footer pb={4} />
         </Box>
