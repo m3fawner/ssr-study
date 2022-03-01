@@ -38,6 +38,7 @@ const ROUTE_KEYS = {
   SHORT_V_LONG_TERM_SAVINGS: 'SHORT_V_LONG_TERM_SAVINGS',
   TAX_HARVESTING: 'TAX_HARVESTING',
   TAX_OPTIMIZATIONS: 'TAX_OPTIMIZATIONS',
+  TECH: 'TECH',
   TRUE_UP_CONTRIBUTIONS: 'TRUE_UP_CONTRIBUTIONS',
 };
 const ROUTES = {
@@ -64,6 +65,7 @@ const ROUTES = {
   [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: '/general/short-v-long-term-savings',
   [ROUTE_KEYS.TAX_HARVESTING]: '/taxation/tax-harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: '/taxation/optimizations',
+  [ROUTE_KEYS.TECH]: '/tech',
   [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: '/tax-advantaged-accounts/401k/true-up-contributions',
 };
 const ROUTE_NAMES = {
@@ -90,6 +92,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: 'Short vs long term savings',
   [ROUTE_KEYS.TAX_HARVESTING]: 'Tax harvesting',
   [ROUTE_KEYS.TAX_OPTIMIZATIONS]: 'Tax optimizations',
+  [ROUTE_KEYS.TECH]: 'Tech',
   [ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS]: 'True-up contributions',
 };
 const CATEGORY_LOOKUP = {
@@ -240,6 +243,7 @@ const PageMenu = ({ isOpen, onClose }) => (
             <Category key={key} {...category} mt={4} />
           ))}
           <NavigationLink href="/resources" label={<Heading size="lg">Resources</Heading>} />
+          <NavigationLink href="/tech" label={<Heading size="lg">Tech</Heading>} />
         </DrawerBody>
       </DrawerContent>
     </DrawerOverlay>
