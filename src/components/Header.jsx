@@ -25,6 +25,7 @@ const ROUTE_KEYS = {
   DIVERSIFICATION: 'DIVERSIFICATION',
   EMERGENCY_FUNDS: 'EMERGENCY_FUNDS',
   EQUITY_COMPENSATION: 'EQUITY_COMPENSATION',
+  ESPP: 'ESPP',
   FILING_YOUR_TAXES: 'FILING_YOUR_TAXES',
   FSA: 'FSA',
   HSA: 'HSA',
@@ -52,6 +53,7 @@ const ROUTES = {
   [ROUTE_KEYS.DIVERSIFICATION]: '/investments/diversification',
   [ROUTE_KEYS.EMERGENCY_FUNDS]: '/general/emergency-funds',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: '/equity-compensation',
+  [ROUTE_KEYS.ESPP]: '/equity-compensation/espp',
   [ROUTE_KEYS.FILING_YOUR_TAXES]: '/taxation/filing-your-taxes',
   [ROUTE_KEYS.FSA]: '/tax-advantaged-accounts/fsa',
   [ROUTE_KEYS.HSA]: '/tax-advantaged-accounts/hsa',
@@ -79,6 +81,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.DIVERSIFICATION]: 'Diversification',
   [ROUTE_KEYS.EMERGENCY_FUNDS]: 'Emergency funds',
   [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Equity compensation',
+  [ROUTE_KEYS.ESPP]: 'Employee Stock Purchasing Program (ESPP)',
   [ROUTE_KEYS.FILING_YOUR_TAXES]: 'Filing your taxes',
   [ROUTE_KEYS.FSA]: 'Flexible Savings Accounts (FSA)',
   [ROUTE_KEYS.HSA]: 'Health Savings Account (HSA)',
@@ -138,6 +141,7 @@ const EQUITY_COMPENSATION = {
   routes: [
     ROUTE_KEYS.RSU_V_OPTIONS,
     ROUTE_KEYS.NET_PROCEEDS,
+    ROUTE_KEYS.ESPP,
   ],
 };
 const INVESTMENTS = {
