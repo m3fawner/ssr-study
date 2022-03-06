@@ -1,5 +1,5 @@
 import {
-  Heading, Link, OrderedList, UnorderedList, ListItem, Text, Table, Tbody, Tr, Th, Td, Thead, Code, Box,
+  Heading, Link, OrderedList, UnorderedList, ListItem, Text, Table, Tbody, Tr, Th, Td, Thead, Code, Box, Divider, Flex,
 } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
@@ -61,6 +61,12 @@ const components = {
   th: ({ node, isHeader, ...props }) => <Th {...props} />,
   thead: ({ children }) => <Thead>{children}</Thead>,
   tr: ({ children }) => <Tr>{children}</Tr>,
+  blockquote: ({ children }) => (
+    <Flex as="blockquote">
+      <Divider orientation="vertical" mr={4} />
+      {children}
+    </Flex>
+  ),
 };
 const MarkdownConverter = ({ markdown, ...props }) => (
   <Box {...props}>

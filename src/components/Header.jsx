@@ -31,6 +31,7 @@ const ROUTE_KEYS = {
   HSA: 'HSA',
   I_BONDS: 'I_BONDS',
   IRA: 'IRA',
+  JOB_OFFER_EVALUATION: 'JOB_OFFER_EVALUATION',
   MEGABACKDOOR_ROTH: 'MEGABACKDOOR_ROTH',
   NET_PROCEEDS: 'NET_PROCEEDS',
   REBALANCING: 'REBALANCING',
@@ -59,6 +60,7 @@ const ROUTES = {
   [ROUTE_KEYS.HSA]: '/tax-advantaged-accounts/hsa',
   [ROUTE_KEYS.I_BONDS]: '/general/i-bonds',
   [ROUTE_KEYS.IRA]: '/tax-advantaged-accounts/ira',
+  [ROUTE_KEYS.JOB_OFFER_EVALUATION]: '/general/job-offer-evaluation',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: '/tax-advantaged-accounts/401k/megabackdoor-roth',
   [ROUTE_KEYS.NET_PROCEEDS]: '/equity-compensation/net-proceeds',
   [ROUTE_KEYS.REBALANCING]: '/investments/rebalancing',
@@ -87,6 +89,7 @@ const ROUTE_NAMES = {
   [ROUTE_KEYS.HSA]: 'Health Savings Account (HSA)',
   [ROUTE_KEYS.I_BONDS]: 'I-Bonds',
   [ROUTE_KEYS.IRA]: 'Individual Retirement Account (IRA)',
+  [ROUTE_KEYS.JOB_OFFER_EVALUATION]: 'Job offer evaluation',
   [ROUTE_KEYS.MEGABACKDOOR_ROTH]: 'Megabackdoor Roth',
   [ROUTE_KEYS.NET_PROCEEDS]: 'Net proceeds',
   [ROUTE_KEYS.REBALANCING]: 'Rebalancing',
@@ -156,6 +159,7 @@ const INVESTMENTS = {
 const GENERAL_FINANCE = {
   label: 'General finance',
   routes: [
+    ROUTE_KEYS.JOB_OFFER_EVALUATION,
     ROUTE_KEYS.EMERGENCY_FUNDS,
     ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS,
     ROUTE_KEYS.I_BONDS,
