@@ -1,5 +1,6 @@
+import { PAGE_METADATA, ROUTE_KEYS } from '../../../src/routing';
 import createMarkdownPage from '../../../src/util/createMarkdownPage';
 
-const { Component, _getStaticProps } = createMarkdownPage('ira', 'Individual Retirement Account', 'Individual retirement accounts are one of the most accessible tax advantaged accounts made available to us. They offer substantial flexibility and tax benefits', 'tax-advantaged-accounts/ira', ['IRA', 'Roth IRA', 'Traditional IRA', 'Individual Retirement Account']);
+const { Component, _getStaticProps } = createMarkdownPage('ira', PAGE_METADATA[ROUTE_KEYS.IRA]);
 export const getStaticProps = _getStaticProps;
 export default Component;

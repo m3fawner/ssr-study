@@ -21,15 +21,12 @@ MarkdownPage.propTypes = {
 MarkdownPage.defaultProps = {
   keywords: [],
 };
-const createMarkdownPage = (markdown, title, description, url, keywords) => ({
-  Component: (props) => <MarkdownPage {...props} title={title} description={description} url={url} keywords={keywords} />,
+const createMarkdownPage = (markdown, pageMetaData) => ({
+  Component: (props) => <MarkdownPage {...props} {...pageMetaData} />,
   _getStaticProps: async () => ({
     props: {
       content: await getMarkdown(markdown),
-      title,
-      description,
-      url,
-      keywords,
+      ...pageMetaData,
     },
   }),
 });

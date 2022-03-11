@@ -1,5 +1,6 @@
+import { PAGE_METADATA, ROUTE_KEYS } from '../../../src/routing';
 import createMarkdownPage from '../../../src/util/createMarkdownPage';
 
-const { Component, _getStaticProps } = createMarkdownPage('backdoor-roth-ira', 'Backdoor Roth IRA', 'Performing a backdoor Roth IRA is a way for those who cannot directly contribute to a Roth IRA due to income limits to still get all the tax benefits of a Roth IRA contribution, but with a few extra steps/considerations.', 'tax-advantaged-accounts/ira/backdoor-roth-ira', ['Roth', 'IRA', 'backdoor Roth', 'backdoor Roth IRA', 'pro-rata taxation']);
+const { Component, _getStaticProps } = createMarkdownPage('backdoor-roth-ira', PAGE_METADATA[ROUTE_KEYS.BACKDOOR_ROTH_IRA]);
 export const getStaticProps = _getStaticProps;
 export default Component;

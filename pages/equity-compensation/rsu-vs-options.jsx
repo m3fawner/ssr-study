@@ -4,6 +4,7 @@ import RSUvOptions from '../../src/components/RSUvOptions/RSUvOptions';
 import MarkdownConverter from '../../src/components/MarkdownConverter';
 import Head from '../../src/components/Head';
 import { getDataFromSymbol } from '../api/alphaVantage/[symbol]';
+import { PAGE_METADATA, ROUTE_KEYS } from '../../src/routing';
 
 const RSUvsOptionsPage = ({
   intro, extraInfo, initialSharePrice, title, description, url, keywords,
@@ -26,10 +27,7 @@ export const getStaticProps = async () => ({
     initialSharePrice: parseFloat((await getDataFromSymbol('Z')).data.price),
     intro: await getMarkdown('rsu-vs-options/how-to-use'),
     extraInfo: await getMarkdown('rsu-vs-options/extra-info'),
-    title: 'RSUs vs Options',
-    description: 'A calculator to help determine if you should take options, RSUs, or both',
-    url: 'equity-compensation/rsu-vs-options',
-    keywords: ['rsus', 'options', 'compensation', 'stock', 'equity'],
+    ...PAGE_METADATA[ROUTE_KEYS.RSU_V_OPTIONS],
   },
 });
 export default RSUvsOptionsPage;

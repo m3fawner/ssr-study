@@ -1,5 +1,28 @@
-import createMarkdownPage from '../src/util/createMarkdownPage';
+import PropTypes from 'prop-types';
+import getMarkdown from '../markdown/getMarkdown';
+import Head from '../src/components/Head';
+import MarkdownConverter from '../src/components/MarkdownConverter';
+import FeaturedPages from '../src/components/FeaturedPages';
+import { PAGE_METADATA, ROUTE_KEYS } from '../src/routing';
 
-const { Component, _getStaticProps } = createMarkdownPage('home-content', 'Home', 'Welcome to FIcarious! This is a site dedicated to teaching about financial independence with helpful tools and articles about the subject.', '', ['Finances', 'Financial Independence', 'FIRE', 'retirement', 'investing']);
-export const getStaticProps = _getStaticProps;
-export default Component;
+const Home = ({
+  content, title, description, url, keywords,
+}) => (
+  <>
+    <Head title={title} description={description} url={url} keywords={keywords} />
+    <MarkdownConverter pt="5" markdown={content} />
+    <FeaturedPages />
+  </>
+);
+Home.propTypes = {
+  content: PropTypes.string.isRequired,
+  ...Head.propTypes,
+};
+export const getStaticProps = async () => ({
+  props: {
+    content: await getMarkdown('home-content'),
+    ...PAGE_METADATA[ROUTE_KEYS.HOME],
+  },
+});
+
+export default Home;
