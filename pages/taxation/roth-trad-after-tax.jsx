@@ -1,5 +1,6 @@
+import { PAGE_METADATA, ROUTE_KEYS } from '../../src/routing';
 import createMarkdownPage from '../../src/util/createMarkdownPage';
 
-const { Component, _getStaticProps } = createMarkdownPage('roth-trad-after-tax', 'Roth, traditional, after tax?', 'An article discussing tax optimizations for investments, highlighting how to leverage tax treatments and investment vehicles to minimize taxation.', 'taxation/roth-trad-after-tax', ['roth', 'traditional', 'after tax', '401k', 'IRA']);
+const { Component, _getStaticProps } = createMarkdownPage('roth-trad-after-tax', PAGE_METADATA[ROUTE_KEYS.ROTH_TRAD_AT]);
 export const getStaticProps = _getStaticProps;
 export default Component;

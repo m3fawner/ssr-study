@@ -1,5 +1,6 @@
 import createMarkdownPage from '../../src/util/createMarkdownPage';
+import { ROUTE_KEYS, PAGE_METADATA } from '../../src/routing';
 
-const { Component, _getStaticProps } = createMarkdownPage('equity-compensation', 'Equity compensation', 'A short read with regards to being compensated via equity, such as RSUs or options.', 'equity-compensation', ['equity compensation', 'equity', 'rsus', 'options', 'compensation']);
+const { Component, _getStaticProps } = createMarkdownPage('equity-compensation', PAGE_METADATA[ROUTE_KEYS.EQUITY_COMPENSATION]);
 export const getStaticProps = _getStaticProps;
 export default Component;

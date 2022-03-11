@@ -1,6 +1,7 @@
+import { PAGE_METADATA, ROUTE_KEYS } from '../../src/routing';
 import createMarkdownPage from '../../src/util/createMarkdownPage';
 
-const { Component, _getStaticProps } = createMarkdownPage('emergency-funds', 'Emergency funds', "Life is unpredictable, an emergency fund can help prevent life's financial unpredictability.", 'general/emergency-funds', ['emergency', 'preparedness', 'emergency fund', 'unexpected costs']);
+const { Component, _getStaticProps } = createMarkdownPage('emergency-funds', PAGE_METADATA[ROUTE_KEYS.EMERGENCY_FUNDS]);
 export const getStaticProps = _getStaticProps;
 
 export default Component;

@@ -3,6 +3,7 @@ import getMarkdown from '../../../markdown/getMarkdown';
 import Head from '../../../src/components/Head';
 import MarkdownConverter from '../../../src/components/MarkdownConverter';
 import MegaBackdoorRoth from '../../../src/components/MegaBackdoorRoth';
+import { PAGE_METADATA, ROUTE_KEYS } from '../../../src/routing';
 
 const MegaBackdoorRothPage = ({
   intro, title, description, url, keywords,
@@ -20,10 +21,7 @@ MegaBackdoorRothPage.propTypes = {
 export const getStaticProps = async () => ({
   props: {
     intro: await getMarkdown('megabackdoor-roth-intro'),
-    title: 'Megabackdoor Roth',
-    description: 'Learn about the advantages of a megabackdoor Roth, calculate how much more Roth you can get out of your 401k per year, and calculate what your paycheck withholdings should look like to maximize it.',
-    url: 'tax-advantaged-accounts/401k/mega-backdoor-roth',
-    keywords: ['Megabackdoor Roth', 'Roth', '401k', 'IRA', 'Tax advantaged'],
+    ...PAGE_METADATA[ROUTE_KEYS.MEGABACKDOOR_ROTH],
   },
 });
 export default MegaBackdoorRothPage;
