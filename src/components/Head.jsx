@@ -17,7 +17,7 @@ const Head = ({
       <meta name="author" content="Evan Williams" />
       <meta name="og:title" content={finalTitle} />
       <meta name="og:description" content={description} />
-      <meta name="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}/${url}`} />
+      <meta name="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}${url}`} />
       <meta name="og:image" content="/assets/icons/icon-48x48.png" />
       <link rel="icon" href="/assets/icons/icon-48x48.png" />
       <link rel="manifest" href="/manifest.json" />
