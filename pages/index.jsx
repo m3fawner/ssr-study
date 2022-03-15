@@ -11,7 +11,7 @@ const Home = ({
   <>
     <Head title={title} description={description} url={url} keywords={keywords} />
     <MarkdownConverter pt="5" markdown={content} />
-    <FeaturedPages />
+    <FeaturedPages mt="5" />
   </>
 );
 Home.propTypes = {
