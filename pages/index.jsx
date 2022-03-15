@@ -4,6 +4,7 @@ import Head from '../src/components/Head';
 import MarkdownConverter from '../src/components/MarkdownConverter';
 import FeaturedPages from '../src/components/FeaturedPages';
 import { PAGE_METADATA, ROUTE_KEYS } from '../src/routing';
+import RecentPages from '../src/components/RecentPages';
 
 const Home = ({
   content, title, description, url, keywords,
@@ -12,6 +13,7 @@ const Home = ({
     <Head title={title} description={description} url={url} keywords={keywords} />
     <MarkdownConverter pt="5" markdown={content} />
     <FeaturedPages mt="5" />
+    <RecentPages mt="5" />
   </>
 );
 Home.propTypes = {

@@ -3,10 +3,10 @@ import {
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-const PageCard = ({ pageMetaData, ...props }) => (
+const PageCard = ({ pageMetaData, dateProp, ...props }) => (
   <LinkBox as="article" maxW="sm" p="5" borderWidth="1px" rounded="md" {...props}>
-    <Box as="time" dateTime={new Date(pageMetaData.authored).toLocaleString()}>
-      {Math.ceil((new Date().getTime() - new Date(pageMetaData.authored).getTime()) / 1000 / 3600 / 24)}
+    <Box as="time" dateTime={new Date(pageMetaData[dateProp]).toLocaleString()}>
+      {Math.ceil((new Date().getTime() - new Date(pageMetaData[dateProp]).getTime()) / 1000 / 3600 / 24)}
       {' '}
       days ago
     </Box>
@@ -27,6 +27,10 @@ PageCard.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
+  dateProp: PropTypes.oneOf(['authored', 'lastUpdated']),
+};
+PageCard.defaultProps = {
+  dateProp: 'authored',
 };
 
 export default PageCard;
