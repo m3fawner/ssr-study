@@ -4,6 +4,7 @@ export const ROUTE_KEYS = {
   ASSET_ALLOCATION: 'ASSET_ALLOCATION',
   BACKDOOR_ROTH_IRA: 'BACKDOOR_ROTH_IRA',
   CAPITAL_GAINS: 'CAPITAL_GAINS',
+  CHANGING_JOBS_401K: 'CHANGING_JOBS_401_K',
   CONTRIBUTION_TIMING: 'CONTRIBUTION_TIMING',
   DONATIONS: 'DONATIONS',
   DIVERSIFICATION: 'DIVERSIFICATION',
@@ -69,6 +70,14 @@ export const PAGE_METADATA = {
     keywords: ['capital gains', 'taxes', 'long term capital gains', 'ltcg', 'short term capital gains', 'stcg', 'income'],
     authored: '2022-02-08T00:00:00.000Z',
     lastUpdated: '2022-02-08T00:00:00.000Z',
+  },
+  [ROUTE_KEYS.CHANGING_JOBS_401K]: {
+    title: 'Changing jobs? 401k must-knows',
+    description: 'Changing jobs and your tax picture is...well, a nightmare. Your 401k is among the most annoying aspect of job changes. This article will cover things to know about job changes and how it affects your 401ks',
+    url: '/tax-advantaged-accounts/401k/changing-jobs',
+    keywords: ['401k', 'changing jobs', 'roll over'],
+    authored: '2022-04-15T00:00:00.000Z',
+    lastUpdated: '2022-04-15T00:00:00.000Z',
   },
   [ROUTE_KEYS.CONTRIBUTION_TIMING]: {
     title: 'Contribution timing',
@@ -304,6 +313,7 @@ const FOUR_OH_ONE_K = {
   label: '401(k)',
   topLevel: ROUTE_KEYS['401K'],
   routes: [
+    ROUTE_KEYS.CHANGING_JOBS_401K,
     ROUTE_KEYS.MEGABACKDOOR_ROTH,
     ROUTE_KEYS.TRUE_UP_CONTRIBUTIONS,
   ],
