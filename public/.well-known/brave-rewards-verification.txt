@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ficarious.com
+Token: e79eccbacdbc39cfeabd007c203a4a35d2badd27add3a8c7cba1120b38642c81
