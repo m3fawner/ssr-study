@@ -6,6 +6,50 @@ I-Bonds are a bond offering from the US Treasury. Effectively, it gives citizens
 
 &nbsp;
 
+## 2022 special announcement
+
+&nbsp;
+
+**If you're new to I-Bonds, I highly recommend reading below this section, then returning**
+
+&nbsp;
+
+It's been a wild year for investing, right? Hopefully things turn around.
+
+&nbsp;
+
+### Rate increase
+
+&nbsp;
+
+The Fed announced a 0.75% increase to the rate they lend money at to help stave off inflation yesterday (6/15/2022), which, on its own has impacts across the economy &amp; your investments... This change does, however, have a positive impact on I-bond interest rates. Any adjustment to this rate is reflected in the fixed rate portion of the I-Bond interest rate. Fixed rates have been at 0% for [16 of the last 28 periods](https://www.treasurydirect.gov/indiv/research/indepth/ibonds/res_ibonds_iratesandterms.htm), including all of the last 2 years.
+
+&nbsp;
+
+### What this means
+
+&nbsp;
+
+Given the CPI (inflation adjustment) is generally near 2%, a fixed rate increase from 0.00% to 0.75% would have a dramatic effect on the yield of the bond. The change of the fixed rate is announced twice annually, once in May, once in November. The rate increases occur throughout those periods, but do not apply to the fixed rate portion of the bond until it is set on those two dates. Thus, any bond purchase between January 1 and November 1 will be 0.00% fixed, but the rate is (presently on 6/16/2022) 0.75%. The Fed has made it clear inflation is needing to be controlled, and there are many more rate increases coming, up to potentially 3.5% by EOY 2022.
+
+&nbsp;
+
+### How do I take advantage
+
+&nbsp;
+
+Given the fixed rate portion of the bond is permanent, any increases are locked in for the full 30 years. Any increase to this rate impacts the compounding interest of the CPI adjustment. As a result, there are two actions to consider:
+
+&nbsp;
+
+* If you have not yet purchased your I-bonds this year _and plan to_: **Wait until November 1st, when the fixed rate has applied to new I-bonds**
+* If you have not yet purchased your I-bonds this year, _and do not plan to_: **Consider exchanging any 0% bonds for new, higher fixed rate bonds**
+  * This will incur a 3 month interest penalty if purchased within the last 5 years
+  * You cannot exchange bonds held for less than 1 year
+  * The opportunity cost of the 3 month interest penalty will be offset by the increased returns (depending on the rate change, the breakeven point will change)
+
+&nbsp;
+
 ## Pros & cons of I-Bonds (tl;dr)
 
 &nbsp;

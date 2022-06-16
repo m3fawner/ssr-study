@@ -165,7 +165,7 @@ export const PAGE_METADATA = {
     url: '/general/i-bonds',
     keywords: ['i-bonds', 'treasury', 'inflation', 'savings'],
     authored: '2022-02-11T00:00:00.000Z',
-    lastUpdated: '2022-02-11T00:00:00.000Z',
+    lastUpdated: '2022-06-16T00:00:00.000Z',
   },
   [ROUTE_KEYS.IRA]: {
     title: 'Individual Retirement Account',
