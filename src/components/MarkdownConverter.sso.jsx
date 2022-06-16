@@ -57,7 +57,7 @@ const components = {
   },
   table: ({ children }) => <Table variant="simple">{children}</Table>,
   tbody: ({ children }) => <Tbody>{children}</Tbody>,
-  td: ({ node, ...props }) => <Td {...props} />,
+  td: ({ node, isHeader, ...props }) => <Td {...props} />,
   th: ({ node, isHeader, ...props }) => <Th {...props} />,
   thead: ({ children }) => <Thead>{children}</Thead>,
   tr: ({ children }) => <Tr>{children}</Tr>,
