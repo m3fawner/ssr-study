@@ -28,7 +28,7 @@ These accounts can be held in cash or invested. Contributions/growth can be with
 
 &nbsp;
 
-One key difference that catches people is that employer matches count towards your contribution limit. In 2022, the family maximum contribution is $7,300 and Zillow contributes $1,500. That makes $5,800 the contribution & tax deductible space available to me, as an employee. If over age 55, there is a $1,000 catch up contribution limit increase (regardless of plan).
+One key difference that catches people is that employer matches count towards your contribution limit. In 2022, the family maximum contribution is $7,300 and my employer contributes $1,500. That makes $5,800 the contribution & tax deductible space available to me, as an employee. If over age 55, there is a $1,000 catch up contribution limit increase (regardless of plan).
 
 &nbsp;
 
@@ -48,7 +48,7 @@ The contribution calendar for HSA is between the 1st of the calendar year, but e
 
 &nbsp;
 
-At a high level, generally speaking, the tax savings of an HSA far outweigh the differences in premiums, and almost always make up for any out of pocket expense differences between plans available to Zillow employees assuming full contribution by the employee.
+At a high level, generally speaking, the tax savings of an HSA far outweigh the differences in premiums, and almost always make up for any out of pocket expense differences between plans available to employees assuming maximum HSA contributions by the employee.
 
 &nbsp;
 
