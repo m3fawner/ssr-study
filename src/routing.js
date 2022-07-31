@@ -8,6 +8,7 @@ export const ROUTE_KEYS = {
   CONTRIBUTION_TIMING: 'CONTRIBUTION_TIMING',
   DONATIONS: 'DONATIONS',
   DIVERSIFICATION: 'DIVERSIFICATION',
+  DRAWDOWN: 'DRAWDOWN',
   EMERGENCY_FUNDS: 'EMERGENCY_FUNDS',
   EQUITY_COMPENSATION: 'EQUITY_COMPENSATION',
   ESPP: 'ESPP',
@@ -102,6 +103,14 @@ export const PAGE_METADATA = {
     keywords: ['diversification', 'investing', 'risk', 'returns'],
     authored: '2022-02-05T00:00:00.000Z',
     lastUpdated: '2022-02-05T00:00:00.000Z',
+  },
+  [ROUTE_KEYS.DRAWDOWN]: {
+    title: 'Retirement drawdown strategy',
+    description: 'Saving for retirement is pretty easy...deciding how to use those savings is not. In this article, I try to point out why it is complicated, and provide some generalizations of how to withdraw from said accounts.',
+    url: '/general/drawdown',
+    keywords: ['retirement', 'drawdown', 'spending', 'Roth', 'traditional', 'savings'],
+    authored: '2022-07-31T00:00:00.000Z',
+    lastUpdated: '2022-07-31T00:00:00.000Z',
   },
   [ROUTE_KEYS.EMERGENCY_FUNDS]: {
     title: 'Emergency funds',
@@ -351,6 +360,7 @@ const GENERAL_FINANCE = {
     ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS,
     ROUTE_KEYS.I_BONDS,
     ROUTE_KEYS['529'],
+    ROUTE_KEYS.DRAWDOWN,
   ],
 };
 const TAX_ADVANTAGED_ACCOUNTS = {
