@@ -36,10 +36,10 @@ const Category = ({
     <Box {...props} ml={level * LEFT_MARGIN_MULTIPLIER}>
       {topLevel ? <NavigationLink href={ROUTES[topLevel]} label={title} /> : title}
       {categories.map((categoryKey) => (
-        <Category mt={2} key={categoryKey} level={indentedLevel} {...CATEGORIES[categoryKey]} />
+        <Category key={categoryKey} level={indentedLevel} {...CATEGORIES[categoryKey]} />
       ))}
       {routes.map((routeKey) => (
-        <NavigationLink mt={2} ml={(indentedLevel) * LEFT_MARGIN_MULTIPLIER} key={routeKey} href={ROUTES[routeKey] ?? ''} label={ROUTE_NAMES[routeKey]} />
+        <NavigationLink ml={(indentedLevel) * LEFT_MARGIN_MULTIPLIER} key={routeKey} href={ROUTES[routeKey] ?? ''} label={ROUTE_NAMES[routeKey]} />
       ))}
     </Box>
   );
@@ -71,7 +71,7 @@ const PageMenu = ({ isOpen, onClose }) => (
         <DrawerBody as="nav">
           <NavigationLink href="/" label={<Heading size="lg">Home</Heading>} />
           {Object.entries(NAVIGATION_HIERARCHY).map(([key, category]) => (
-            <Category key={key} {...category} mt={4} />
+            <Category key={key} {...category} />
           ))}
           <NavigationLink href="/resources" label={<Heading size="lg">Resources</Heading>} />
           <NavigationLink href="/tech" label={<Heading size="lg">Tech</Heading>} />
