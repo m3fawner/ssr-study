@@ -5,18 +5,6 @@ import ExternalIcon from '../svgs/external-link.svg';
 
 const Trello = (props) => (
   <Box {...props}>
-    <Text>
-      Did you find a bug
-      {' '}
-      <Text as="em">*gasp*</Text>
-      ? Want a feature added or topic covered? Feel free to drop a ticket in my
-      {' '}
-      <Link color="brand.800" href="https://trello.com/b/J75MEX7K/ficarious" isExternal>
-        Trello board
-        <Icon fill="brand.800" ml={2} as={ExternalIcon} />
-      </Link>
-      !
-    </Text>
     <Text mt={2}>
       Would you like to be notified of new articles?
       {' '}
@@ -25,6 +13,7 @@ const Trello = (props) => (
         <Icon fill="brand.800" ml={2} as={ExternalIcon} />
       </Link>
       . It is set up to email whenever an article ticket is moved into the done column!
+      The invite link will also allow you to file a bug or feature request if you&apos;d like!
     </Text>
   </Box>
 );
