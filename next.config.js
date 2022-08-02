@@ -12,7 +12,7 @@ module.exports = withPWA(withBundleAnalyzer({
     runtimeCaching,
     disable: process.env.NODE_ENV === 'development',
   },
-  pageExtensions: ['jsx', 'js'],
+  pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
   i18n: {
     locales: ['en-US'],
     defaultLocale: 'en-US',
@@ -27,7 +27,7 @@ module.exports = withPWA(withBundleAnalyzer({
       use: ['raw-loader'],
     });
     if (!isServer) {
-      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/sso\.jsx/, path.join(__dirname, 'empty.jsx')));
+      config.plugins.push(new webpack.NormalModuleReplacementPlugin(/sso\.jsx/, path.join(__dirname, 'empty.tsx')));
       config.plugins.push(new webpack.IgnorePlugin({ resourceRegExp: /\.md$/ }));
     }
 
