@@ -3,7 +3,7 @@ import {
 } from '@chakra-ui/react';
 import { Property } from 'csstype';
 import { useMemo } from 'react';
-import QuestionIcon from '../../svgs/question.svg';
+import QuestionIcon from '../../../svgs/question.svg';
 import useForm from '../../../hooks/useForm';
 import yup from '../../../util/yup';
 import { timeToFutureValue } from '../../../util/futureValue';
