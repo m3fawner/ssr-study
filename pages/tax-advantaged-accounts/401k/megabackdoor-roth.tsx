@@ -1,7 +1,7 @@
 import getMarkdown from '../../../markdown/getMarkdown';
-import Head, { HeadProps } from '../../../src/components/Head';
-import MarkdownConverter from '../../../src/components/MarkdownConverter';
-import MegaBackdoorRoth from '../../../src/components/MegaBackdoorRoth';
+import Head, { HeadProps } from '../../../src/components/page/Head';
+import MarkdownConverter from '../../../src/components/utility/MarkdownConverter';
+import MegaBackdoorRoth from '../../../src/components/pages/MegaBackdoorRoth';
 import { PAGE_METADATA, ROUTE_KEYS } from '../../../src/routing';
 
 type MegabackdoorRothProps = {

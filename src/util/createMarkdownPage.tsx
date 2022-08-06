@@ -1,6 +1,6 @@
 import getMarkdown from '../../markdown/getMarkdown';
-import Head, { HeadProps } from '../components/Head';
-import MarkdownConverter from '../components/MarkdownConverter';
+import Head, { HeadProps } from '../components/page/Head';
+import MarkdownConverter from '../components/utility/MarkdownConverter';
 
 type BaseMarkdownPageProps = {
   content: string

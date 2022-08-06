@@ -14,11 +14,11 @@ import {
 import {
   useCallback, useState, useMemo, ReactNode,
 } from 'react';
-import useForm from '../hooks/useForm';
-import yup from '../util/yup';
-import { getDollar, getPercentString } from '../util/formatters';
-import useAlphaVantageAPI from '../hooks/useAlphaVantageAPI';
-import RHFInput from './RHFInput';
+import useForm from '../../hooks/useForm';
+import yup from '../../util/yup';
+import { getDollar, getPercentString } from '../../util/formatters';
+import useAlphaVantageAPI from '../../hooks/useAlphaVantageAPI';
+import RHFInput from '../RHF/Input';
 
 type CastedFormData = {
   symbol?: string,

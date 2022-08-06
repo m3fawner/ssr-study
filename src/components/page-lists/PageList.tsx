@@ -1,6 +1,6 @@
 import { Flex, StyleProps } from '@chakra-ui/react';
 import PageCard, { DateProp } from './PageCard';
-import { Page } from '../types';
+import { Page } from './types';
 
 type PageListProps = {
   pages: Page[],

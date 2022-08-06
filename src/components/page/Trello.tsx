@@ -1,6 +1,6 @@
 import { StyleProps } from '@chakra-ui/react';
 import Trello from './Trello.sso';
-import ServerSideOnly from './ServerSideOnly';
+import ServerSideOnly from '../utility/ServerSideOnly';
 
 const SSOTrello = (props: StyleProps) => (
   <ServerSideOnly>

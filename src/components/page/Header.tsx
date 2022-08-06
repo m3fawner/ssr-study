@@ -15,8 +15,8 @@ import {
 import { ReactNode } from 'react';
 import {
   ROUTES, CATEGORIES, ROUTE_NAMES, NAVIGATION_HIERARCHY,
-} from '../routing';
-import MenuIcon from '../svgs/menu.svg';
+} from '../../routing';
+import MenuIcon from '../../svgs/menu.svg';
 
 type NavigationLinkProps = {
   label: ReactNode,

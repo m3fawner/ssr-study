@@ -1,7 +1,7 @@
 import {
   Text, Link, Icon, Box, StyleProps,
 } from '@chakra-ui/react';
-import ExternalIcon from '../svgs/external-link.svg';
+import ExternalIcon from '../../svgs/external-link.svg';
 
 const Trello = (props: StyleProps) => (
   <Box {...props}>

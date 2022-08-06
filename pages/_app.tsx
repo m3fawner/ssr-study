@@ -1,11 +1,11 @@
 import { Box, Flex, Divider } from '@chakra-ui/react';
 import { AppProps } from 'next/app';
 import ThemeProvider from '../ThemeProvider';
-import Header from '../src/components/Header';
-import SocialShare, { SocialScripts } from '../src/components/SocialShare';
-import Trello from '../src/components/Trello';
-import GoogleAnalytics from '../src/components/GoogleAnalytics';
-import Footer from '../src/components/Footer';
+import Header from '../src/components/page/Header';
+import SocialShare, { SocialScripts } from '../src/components/page/SocialShare';
+import Trello from '../src/components/page/Trello';
+import GoogleAnalytics from '../src/components/page/GoogleAnalytics';
+import Footer from '../src/components/page/Footer';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider>

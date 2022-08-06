@@ -1,5 +1,5 @@
 import RecentPages, { RecentPagesProps } from './RecentPages.sso';
-import ServerSideOnly from './ServerSideOnly';
+import ServerSideOnly from '../utility/ServerSideOnly';
 
 const SSORecentPages = (props: RecentPagesProps) => (
   <ServerSideOnly>

@@ -3,7 +3,7 @@ import {
 } from 'react';
 import { FormControl, FormErrorMessage, Checkbox } from '@chakra-ui/react';
 import get from 'lodash/get';
-import { RHFCheckboxProps } from './RHFTypes';
+import { RHFCheckboxProps } from './types';
 
 const RHFCheckbox = forwardRef(({
   onChange, onBlur, name, label, errors = {}, ...props

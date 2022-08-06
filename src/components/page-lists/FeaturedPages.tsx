@@ -1,5 +1,5 @@
 import FeaturedPages, { FeaturedPagesProps } from './FeaturedPages.sso';
-import ServerSideOnly from './ServerSideOnly';
+import ServerSideOnly from '../utility/ServerSideOnly';
 
 const SSOFeaturedPages = (props: FeaturedPagesProps) => (
   <ServerSideOnly>

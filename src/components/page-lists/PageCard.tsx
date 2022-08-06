@@ -1,7 +1,7 @@
 import {
   LinkBox, LinkOverlay, Text, Box, Heading, StyleProps,
 } from '@chakra-ui/react';
-import { Page } from '../types';
+import { Page } from './types';
 
 export type DateProp = 'authored' | 'lastUpdated';
 type PageCardProps = {

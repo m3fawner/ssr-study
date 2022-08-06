@@ -2,11 +2,11 @@ import {
   Text, Box, Button, Flex,
 } from '@chakra-ui/react';
 import { useCallback, useState, useMemo } from 'react';
-import useForm from '../hooks/useForm';
-import yup from '../util/yup';
-import { getDollar } from '../util/formatters';
-import RHFInput from './RHFInput';
-import RHFCheckbox from './RHFCheckbox';
+import useForm from '../../hooks/useForm';
+import yup from '../../util/yup';
+import { getDollar } from '../../util/formatters';
+import RHFInput from '../RHF/Input';
+import RHFCheckbox from '../RHF/Checkbox';
 
 const TOTAL_401K_LIMIT_OVER_55 = 67500;
 const TOTAL_401K_LIMIT = 61000;

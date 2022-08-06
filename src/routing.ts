@@ -1,4 +1,4 @@
-import { Page } from './types';
+import { Page } from './components/page-lists/types';
 
 export const ROUTE_KEYS = {
   '401K': '401K',

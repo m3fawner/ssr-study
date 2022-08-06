@@ -1,5 +1,5 @@
-import EstimatedNetGrant from '../../src/components/EstimatedNetGrant';
-import Head, { HeadProps } from '../../src/components/Head';
+import EstimatedNetGrant from '../../src/components/pages/EstimatedNetGrant';
+import Head, { HeadProps } from '../../src/components/page/Head';
 import { ROUTE_KEYS, PAGE_METADATA } from '../../src/routing';
 
 const NetProceeds = ({

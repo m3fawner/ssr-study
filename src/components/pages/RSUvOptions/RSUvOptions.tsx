@@ -1,16 +1,16 @@
 import {
   Text, Flex, Tooltip, Icon, Table, Thead, Tbody, Tr, Th, Td, Box, ResponsiveValue,
 } from '@chakra-ui/react';
-import CSS from 'csstype';
+import { Property } from 'csstype';
 import { useMemo } from 'react';
 import QuestionIcon from '../../svgs/question.svg';
-import useForm from '../../hooks/useForm';
-import yup from '../../util/yup';
-import { timeToFutureValue } from '../../util/futureValue';
-import { getDollar, getFloatToPrecision } from '../../util/formatters';
-import RHFInput from '../RHFInput';
+import useForm from '../../../hooks/useForm';
+import yup from '../../../util/yup';
+import { timeToFutureValue } from '../../../util/futureValue';
+import { getDollar, getFloatToPrecision } from '../../../util/formatters';
+import RHFInput from '../../RHF/Input';
 import { DataRow, ComparisonChartProps } from './types';
-import DynamicallyImported from '../DynamicallyImported';
+import DynamicallyImported from '../../utility/DynamicallyImported';
 
 const hiddenOnMobileCell = ['none', null, null, 'table-cell'];
 const getColorForValue = (value: number, compareTo: number) => {
@@ -79,7 +79,7 @@ const rsuVOptionsSchema = yup.object({
   optionRatio: yup.number().min(1).required().label('Option ratio'),
   grantAmount: yup.number().min(1).required().label('Grant amount'),
 });
-const chartFlex: ResponsiveValue<CSS.Property.FlexDirection> = ['column', null, null, 'row'];
+const chartFlex: ResponsiveValue<Property.FlexDirection> = ['column', null, null, 'row'];
 const fullOnMobile = ['100%', null, '50%', '100%'];
 const toTwoDecimalFloat = (value: number) => parseFloat(getFloatToPrecision(value, 2));
 

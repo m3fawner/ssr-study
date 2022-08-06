@@ -1,5 +1,5 @@
 import { Box, Heading, StyleProps } from '@chakra-ui/react';
-import { PAGE_METADATA, ROUTE_KEYS } from '../routing';
+import { PAGE_METADATA, ROUTE_KEYS } from '../../routing';
 import PageList from './PageList';
 
 const EXCLUDE = new Set([PAGE_METADATA[ROUTE_KEYS.HOME].url]);

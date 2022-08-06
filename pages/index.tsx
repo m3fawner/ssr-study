@@ -1,9 +1,9 @@
 import getMarkdown from '../markdown/getMarkdown';
-import Head, { HeadProps } from '../src/components/Head';
-import MarkdownConverter from '../src/components/MarkdownConverter';
-import FeaturedPages from '../src/components/FeaturedPages';
+import Head, { HeadProps } from '../src/components/page/Head';
+import MarkdownConverter from '../src/components/utility/MarkdownConverter';
+import FeaturedPages from '../src/components/page-lists/FeaturedPages';
+import RecentPages from '../src/components/page-lists/RecentPages';
 import { PAGE_METADATA, ROUTE_KEYS } from '../src/routing';
-import RecentPages from '../src/components/RecentPages';
 
 type HomeProps = {
   content: string

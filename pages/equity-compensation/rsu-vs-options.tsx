@@ -1,7 +1,7 @@
 import getMarkdown from '../../markdown/getMarkdown';
-import RSUvOptions from '../../src/components/RSUvOptions/RSUvOptions';
-import MarkdownConverter from '../../src/components/MarkdownConverter';
-import Head, { HeadProps } from '../../src/components/Head';
+import RSUvOptions from '../../src/components/pages/RSUvOptions/RSUvOptions';
+import MarkdownConverter from '../../src/components/utility/MarkdownConverter';
+import Head, { HeadProps } from '../../src/components/page/Head';
 import { AlphaVantageData, getDataFromSymbol } from '../api/alphaVantage/[symbol]';
 import { PAGE_METADATA, ROUTE_KEYS } from '../../src/routing';
 

@@ -10,7 +10,7 @@ import {
   Input,
 } from '@chakra-ui/react';
 import get from 'lodash/get';
-import { RHFInputProps } from './RHFTypes';
+import { RHFInputProps } from './types';
 
 const RHFInput = forwardRef(({
   name, onChange, onBlur, left, right, label, errors = {}, help, ...props

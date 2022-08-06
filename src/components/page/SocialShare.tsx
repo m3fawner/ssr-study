@@ -1,6 +1,6 @@
 import Script from 'next/script';
 import SocialShare, { SocialShareProps } from './SocialShare.sso';
-import ServerSideOnly from './ServerSideOnly';
+import ServerSideOnly from '../utility/ServerSideOnly';
 
 export const SocialScripts = () => (
   <>
