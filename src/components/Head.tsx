@@ -2,8 +2,8 @@ import NextHead from 'next/head';
 
 export type HeadProps = {
   title: string,
-  description: string,
-  url: string,
+  description?: string,
+  url?: string,
   keywords?: string[],
 }
 const Head = ({
