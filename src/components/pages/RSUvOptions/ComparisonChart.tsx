@@ -3,7 +3,7 @@ import {
   LineChart, XAxis, YAxis, Tooltip, Legend, Line, CartesianGrid,
 } from 'recharts';
 import { ComparisonChartProps } from './types';
-import { getDollar } from '../../util/formatters';
+import { getDollar } from '../../../util/formatters';
 
 const ComparisonChart = ({ dataRows }: ComparisonChartProps) => {
   const [optionsLineColor, rsusLineColor] = useToken('colors', ['red.600', 'green.900']);
