@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from 'react';
 import {
   Box, TabList, Tabs, TabPanel, TabPanels, Tab,
 } from '@chakra-ui/react';
@@ -21,27 +22,39 @@ const SSOCuratedArticles = () => (
   </ServerSideOnly>
 );
 
-const NavigateThisSite = () => (
-  <Box py={2}>
-    <Tabs>
-      <TabList>
-        <Tab>Curated reading list</Tab>
-        <Tab>Articles by authored date</Tab>
-        <Tab>Articles by last updated</Tab>
-      </TabList>
-      <TabPanels>
-        <TabPanel>
-          <SSOCuratedArticles />
-        </TabPanel>
-        <TabPanel>
-          <SSORecentlyAuthoredArticles />
-        </TabPanel>
-        <TabPanel>
-          <SSOLastUpdatedArticles />
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
-  </Box>
-);
+const NavigateThisSite = () => {
+  const [selectedIndex, setSelectedIndex] = useState<string | null>(null);
+  const selectedIndexInt = typeof selectedIndex === 'string' ? parseInt(selectedIndex, 10) : 0;
+  useEffect(() => {
+    setSelectedIndex(localStorage.getItem('navigateIndex'));
+  }, []);
+  const onTabSelect = useCallback((index: number) => {
+    const indexAsString = index.toString();
+    localStorage.setItem('navigateIndex', indexAsString);
+    setSelectedIndex(indexAsString);
+  }, []);
+  return (
+    <Box py={2}>
+      <Tabs defaultIndex={selectedIndexInt} index={selectedIndexInt} onChange={onTabSelect}>
+        <TabList>
+          <Tab>Curated reading list</Tab>
+          <Tab>Articles by authored date</Tab>
+          <Tab>Articles by last updated</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <SSOCuratedArticles />
+          </TabPanel>
+          <TabPanel>
+            <SSORecentlyAuthoredArticles />
+          </TabPanel>
+          <TabPanel>
+            <SSOLastUpdatedArticles />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+    </Box>
+  );
+};
 
 export default NavigateThisSite;
