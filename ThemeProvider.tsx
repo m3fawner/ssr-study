@@ -1,5 +1,5 @@
 import {
-  ChakraProvider, extendTheme,
+  ChakraProvider, extendTheme, withDefaultColorScheme,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
@@ -24,7 +24,10 @@ const colors = {
     900: '#23656C',
   },
 };
-const theme = extendTheme({ colors, components });
+const theme = extendTheme(
+  withDefaultColorScheme({ colorScheme: 'brand' }),
+  { colors, components },
+);
 type ThemeProviderProps = {
   children: ReactNode
 }

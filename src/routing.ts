@@ -22,6 +22,7 @@ export const ROUTE_KEYS = {
   IRA: 'IRA',
   JOB_OFFER_EVALUATION: 'JOB_OFFER_EVALUATION',
   MEGABACKDOOR_ROTH: 'MEGABACKDOOR_ROTH',
+  NAVIGATE: 'NAVIGATE',
   NET_PROCEEDS: 'NET_PROCEEDS',
   REBALANCING: 'REBALANCING',
   RESOURCES: 'RESOURCES',
@@ -202,6 +203,13 @@ export const PAGE_METADATA:Record<string, Page> = {
     keywords: ['Megabackdoor Roth', 'Roth', '401k', 'IRA', 'Tax advantaged'],
     authored: '2020-12-28T00:00:00.000Z',
     lastUpdated: '2022-02-09T00:00:00.000Z',
+  },
+  [ROUTE_KEYS.NAVIGATE]: {
+    title: 'Navigate this site',
+    description: 'There is a lot of information on this site and people in different stages of their finances. This page may help finding the right info at the right time easier!',
+    url: '/navigate',
+    authored: '2022-08-07T00:00.000Z',
+    lastUpdated: '2022-08-07T00:00.000Z',
   },
   [ROUTE_KEYS.NET_PROCEEDS]: {
     title: 'Net RSU grant proceeds',
@@ -400,3 +408,10 @@ export const NAVIGATION_HIERARCHY = {
   [CATEGORY_LOOKUP.TAXATION]: CATEGORIES[CATEGORY_LOOKUP.TAXATION],
   [CATEGORY_LOOKUP.INVESTMENTS]: CATEGORIES[CATEGORY_LOOKUP.INVESTMENTS],
 };
+
+const EXCLUDE = new Set([PAGE_METADATA[ROUTE_KEYS.HOME].url, PAGE_METADATA[ROUTE_KEYS.NAVIGATE].url]);
+const getRecentByKey = (key: 'lastUpdated' | 'authored'): Page[] => Object.values(PAGE_METADATA)
+  .filter(({ url }) => !EXCLUDE.has(url))
+  .sort((a, b) => (new Date(a[key]).getTime() < new Date(b[key]).getTime() ? 1 : -1));
+export const RECENT_BY_LAST_UPDATED = getRecentByKey('lastUpdated');
+export const RECENT_BY_LAST_AUTHORED = getRecentByKey('authored');
