@@ -70,6 +70,7 @@ const PageMenu = ({ isOpen, onClose }: PageMenuProps) => (
         <DrawerHeader>Menu</DrawerHeader>
         <DrawerBody as="nav">
           <NavigationLink href="/" label={<Heading size="lg">Home</Heading>} />
+          <NavigationLink href="/navigate" label={<Heading size="lg">Site navigation</Heading>} />
           {Object.entries(NAVIGATION_HIERARCHY).map(([key, category]) => (
             <Category key={key} {...category} />
           ))}
