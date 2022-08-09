@@ -14,6 +14,19 @@ This article will hopefully get you thinking about how to define your investment
 
 &nbsp;
 
+- [Retirement drawdown strategy](#retirement-drawdown-strategy)
+  - [Basic premises](#basic-premises)
+  - [Your expenses](#your-expenses)
+  - [Non-taxable income](#non-taxable-income)
+  - [Taxable income](#taxable-income)
+  - [Prioritizing tax treatments while saving](#prioritizing-tax-treatments-while-saving)
+  - [Withdrawal order](#withdrawal-order)
+    - ["Filling buckets"](#filling-buckets)
+    - [Not overdrawing important tax treatments](#not-overdrawing-important-tax-treatments)
+    - [Early retirement](#early-retirement)
+    - [RMDs](#rmds)
+  - [When to withdraw?](#when-to-withdraw)
+
 ## Basic premises
 
 &nbsp;
