@@ -24,6 +24,7 @@ type TopicList = Record<string, ReactNode>
 const BEGINNER_TOPICS: TopicList = {
   [ROUTE_KEYS.EMERGENCY_FUNDS]: 'Start here! Emergency funds help avoid high interest loans necessary to cover unforeseen circumstances. They are an important part of savings!',
   [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: "It is important to know where to put your money, but before you can do that, you should also think about when you'll need that money!",
+  [ROUTE_KEYS.WHERE_SHOULD_MY_MONEY_GO]: 'This borders advanced & introductory. I would recommend looking at the prime directive section, get an understanding of that, apply it to your situation, and move on to other topics here; returning later when the rest of the article may be applicable!',
   [ROUTE_KEYS.IRA]: 'IRAs are accessible to all folks, and it is a great savings vehicle to start with!',
   [ROUTE_KEYS.ROTH_TRAD_AT]: 'When looking into IRAs, you will want to know about the tax treatments and what they mean in order to make the right decision.',
   [ROUTE_KEYS['401K']]: 'A 401k is an example of a company sponsored tax advantaged account. This will be similar for other accounts like 457, 403, TSP, and others. It is a pretty common retirement account.',

@@ -33,6 +33,7 @@ export const ROUTE_KEYS = {
   TAX_OPTIMIZATIONS: 'TAX_OPTIMIZATIONS',
   TECH: 'TECH',
   TRUE_UP_CONTRIBUTIONS: 'TRUE_UP_CONTRIBUTIONS',
+  WHERE_SHOULD_MY_MONEY_GO: 'WHERE_SHOULD_MY_MONEY_GO',
 };
 
 export const PAGE_METADATA:Record<string, Page> = {
@@ -291,6 +292,14 @@ export const PAGE_METADATA:Record<string, Page> = {
     authored: '2022-02-10T00:00:00.000Z',
     lastUpdated: '2022-02-10T00:00:00.000Z',
   },
+  [ROUTE_KEYS.WHERE_SHOULD_MY_MONEY_GO]: {
+    title: 'Where should my money go?',
+    description: 'Learning how to be optimal in your finances is a long journey. One of the basic questions is "where should I save my money?" It is a windy road of options, some better than others. This article introduces a great external resource, then adds some nuance to it & advanced directives at the end!',
+    url: '/general/where-should-my-money-go',
+    keywords: ['savings', 'home buying', 'prime directive'],
+    authored: '2022-08-10T00:00:00.000Z',
+    lastUpdated: '2022-08-10T00:00:00.000Z',
+  },
 };
 type MappedRoutes = { ROUTES: Record<string, string>, ROUTE_NAMES: Record<string, string>};
 const { ROUTES, ROUTE_NAMES } = <MappedRoutes>Object.values(ROUTE_KEYS).reduce((acc, key) => ({
@@ -372,6 +381,7 @@ const INVESTMENTS: Category = {
 const GENERAL_FINANCE: Category = {
   label: 'General finance',
   routes: [
+    ROUTE_KEYS.WHERE_SHOULD_MY_MONEY_GO,
     ROUTE_KEYS.JOB_OFFER_EVALUATION,
     ROUTE_KEYS.EMERGENCY_FUNDS,
     ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS,
