@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import {
-  ROUTES, CATEGORIES, ROUTE_NAMES, NAVIGATION_HIERARCHY,
+  ROUTES, CATEGORIES, ROUTE_NAMES, NAVIGATION_HIERARCHY, Route, CategoryKey, Category as CategoryType,
 } from '../../routing';
 import MenuIcon from '../../svgs/menu.svg';
 
@@ -30,10 +30,10 @@ const LEVEL_TO_SIZE_MAP = ['lg', 'md', 'sm'];
 const LEFT_MARGIN_MULTIPLIER = 4;
 
 type CategoryProps = {
-  topLevel?: string,
+  topLevel?: Route,
   level?: number,
-  routes?: string[],
-  categories?: string[],
+  routes?: Route[],
+  categories?: CategoryKey[],
   label: ReactNode
 } & StyleProps;
 const Category = ({
@@ -45,10 +45,10 @@ const Category = ({
     <Box {...props} ml={level * LEFT_MARGIN_MULTIPLIER}>
       {topLevel ? <NavigationLink href={ROUTES[topLevel]} label={title} /> : title}
       {categories.map((categoryKey) => (
-        <Category key={categoryKey} level={indentedLevel} {...CATEGORIES[categoryKey]} />
+        <Category key={categoryKey} level={indentedLevel} {...CATEGORIES[categoryKey] as CategoryType} />
       ))}
       {routes.map((routeKey) => (
-        <NavigationLink ml={(indentedLevel) * LEFT_MARGIN_MULTIPLIER} key={routeKey} href={ROUTES[routeKey] ?? ''} label={ROUTE_NAMES[routeKey]} />
+        <NavigationLink ml={(indentedLevel) * LEFT_MARGIN_MULTIPLIER} key={routeKey} href={ROUTES[routeKey]} label={ROUTE_NAMES[routeKey]} />
       ))}
     </Box>
   );

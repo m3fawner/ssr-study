@@ -282,8 +282,8 @@ const { ROUTES, ROUTE_NAMES } = <MappedRoutes>(Object.keys(PAGE_METADATA) as Rou
 });
 export { ROUTES, ROUTE_NAMES };
 
-type CategoryKey = '401K' | 'EQUITY_COMPENSATION' | 'FSA' | 'GENERAL_FINANCE' | 'HSA' | 'INVESTMENTS' | 'IRA' | 'TAX_ADVANTAGED_ACCOUNTS' | 'TAXATION';
-interface Category {
+export type CategoryKey = '401K' | 'EQUITY_COMPENSATION' | 'FSA' | 'GENERAL_FINANCE' | 'HSA' | 'INVESTMENTS' | 'IRA' | 'TAX_ADVANTAGED_ACCOUNTS' | 'TAXATION';
+export interface Category {
   label: string,
   routes: Route[],
   topLevel?: Route,
