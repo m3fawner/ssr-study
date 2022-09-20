@@ -1,6 +1,7 @@
 import getMarkdown from '../../markdown/getMarkdown';
 import Head, { HeadProps } from '../components/page/Head';
 import MarkdownConverter from '../components/utility/MarkdownConverter';
+import { PAGE_METADATA, Route } from '../routing';
 
 type BaseMarkdownPageProps = {
   content: string
@@ -15,12 +16,12 @@ const MarkdownPage = ({
     <MarkdownConverter py="5" markdown={content} />
   </>
 );
-const createMarkdownPage = (markdown: string, pageMetaData: HeadProps) => ({
-  Component: (props: MarkdownPageProps) => <MarkdownPage {...props} {...pageMetaData} />,
+const createMarkdownPage = (markdown: string, pageMetaData: Route) => ({
+  Component: (props: MarkdownPageProps) => <MarkdownPage {...props} {...PAGE_METADATA[pageMetaData] as HeadProps} />,
   _getStaticProps: async () => ({
     props: {
       content: await getMarkdown(markdown),
-      ...pageMetaData,
+      ...PAGE_METADATA[pageMetaData],
     },
   }),
 });

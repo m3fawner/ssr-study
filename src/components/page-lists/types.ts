@@ -1,8 +1,8 @@
-export type Page = {
+export interface Page {
   authored: string,
   url: string,
   title: string,
   description: string,
   lastUpdated: string,
-  keywords?: string[]
+  keywords?: readonly string[]
 }

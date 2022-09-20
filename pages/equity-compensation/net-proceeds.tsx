@@ -1,6 +1,6 @@
 import EstimatedNetGrant from '../../src/components/pages/EstimatedNetGrant';
 import Head, { HeadProps } from '../../src/components/page/Head';
-import { ROUTE_KEYS, PAGE_METADATA } from '../../src/routing';
+import { PAGE_METADATA } from '../../src/routing';
 
 const NetProceeds = ({
   title, description, url, keywords,
@@ -12,6 +12,6 @@ const NetProceeds = ({
 );
 
 export const getStaticProps = async () => ({
-  props: PAGE_METADATA[ROUTE_KEYS.NET_PROCEEDS],
+  props: PAGE_METADATA.NET_PROCEEDS,
 });
 export default NetProceeds;

@@ -1,6 +1,6 @@
 import Head, { HeadProps } from '../src/components/page/Head';
 import NavigateThisSite from '../src/components/pages/NavigateThisSite/NavigateThisSite';
-import { PAGE_METADATA, ROUTE_KEYS } from '../src/routing';
+import { PAGE_METADATA } from '../src/routing';
 
 type NavigateProps = HeadProps;
 
@@ -14,7 +14,7 @@ const Navigate = ({
 );
 export const getStaticProps = () => ({
   props: {
-    ...PAGE_METADATA[ROUTE_KEYS.NAVIGATE],
+    ...PAGE_METADATA.NAVIGATE,
   },
 });
 export default Navigate;

@@ -3,7 +3,7 @@ import RSUvOptions from '../../src/components/pages/RSUvOptions/RSUvOptions';
 import MarkdownConverter from '../../src/components/utility/MarkdownConverter';
 import Head, { HeadProps } from '../../src/components/page/Head';
 import { AlphaVantageData, getDataFromSymbol } from '../api/alphaVantage/[symbol]';
-import { PAGE_METADATA, ROUTE_KEYS } from '../../src/routing';
+import { PAGE_METADATA } from '../../src/routing';
 
 type RSUvsOptionsProps = {
   intro: string,
@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
       initialSharePrice: exampleQuote ? parseFloat(exampleQuote.data.price) : 50,
       intro: await getMarkdown('rsu-vs-options/how-to-use'),
       extraInfo: await getMarkdown('rsu-vs-options/extra-info'),
-      ...PAGE_METADATA[ROUTE_KEYS.RSU_V_OPTIONS],
+      ...PAGE_METADATA.RSU_V_OPTIONS,
     },
   });
 };

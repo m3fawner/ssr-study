@@ -3,7 +3,7 @@ import Head, { HeadProps } from '../src/components/page/Head';
 import MarkdownConverter from '../src/components/utility/MarkdownConverter';
 import FeaturedPages from '../src/components/page-lists/FeaturedPages';
 import RecentPages from '../src/components/page-lists/RecentPages';
-import { PAGE_METADATA, ROUTE_KEYS } from '../src/routing';
+import { PAGE_METADATA } from '../src/routing';
 
 type HomeProps = {
   content: string
@@ -22,7 +22,7 @@ const Home = ({
 export const getStaticProps = async () => ({
   props: {
     content: await getMarkdown('home-content'),
-    ...PAGE_METADATA[ROUTE_KEYS.HOME],
+    ...PAGE_METADATA.HOME,
   },
 });
 
