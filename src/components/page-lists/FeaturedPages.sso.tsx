@@ -1,8 +1,8 @@
 import { Box, Heading, StyleProps } from '@chakra-ui/react';
-import { ROUTE_KEYS, PAGE_METADATA } from '../../routing';
+import { PAGE_METADATA, Route } from '../../routing';
 import PageList from './PageList';
 
-const FEATURED = [ROUTE_KEYS.RSU_V_OPTIONS, ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS, ROUTE_KEYS.MEGABACKDOOR_ROTH, ROUTE_KEYS.TAX_HARVESTING];
+const FEATURED: Route[] = ['RSU_V_OPTIONS', 'SHORT_V_LONG_TERM_SAVINGS', 'MEGABACKDOOR_ROTH', 'TAX_HARVESTING'];
 
 export type FeaturedPagesProps = StyleProps;
 const FeaturedPages = (props: FeaturedPagesProps) => (

@@ -2,9 +2,9 @@ import {
   Link, StyleProps, Text, UnorderedList, ListItem,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
-import { ROUTE_KEYS, PAGE_METADATA } from '../../../routing';
+import { PAGE_METADATA, Route } from '../../../routing';
 
-type PageLinkProps = { pageKey: string } & StyleProps;
+type PageLinkProps = { pageKey: Route } & StyleProps;
 const PageLink = ({ pageKey, ...props }: PageLinkProps) => <Link {...props} href={PAGE_METADATA[pageKey].url} color="brand.800">{PAGE_METADATA[pageKey].title}</Link>;
 
 type PageLinkWithDescriptionProps = { description: ReactNode } & PageLinkProps;
@@ -20,44 +20,44 @@ const PageLinkWithDescription = ({ description, pageKey }: PageLinkWithDescripti
   </>
 );
 
-type TopicList = Record<string, ReactNode>
+type TopicList = Partial<Record<Route, ReactNode>>;
 const BEGINNER_TOPICS: TopicList = {
-  [ROUTE_KEYS.EMERGENCY_FUNDS]: 'Start here! Emergency funds help avoid high interest loans necessary to cover unforeseen circumstances. They are an important part of savings!',
-  [ROUTE_KEYS.SHORT_V_LONG_TERM_SAVINGS]: "It is important to know where to put your money, but before you can do that, you should also think about when you'll need that money!",
-  [ROUTE_KEYS.WHERE_SHOULD_MY_MONEY_GO]: 'This borders advanced & introductory. I would recommend looking at the prime directive section, get an understanding of that, apply it to your situation, and move on to other topics here; returning later when the rest of the article may be applicable!',
-  [ROUTE_KEYS.IRA]: 'IRAs are accessible to all folks, and it is a great savings vehicle to start with!',
-  [ROUTE_KEYS.ROTH_TRAD_AT]: 'When looking into IRAs, you will want to know about the tax treatments and what they mean in order to make the right decision.',
-  [ROUTE_KEYS['401K']]: 'A 401k is an example of a company sponsored tax advantaged account. This will be similar for other accounts like 457, 403, TSP, and others. It is a pretty common retirement account.',
-  [ROUTE_KEYS.HSA]: 'Health savings accounts may be accessible and help offset medical expenses if applicable to your health plan.',
-  [ROUTE_KEYS.FSA]: 'Flex savings accounts are another type of account that can decrease taxes for common expenses (dependent care, health expenses, and travel expenses)',
-  [ROUTE_KEYS.I_BONDS]: 'I-bonds are a type of government backed investment that are inflation adjusted and can be useful for savings goals.',
-  [ROUTE_KEYS.FIVE_TWENTY_NINE]: '529s are education expense accounts, useful both for you and others you may want to help fund educational pursuits for!',
+  EMERGENCY_FUNDS: 'Start here! Emergency funds help avoid high interest loans necessary to cover unforeseen circumstances. They are an important part of savings!',
+  SHORT_V_LONG_TERM_SAVINGS: "It is important to know where to put your money, but before you can do that, you should also think about when you'll need that money!",
+  WHERE_SHOULD_MY_MONEY_GO: 'This borders advanced & introductory. I would recommend looking at the prime directive section, get an understanding of that, apply it to your situation, and move on to other topics here; returning later when the rest of the article may be applicable!',
+  IRA: 'IRAs are accessible to all folks, and it is a great savings vehicle to start with!',
+  ROTH_TRAD_AT: 'When looking into IRAs, you will want to know about the tax treatments and what they mean in order to make the right decision.',
+  '401K': 'A 401k is an example of a company sponsored tax advantaged account. This will be similar for other accounts like 457, 403, TSP, and others. It is a pretty common retirement account.',
+  HSA: 'Health savings accounts may be accessible and help offset medical expenses if applicable to your health plan.',
+  FSA: 'Flex savings accounts are another type of account that can decrease taxes for common expenses (dependent care, health expenses, and travel expenses)',
+  I_BONDS: 'I-bonds are a type of government backed investment that are inflation adjusted and can be useful for savings goals.',
+  FIVE_TWENTY_NINE: '529s are education expense accounts, useful both for you and others you may want to help fund educational pursuits for!',
 };
-const INVESTMENT_TOPICS: TopicList = [
-  ROUTE_KEYS.ASSET_ALLOCATION,
-  ROUTE_KEYS.REBALANCING,
-  ROUTE_KEYS.DIVERSIFICATION,
-  ROUTE_KEYS.CAPITAL_GAINS,
-  ROUTE_KEYS.CONTRIBUTION_TIMING,
-].reduce((acc, key) => ({
+const INVESTMENT_ROUTES: Route[] = ['ASSET_ALLOCATION',
+  'REBALANCING',
+  'DIVERSIFICATION',
+  'CAPITAL_GAINS',
+  'CONTRIBUTION_TIMING'];
+const INVESTMENT_TOPICS: TopicList = INVESTMENT_ROUTES.reduce((acc, key) => ({
   ...acc,
   [key]: PAGE_METADATA[key].description,
 }), {});
 const TECH_TOPICS: TopicList = {
-  [ROUTE_KEYS.EQUITY_COMPENSATION]: 'Start here! This is your basic introduction to equity compensation.',
-  [ROUTE_KEYS.RSU_V_OPTIONS]: 'Some companies offer the choice for options or RSUs, this page can help visualize what that may look like for your situation.',
-  [ROUTE_KEYS.NET_PROCEEDS]: 'The net proceeds calculator helps get an idea of what a grant may look like in terms of tax picture and take home pay',
-  [ROUTE_KEYS.ESPP]: 'Employee stock purchase programs are a benefit offered to some allowing employees to purchase more equity at a discount',
+  EQUITY_COMPENSATION: 'Start here! This is your basic introduction to equity compensation.',
+  RSU_V_OPTIONS: 'Some companies offer the choice for options or RSUs, this page can help visualize what that may look like for your situation.',
+  NET_PROCEEDS: 'The net proceeds calculator helps get an idea of what a grant may look like in terms of tax picture and take home pay',
+  ESPP: 'Employee stock purchase programs are a benefit offered to some allowing employees to purchase more equity at a discount',
 };
-const ADVANCED_TAXES: TopicList = [
-  ROUTE_KEYS.TAX_OPTIMIZATIONS,
-  ROUTE_KEYS.TAX_HARVESTING,
-  ROUTE_KEYS.BACKDOOR_ROTH_IRA,
-  ROUTE_KEYS.MEGABACKDOOR_ROTH,
-  ROUTE_KEYS.DRAWDOWN,
-  ROUTE_KEYS.DONATIONS,
-  ROUTE_KEYS.CHANGING_JOBS_401K,
-].reduce((acc, key) => ({
+const ADVANCED_TAXES_ROUTES: Route[] = [
+  'TAX_OPTIMIZATIONS',
+  'TAX_HARVESTING',
+  'BACKDOOR_ROTH_IRA',
+  'MEGABACKDOOR_ROTH',
+  'DRAWDOWN',
+  'DONATIONS',
+  'CHANGING_JOBS_401K',
+];
+const ADVANCED_TAXES: TopicList = ADVANCED_TAXES_ROUTES.reduce((acc, key) => ({
   ...acc,
   [key]: PAGE_METADATA[key].description,
 }), {});
@@ -67,7 +67,7 @@ type TopicListProps = {
 };
 const TopicList = ({ articles }: TopicListProps) => (
   <UnorderedList>
-    {Object.entries(articles).map(([key, description]) => (
+    {(Object.entries(articles) as Array<[Route, string]>).map(([key, description]) => (
       <ListItem key={key}><PageLinkWithDescription pageKey={key} description={description} /></ListItem>))}
   </UnorderedList>
 );
@@ -78,7 +78,7 @@ const CuratedArticles = () => (
     <Text>
       As you&apos;ll note, there is a distinct lack of &apos;beginner&apos; information. That type of information is pretty well covered
       by other resources. There is a good section in the
-      <PageLink pageKey={ROUTE_KEYS.RESOURCES} mx={1} />
+      <PageLink pageKey="RESOURCES" mx={1} />
       {' '}
       page that is a great start!
     </Text>
