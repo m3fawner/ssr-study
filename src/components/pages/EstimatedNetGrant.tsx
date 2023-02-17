@@ -86,7 +86,7 @@ const HelpItems = () => (
     <HelpItem label="Federal income taxes" body="Federal income taxes are withheld at supplemental income rates, or 22%. You will need to appropriately account for the difference in supplemental & marginal rates!" />
     <HelpItem label="State taxes" body="State taxes are income taxes applied to earnings. This will be dependent upon the appropriate state's tax regulation." />
     <HelpItem label="Medicare taxes" body="Medicare taxes are withheld at 1.45% for the employee, and another 1.45% paid by the employer." />
-    <HelpItem label="Social Security taxes" body="Social Security taxes, like medicare, are an employee/employer tax. The employee pays 6.2%, on up to $142,800 of earnings. After that, social security does not apply." />
+    <HelpItem label="Social Security taxes" body="Social Security taxes, like medicare, are an employee/employer tax. The employee pays 6.2%, on up to $160,200 of earnings. After that, social security does not apply." />
     <HelpItem label="Net proceeds" body="The amount of proceeds that will be credited to your account after all sales & and taxes are withheld." />
   </SimpleGrid>
 );
