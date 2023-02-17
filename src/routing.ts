@@ -8,7 +8,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/tax-advantaged-accounts/401k',
     keywords: ['401k', 'retirement', 'employee sponsored plan', 'investing'],
     authored: '2022-02-09T00:00:00.000Z',
-    lastUpdated: '2022-02-09T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   ASSET_ALLOCATION: {
     title: 'Asset allocation',
@@ -32,7 +32,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/taxation/capital-gains',
     keywords: ['capital gains', 'taxes', 'long term capital gains', 'ltcg', 'short term capital gains', 'stcg', 'income'],
     authored: '2022-02-08T00:00:00.000Z',
-    lastUpdated: '2022-02-08T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   CHANGING_JOBS_401K: {
     title: 'Changing jobs? 401k must-knows',
@@ -72,7 +72,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/general/drawdown',
     keywords: ['retirement', 'drawdown', 'spending', 'Roth', 'traditional', 'savings'],
     authored: '2022-07-31T00:00:00.000Z',
-    lastUpdated: '2022-07-31T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   EMERGENCY_FUNDS: {
     title: 'Emergency funds',
@@ -120,7 +120,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/tax-advantaged-accounts/fsa',
     keywords: ['flexible savings account', 'fsa', 'limited purpose', 'commuter', 'dependent care'],
     authored: '2022-02-10T00:00:00.000Z',
-    lastUpdated: '2022-02-10T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   HOME: {
     title: 'Home',
@@ -136,7 +136,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/tax-advantaged-accounts/hsa',
     keywords: ['health savings account', 'hsa', 'medical expenses'],
     authored: '2022-02-11T00:00:00.000Z',
-    lastUpdated: '2022-02-11T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   I_BONDS: {
     title: 'I-Bonds',
@@ -144,7 +144,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/general/i-bonds',
     keywords: ['i-bonds', 'treasury', 'inflation', 'savings'],
     authored: '2022-02-11T00:00:00.000Z',
-    lastUpdated: '2022-06-16T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   IRA: {
     title: 'Individual Retirement Account',
@@ -152,7 +152,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/tax-advantaged-accounts/ira',
     keywords: ['IRA', 'Roth IRA', 'Traditional IRA', 'Individual Retirement Account'],
     authored: '2022-02-11T00:00:00.000Z',
-    lastUpdated: '2022-02-11T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   JOB_OFFER_EVALUATION: {
     title: 'Evaluating a job offer',
@@ -168,7 +168,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/tax-advantaged-accounts/401k/megabackdoor-roth',
     keywords: ['Megabackdoor Roth', 'Roth', '401k', 'IRA', 'Tax advantaged'],
     authored: '2020-12-28T00:00:00.000Z',
-    lastUpdated: '2022-02-09T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   NAVIGATE: {
     title: 'Navigate this site',
@@ -183,7 +183,7 @@ export const PAGE_METADATA: Record<Route, Page> = {
     url: '/equity-compensation/net-proceeds',
     keywords: ['rsus', 'equity', 'grant', 'taxes', 'net proceeds'],
     authored: '2020-12-26T00:00:00.000Z',
-    lastUpdated: '2020-12-26T00:00:00.000Z',
+    lastUpdated: '2023-02-16T00:00:00.000Z',
   },
   REBALANCING: {
     title: 'Rebalancing',
