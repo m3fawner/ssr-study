@@ -41,7 +41,7 @@ I-Bonds are a bond offering from the US Treasury. Effectively, it gives citizens
 
 &nbsp;
 
-The way I-Bond rates are determined is two-fold: a fixed rate (currently 0.00%) and an inflation adjustment. The inflation adjustment accounts for changes to the CPI. **This is the benefit of an I-Bond!**
+The way I-Bond rates are determined is two-fold: a fixed rate (currently 0.40%) and an inflation adjustment. The inflation adjustment accounts for changes to the CPI. **This is the benefit of an I-Bond!**
 
 &nbsp;
 
