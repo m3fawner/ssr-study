@@ -75,11 +75,11 @@ The key thing to evaluate for your individual scenario, is to look at your curre
 
 &nbsp;  
 
-In addition, I advocate for Traditional investments where you can at higher income levels because there is a limited number. Married couples who make more than $129,000 combined cannot deduct a single dollar of traditional IRA contributions, for instance. This leaves only sources like 401(k)s and HSA contributions that are tax deductible for high earners.
+In addition, I advocate for Traditional investments where you can at higher income levels because there is a limited number. Married couples who make more than $136,000 combined cannot deduct a single dollar of traditional IRA contributions, for instance. This leaves only sources like 401(k)s and HSA contributions that are tax deductible for high earners.
 
 &nbsp;  
 
-On the other hand, you have $6,000 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in [Mega-backdoor Roth 401k space](/tax-advantaged-accounts/401k/megabackdoor-roth). 
+On the other hand, you have $6,500 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in [Mega-backdoor Roth 401k space](/tax-advantaged-accounts/401k/megabackdoor-roth). 
 
 &nbsp;  
 

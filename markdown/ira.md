@@ -3,7 +3,7 @@
 &nbsp;
 
 - [Individual Retirement Account (IRA)](#individual-retirement-account-ira)
-  - [IRAs & High Income Earners](#iras--high-income-earners)
+  - [IRAs \& High Income Earners](#iras--high-income-earners)
   - [How the IRS views IRAs](#how-the-irs-views-iras)
 
 &nbsp;
@@ -16,7 +16,7 @@ IRAs are funded with post-tax earnings, meaning they need to be funded outside o
 
 &nbsp;
 
-The contribution calendar for IRAs is also between the 1st of the calendar year, but extends through the filing date of the same tax year. This means for 2021 contributions to IRAs can be made from Jan 1, 2021 through Apr 18, 2022.
+The contribution calendar for IRAs is also between the 1st of the calendar year, but extends through the filing date of the same tax year. This means for 2022 contributions to IRAs can be made from Jan 1, 2022 through Apr 18, 2023.
 
 &nbsp;
 
@@ -40,7 +40,7 @@ Another complication of IRAs as a high income earner, is that direct Roth contri
 
 &nbsp;
 
-IRAs are seen as one account across all brokerages and the tax treatments of each account is just seen as a “bucket” within an IRA. This is important to note because of [pro-rata taxation](/tax-advantaged-accounts/ira/backdoor-roth-ira#pro-rata-taxation). You can contribute $3,000 to an IRA with Fidelity and $3,000 to an IRA with Vanguard and the IRS will note that you contributed $6,000 to IRAs. If you were to exceed the limit because you contributed to multiple accounts, you will be penalized.
+IRAs are seen as one account across all brokerages and the tax treatments of each account is just seen as a “bucket” within an IRA. This is important to note because of [pro-rata taxation](/tax-advantaged-accounts/ira/backdoor-roth-ira#pro-rata-taxation). You can contribute $3,250 to an IRA with Fidelity and $3,250 to an IRA with Vanguard and the IRS will note that you contributed $6,500 to IRAs. If you were to exceed the limit because you contributed to multiple accounts, you will be penalized.
 
 &nbsp;
 
