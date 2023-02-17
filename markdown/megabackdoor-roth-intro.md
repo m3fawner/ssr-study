@@ -5,11 +5,11 @@
 
 &nbsp;  
 
-The motivation for a megabackdoor Roth is to take advantage of the full 401k limit defined by the IRS. It is comprised of the employee contribution limit of $20,500 limit, which can be Traditional (pre-tax) or Roth. This is the limit most people are familiar with. If you are over the age of 55, this limit is $27,000.
+The motivation for a megabackdoor Roth is to take advantage of the full 401k limit defined by the IRS. It is comprised of the employee contribution limit of $22,500 limit, which can be Traditional (pre-tax) or Roth. This is the limit most people are familiar with. If you are over the age of 55, this limit is $30,000.
 
 &nbsp;  
 
-However, the total 401k limit is actually $61,000, or $67,500 for those over 55! The additional difference is made up by your employer match (if you have one!) and "after-tax" 401k contributions. After-tax is what we will be leveraging to perform megabackdoor Roth conversions. It is a way of unlocking the full limit.
+However, the total 401k limit is actually $66,000, or $73,500 for those over 55! The additional difference is made up by your employer match (if you have one!) and "after-tax" 401k contributions. After-tax is what we will be leveraging to perform megabackdoor Roth conversions. It is a way of unlocking the full limit.
 
 &nbsp;  
 

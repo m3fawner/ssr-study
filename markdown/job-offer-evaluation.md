@@ -126,7 +126,7 @@ When I compare offers, I take my total comp and subtract the cost of healthcare 
 
 &nbsp;
 
-Tax advantaged accounts are only as good as your choice to use them. If a company offers a 401k and another doesn't, but you opt not to contribute, then they are of equal value. However, if one offers a 401k and you max out the employee contributions of $20,500, that may be worth up to $7,585 (if you're in the top tax bracket).
+Tax advantaged accounts are only as good as your choice to use them. If a company offers a 401k and another doesn't, but you opt not to contribute, then they are of equal value. However, if one offers a 401k and you max out the employee contributions of $22,500, that may be worth up to $8,325 (if you're in the top tax bracket).
 
 &nbsp;
 
