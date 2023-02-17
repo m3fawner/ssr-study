@@ -34,9 +34,9 @@ With long term capital gains, you are taxed at one of the following brackets: 0%
 
 | Rate | Single | Married filing jointly | Married filing separately | Head of household |
 | ---- | ------ | ---------------------- | ------------------------- | ----------------- |
-| 0%   | $0-41,675 | $0-$83,350 | $0-$41,675 | $0-$55,800 |
-| 15%  | $41,675-$459,750 | $83,350-$517,200 | $41,675-$258,600 | $55,800-$488,500 |
-| 20%  | $459,750+ | $517,200+ | $258,600+ | $488,500+ |
+| 0%   | $0-$44,625 | $0-$89,250 | $0-$44,625 | $0-$59,750 |
+| 15%  | $44,626-$492,300 | $89,251-$553,850 | $44,626-$276,900 | $59,751-$523,050 |
+| 20%  | $492,301+ | $553,851+ | $276,901+ | $523,051+ |
 
 &nbsp;  
 
@@ -50,7 +50,7 @@ Let's take an example:
 
 I have $150,000 in VTSAX, with a cost basis of $100,000. This amounts to $150,000 of wealth, and $50,000 of capital gains. If the sale of all shares of VTSAX was the only income that I had for the year (married filing jointly), my tax rate would be a whopping...0%. In fact, it would be negative due to the standard deduction.
 
- I will have realized $50,000 of capital gains, fallen squarely under the 0% tax bracket, and been able to take the standard deduction of $25,900 and had a whopping total of $175,900 to spend.
+ I will have realized $50,000 of capital gains, fallen squarely under the 0% tax bracket, and been able to take the standard deduction of $27,700 and had a whopping total of $177,700 to spend.
 
 Pair this with investment vehicles like Roth IRAs and HSAs which have pre-tax withdrawals, you can start to see how your tax picture could be much smaller than you think in retirement!
 
