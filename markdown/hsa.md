@@ -28,7 +28,7 @@ These accounts can be held in cash or invested. Contributions/growth can be with
 
 &nbsp;
 
-One key difference that catches people is that employer matches count towards your contribution limit. In 2022, the family maximum contribution is $7,300 and my employer contributes $1,500. That makes $5,800 the contribution & tax deductible space available to me, as an employee. If over age 55, there is a $1,000 catch up contribution limit increase (regardless of plan).
+One key difference that catches people is that employer matches count towards your contribution limit. In 2023, the family maximum contribution is $7,750 and my employer contributes $1,500. That makes $5,800 the contribution & tax deductible space available to me, as an employee. If over age 55, there is a $1,000 catch up contribution limit increase (regardless of plan).
 
 &nbsp;
 
@@ -40,7 +40,7 @@ HSAs can be contributed to in two fashions: direct contribution (post-tax) or vi
 
 &nbsp;
 
-The contribution calendar for HSA is between the 1st of the calendar year, but extends through the filing date of the same tax year. This means for 2021 contributions to HSAs can be made from Jan 1, 2021 through Apr 18, 2022. However, payroll contributions to HSAs may be restricted to just the calendar year. An example: for 2021 the HSA contribution limit was $7,200 for family plans. If $5,000 was contributed via payroll, you can additionally contribute $2,200 directly to the HSA for tax year 2021 if your payroll does not allow you to contribute to the past year. While you’ll still pay payroll taxes on that contribution, it’ll lower your taxable income by $2,200 which can be a good chunk of change!
+The contribution calendar for HSA is between the 1st of the calendar year, but extends through the filing date of the same tax year. This means for 2022 contributions to HSAs can be made from Jan 1, 2022 through Apr 18, 2023. However, payroll contributions to HSAs may be restricted to just the calendar year. An example: for 2022 the HSA contribution limit was $7,200 for family plans. If $5,000 was contributed via payroll, you can additionally contribute $2,200 directly to the HSA for tax year 2022 if your payroll does not allow you to contribute to the past year. While you’ll still pay payroll taxes on that contribution, it’ll lower your taxable income by $2,200 which can be a good chunk of change!
 
 &nbsp;
 
@@ -106,7 +106,7 @@ HSAs have a “last month” rule, in which you are considered fully eligible to
 - You are on said plan on, or before, December 1st
 - You remain on a qualifying HDHP for the full calendar year subsequent to signing up for the HSA eligible plan (does not need to be the same plan, i.e. if you change employers)
 
-If these criteria are met, you can fully maximize your HSA for the first year (remember, you can make contributions directly to your HSA outside of payroll, and up until tax filing day of the following year). For some, this could mean an additional $3,350 to $7,100 of tax advantaged space. If you fail to meet any one of the criteria, you will owe taxes on the contribution amount, in addition to a penalty.
+If these criteria are met, you can fully maximize your HSA for the first year (remember, you can make contributions directly to your HSA outside of payroll, and up until tax filing day of the following year). For some, this could mean an additional $3,850 to $7,750 of tax advantaged space. If you fail to meet any one of the criteria, you will owe taxes on the contribution amount, in addition to a penalty.
 
 &nbsp;
 
