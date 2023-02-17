@@ -62,7 +62,7 @@ Your expenses dictate a good amount of how you'll want to draw your funds. The m
 
 &nbsp;
 
-You & your spouse's expenses are $35,000/yr. You sell $35,000 worth of VTSAX and have no other forms of income (let's pretend no dividends exist this year). Your tax liability? $0, if you include the standard deduction? -$25,900. That's because you can have up to $80,800 in long term _capital gains_ (I emphasize gains because you would also have principal as a part of that sale, too). If you are under that $80,800, it would be a good idea to do [tax gain harvesting](/taxation/tax-harvesting).
+You & your spouse's expenses are $35,000/yr. You sell $35,000 worth of VTSAX and have no other forms of income (let's pretend no dividends exist this year). Your tax liability? $0, if you include the standard deduction? -$27,700. That's because you can have up to $89,250 in long term _capital gains_ (I emphasize gains because you would also have principal as a part of that sale, too). If you are under that $89,250, it would be a good idea to do [tax gain harvesting](/taxation/tax-harvesting).
 
 &nbsp;
 
@@ -74,7 +74,7 @@ If you have higher expenses due to healthcare and other forms of expensive end-o
 
 &nbsp;
 
-[Capital gains taxes](/taxation/capital-gains) are based on your taxable income. There are other ways of achieving the necessary funds while also keeping your taxable income low. An example, is using your HSA to recoup incurred medical expenses. This can be current medical expenses, or, as highlighted in [the HSA article](https://ficarious.com/tax-advantaged-accounts/hsa#hsas-as-retirement-vehicles), past medical expenses. This income is non-taxable (at least federally), and would allow you to still be below that $80,800 of income to be in the 0% bracket of long term capital gains taxes!
+[Capital gains taxes](/taxation/capital-gains) are based on your taxable income. There are other ways of achieving the necessary funds while also keeping your taxable income low. An example, is using your HSA to recoup incurred medical expenses. This can be current medical expenses, or, as highlighted in [the HSA article](https://ficarious.com/tax-advantaged-accounts/hsa#hsas-as-retirement-vehicles), past medical expenses. This income is non-taxable (at least federally), and would allow you to still be below that $89,250 of income to be in the 0% bracket of long term capital gains taxes!
 
 &nbsp;
 
@@ -102,7 +102,7 @@ Up to now, you've probably had a few thoughts: "I could overweight on Roth and j
 
 &nbsp;
 
-Unfortunately, that ignores the bigger picture. Roth & brokerage investments are expensive over that of traditional (remember, when you invest in pre-tax accounts you're saving taxes at the highest tax bracket. So that could be up to 37% less in investment principal). As mentioned in the last section, it's also not a bad thing to have traditional investments because of how our tax brackets work. In 2022, you'd only pay 12% up to $81,050 of income (pre-standard deduction, too!).
+Unfortunately, that ignores the bigger picture. Roth & brokerage investments are expensive over that of traditional (remember, when you invest in pre-tax accounts you're saving taxes at the highest tax bracket. So that could be up to 37% less in investment principal). As mentioned in the last section, it's also not a bad thing to have traditional investments because of how our tax brackets work. In 2023, you'd only pay 12% up to $89,450 of income (pre-standard deduction, too!).
 
 &nbsp;
 
@@ -122,15 +122,15 @@ You're now a bajillion words into this article. Hopefully you've learned somethi
 
 &nbsp;
 
-The way I look at retirement funding is by looking at the various tax brackets as a form of bucket. An optimal tax picture is to fill the most optimal buckets to the brim, while minimizing the buckets that are less efficient. For instance, 2022 has a tax rate of 10% up to $20,550. If you account for a standard deduction of $25,900, that's $46,450 of income at only 10%. This is the most optimal taxable income bracket. Those "uncontrollable taxable income" items fall under this bucket. Things like a pension payout, social security, etc will likely take a good portion of these items before you even touch pre-tax dollars. Additionally, these brackets may be worth taking advantage of in years where you don't have as much income to do things like traditional -> Roth conversions.
+The way I look at retirement funding is by looking at the various tax brackets as a form of bucket. An optimal tax picture is to fill the most optimal buckets to the brim, while minimizing the buckets that are less efficient. For instance, 2023 has a tax rate of 10% up to $22,000. If you account for a standard deduction of $27,700, that's $47,700 of income at only 10%. This is the most optimal taxable income bracket. Those "uncontrollable taxable income" items fall under this bucket. Things like a pension payout, social security, etc will likely take a good portion of these items before you even touch pre-tax dollars. Additionally, these brackets may be worth taking advantage of in years where you don't have as much income to do things like traditional -> Roth conversions.
 
 &nbsp;
 
-To realize that $46,450 of income, it'll count against the $80,800 of taxable income limit for the 0% capital gains bucket. This means you could get $34,350 of capital gains in for the year and not pay a dime of extra taxes on that income. If you needed even more money, you could look at pulling from your Roth accounts.
+To realize that $47,700 of income, it'll count against the $89,250 of taxable income limit for the 0% capital gains bucket. This means you could get $41,550 of capital gains in for the year and not pay a dime of extra taxes on that income. If you needed even more money, you could look at pulling from your Roth accounts.
 
 &nbsp;
 
-For most years, this should be a relatively simple process. Big expenses throw a wrench in the plans. However, the same principals apply. You'll want to maximize the lower tax brackets as much as possible, and compare them with your options. Up to the 22% income bracket? Capital gains are only 15% up to $501k of _gains_.
+For most years, this should be a relatively simple process. Big expenses throw a wrench in the plans. However, the same principals apply. You'll want to maximize the lower tax brackets as much as possible, and compare them with your options. Up to the 22% income bracket? Capital gains are only 15% up to $553k of _gains_.
 
 &nbsp;
 
