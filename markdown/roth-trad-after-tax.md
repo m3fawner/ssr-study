@@ -56,10 +56,10 @@ Hypothetically, if a person would receive $2000 in gross income and $1500 in tak
 
 | Contribution % | Amount put into after-tax | Take-home |
 | -------------- | ------------------------- | --------- |
-| 25% | $500 | $1,000 |
-| 50% | $1,000 | $500 |
-| 75% | $1,500 | $0 |
-| 100% | $1,500 | $0 |
+| 25%            | $500                      | $1,000    |
+| 50%            | $1,000                    | $500      |
+| 75%            | $1,500                    | $0        |
+| 100%           | $1,500                    | $0        |
 
 &nbsp;  
 
@@ -79,7 +79,7 @@ In addition, I advocate for Traditional investments where you can at higher inco
 
 &nbsp;  
 
-On the other hand, you have $6,500 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in [Mega-backdoor Roth 401k space](/tax-advantaged-accounts/401k/megabackdoor-roth). 
+On the other hand, you have $7,000 of Roth IRA space (see Backdoor Roth IRA) and tens of thousands of dollars in [Mega-backdoor Roth 401k space](/tax-advantaged-accounts/401k/megabackdoor-roth). 
 
 &nbsp;  
 

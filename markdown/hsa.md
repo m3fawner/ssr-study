@@ -15,10 +15,10 @@ HSA are intended to help those who are on High Deductible Healthcare Plans (HDHP
 
 &nbsp;
 
-|   | Self-only coverage | Family coverage |
-| - | ------------------ | --------------- |
-| Minimum annual deductible | $1,400 | $2,800 |
-| Maximum annual deductible and other out of pocket expenses | $6,900 | $13,800 |
+|                                                            | Self-only coverage | Family coverage |
+| ---------------------------------------------------------- | ------------------ | --------------- |
+| Minimum annual deductible                                  | $1,650             | $3,300          |
+| Maximum annual deductible and other out of pocket expenses | $8,300             | $16,600         |
 
 (source https://www.irs.gov/pub/irs-pdf/p969.pdf)
 
@@ -28,7 +28,7 @@ These accounts can be held in cash or invested. Contributions/growth can be with
 
 &nbsp;
 
-One key difference that catches people is that employer matches count towards your contribution limit. In 2023, the family maximum contribution is $7,750 and my employer contributes $1,500. That makes $5,800 the contribution & tax deductible space available to me, as an employee. If over age 55, there is a $1,000 catch up contribution limit increase (regardless of plan).
+One key difference that catches people is that employer matches count towards your contribution limit. In 2024, the family maximum contribution is $8,550 and my employer contributes $1,500. That makes $7,050 the contribution & tax deductible space available to me, as an employee. If over age 55, there is a $1,000 catch up contribution limit increase (regardless of plan).
 
 &nbsp;
 

@@ -102,7 +102,7 @@ Up to now, you've probably had a few thoughts: "I could overweight on Roth and j
 
 &nbsp;
 
-Unfortunately, that ignores the bigger picture. Roth & brokerage investments are expensive over that of traditional (remember, when you invest in pre-tax accounts you're saving taxes at the highest tax bracket. So that could be up to 37% less in investment principal). As mentioned in the last section, it's also not a bad thing to have traditional investments because of how our tax brackets work. In 2023, you'd only pay 12% up to $89,450 of income (pre-standard deduction, too!).
+Unfortunately, that ignores the bigger picture. Roth & brokerage investments are expensive over that of traditional (remember, when you invest in pre-tax accounts you're saving taxes at the highest tax bracket. So that could be up to 37% less in investment principal). As mentioned in the last section, it's also not a bad thing to have traditional investments because of how our tax brackets work. In 2025, you'd only pay 12% up to $96,950 of income (pre-standard deduction, too!).
 
 &nbsp;
 
@@ -122,11 +122,11 @@ You're now a bajillion words into this article. Hopefully you've learned somethi
 
 &nbsp;
 
-The way I look at retirement funding is by looking at the various tax brackets as a form of bucket. An optimal tax picture is to fill the most optimal buckets to the brim, while minimizing the buckets that are less efficient. For instance, 2023 has a tax rate of 10% up to $22,000. If you account for a standard deduction of $27,700, that's $47,700 of income at only 10%. This is the most optimal taxable income bracket. Those "uncontrollable taxable income" items fall under this bucket. Things like a pension payout, social security, etc will likely take a good portion of these items before you even touch pre-tax dollars. Additionally, these brackets may be worth taking advantage of in years where you don't have as much income to do things like traditional -> Roth conversions.
+The way I look at retirement funding is by looking at the various tax brackets as a form of bucket. An optimal tax picture is to fill the most optimal buckets to the brim, while minimizing the buckets that are less efficient. For instance, 2025 has a tax rate of 10% up to $24,300. If you account for a standard deduction of $30,000, that's $54,300 of income at only 10%. This is the most optimal taxable income bracket. Those "uncontrollable taxable income" items fall under this bucket. Things like a pension payout, social security, etc will likely take a good portion of these items before you even touch pre-tax dollars. Additionally, these brackets may be worth taking advantage of in years where you don't have as much income to do things like traditional -> Roth conversions.
 
 &nbsp;
 
-To realize that $47,700 of income, it'll count against the $89,250 of taxable income limit for the 0% capital gains bucket. This means you could get $41,550 of capital gains in for the year and not pay a dime of extra taxes on that income. If you needed even more money, you could look at pulling from your Roth accounts.
+To realize that $54,300 of income, it'll count against the $94,050 of taxable income limit for the 0% capital gains bucket. This means you could get $39,750 of capital gains in for the year and not pay a dime of extra taxes on that income. If you needed even more money, you could look at pulling from your Roth accounts.
 
 &nbsp;
 

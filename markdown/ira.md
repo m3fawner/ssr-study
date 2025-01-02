@@ -40,7 +40,7 @@ Another complication of IRAs as a high income earner, is that direct Roth contri
 
 &nbsp;
 
-IRAs are seen as one account across all brokerages and the tax treatments of each account is just seen as a “bucket” within an IRA. This is important to note because of [pro-rata taxation](/tax-advantaged-accounts/ira/backdoor-roth-ira#pro-rata-taxation). You can contribute $3,250 to an IRA with Fidelity and $3,250 to an IRA with Vanguard and the IRS will note that you contributed $6,500 to IRAs. If you were to exceed the limit because you contributed to multiple accounts, you will be penalized.
+IRAs are seen as one account across all brokerages and the tax treatments of each account is just seen as a “bucket” within an IRA. This is important to note because of [pro-rata taxation](/tax-advantaged-accounts/ira/backdoor-roth-ira#pro-rata-taxation). You can contribute $3,000 to an IRA with Fidelity and $3,000 to an IRA with Vanguard and the IRS will note that you contributed $7,000 to IRAs. If you were to exceed the limit because you contributed to multiple accounts, you will be penalized.
 
 &nbsp;
 
